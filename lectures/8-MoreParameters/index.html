@@ -1,0 +1,840 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/8-MoreParameters/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:46:12 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 8: More Parameters
+					</h1>
+					<p class="subtleHeading">
+						April 20th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a
+						href="8-MoreParameters.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture8.zip"><i class="fas fa-code"
+							aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						We've posted information about the diagnostic and some practice material on 
+						<a href="../../handouts/diagnostic.html" target="_blank">this handout</a>. 
+						<b>Please make sure to have downloaded and installed BlueBook, our exam platform.</b>
+					</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hey CS106a Team,</p></i>
+               <p><b>A1:&nbsp;</b> hi!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what will be the format of the diagnostic?</p></i>
+               <p><b>A1:&nbsp;</b> 3 short questions. 1 karel. the practice will be exactly the same. check it out!</p>
+        
+               <p><b>A2:&nbsp;</b> We’ll be posting materials about it immediately after class.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will the questions be similar to the assignments?</p></i>
+               <p><b>A1:&nbsp;</b> shorter!</p>
+        
+               <p><b>A2:&nbsp;</b> They’ll be smaller scale</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a grade attached to it?</p></i>
+               <p><b>A1:&nbsp;</b> we will give you a score, and it is part of your final grade calculation. But that is not the point of the diagnostic. The point is to give you feedback. And if you do well, great. If you dont do as well as you hoped thats fine too, we will use it as a way to help you figure out what you should focus on learning</p>
+        
+               <p><b>A2:&nbsp;</b> (To be clear, it constitutes 15% of your grade for the class but given that the grading scheme is S/NC, that means it’s relatively low pressure!)</p>
+        
+               <p><b>A3:&nbsp;</b> feedback, not a grade</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where is the link to the python guide mentioned in class?</p></i>
+               <p><b>A1:&nbsp;</b> On the right sidebar of the course page</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can return not take an argument ?</p></i>
+               <p><b>A1:&nbsp;</b> It’s not a function, but you can return a value</p>
+        
+               <p><b>A2:&nbsp;</b> it just takes an “expression” after the word “return”.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a minimum score we are aiming for to get a S in the class?</p></i>
+               <p><b>A1:&nbsp;</b> its “mastery” so you have to do reasonably well on all parts. If you are in danger of not passing we will let you know. You just need to try your best</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;*Sorry, truncated question. 
+Hey CS106a Team,
+I was trying to define separate functions and their variables for the homework and was running into the error of variables not defined. How do we apply/keep variable values (like if you&#039;ve evaluated &#039;sum&#039; to the int 3) between functions? I did the workaround of just writing one function in &#039;main&#039;, but for style I thought it would be better to decompose into separate shorter functions?</p></i>
+               <p><b>A1:&nbsp;</b> Also, questions like this are better asked on Ed or at office hours/the LaIR</p>
+        
+               <p><b>A2:&nbsp;</b> parameters are your solution!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can constants take user input?</p></i>
+               <p><b>A1:&nbsp;</b> not traditionally. Constants should be fixed</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does def factorial know what n is?</p></i>
+               <p><b>A1:&nbsp;</b> Whoever calls the factorial function passes a value for n in as a parameter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;wait, do i and factorial appear on the same line?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, they print with a space in between them</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it ok programming style to have variables of the same name in different functions?</p></i>
+               <p><b>A1:&nbsp;</b> yes! its common</p>
+        
+               <p><b>A2:&nbsp;</b> Yep, provided that name is descriptive enough</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you have a variable visible to all functions that is changed by those functions, or does that only work with constants?</p></i>
+               <p><b>A1:&nbsp;</b> its possible, but considered very bad style because it leads to so many bugs</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would you do if you wanna get answer until infinity?</p></i>
+               <p><b>A1:&nbsp;</b> while True:</p>
+        
+               <p><b>A2:&nbsp;</b> float(‘inf’) is infinity so you could put it in your range function, but you’d be there for a while!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it still ok to use +’s to get multiple string objects out of a print line? is that good style?</p></i>
+               <p><b>A1:&nbsp;</b> Either is fine</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it good style to change the variable names when defining a new function? Or is it okay to give it the same name so you don’t have too many variables?</p></i>
+               <p><b>A1:&nbsp;</b> Either is fine! Basically, a variable should have a name that describes how it will be used in that function.</p>
+        
+               <p><b>A2:&nbsp;</b> i often use the same name. As such its really important to know your scope rules!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you use any arbitrary name for the counting variable in a for loop?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, but i is conventional</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is i 0 and not 1 again?</p></i>
+               <p><b>A1:&nbsp;</b> its a convention! But its really useful for things we will do later in the course</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the loop not carry out just that one time? if I said for i in range(1), would the body of the loop not occur exactly once?</p></i>
+               <p><b>A1:&nbsp;</b> It would</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are n and i both parameters?</p></i>
+               <p><b>A1:&nbsp;</b> n is a parameter, i is a local variable.. but they both behave like variables only visible in this stack frame</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we use everything that’s on the python reader for the assignment ? Ans should we know it for the monday test ?</p></i>
+               <p><b>A1:&nbsp;</b> you only need to know up until todays class</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;for i in range only works for numbers, right? that is why he did not call “int”, right?</p></i>
+               <p><b>A1:&nbsp;</b> right! so the value was already an int.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why does result = 1 ?</p></i>
+               <p><b>A1:&nbsp;</b> It starts off as 1 for the multiplication</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you return multiple variables?
+
+Say my function has variables:
+
+a = 5
+b = 4
+
+Is &#039;return a, b&#039; valid?</p></i>
+               <p><b>A1:&nbsp;</b> yes! Its a little advanced. But you got it right</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if this function needed a constant, would we enter it under &#039;def factorial (n) : &#039;</p></i>
+               <p><b>A1:&nbsp;</b> Constants should be declared outside of any function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just clarifying the point Mehran is trying to make about the information flow: When factorial(i) is called in the print statement within main(), the information that is actually passed into factorial() is not i, but the value of i within main?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does it mean to use a parameter in a function versus using a local variable?</p></i>
+               <p><b>A1:&nbsp;</b> A parameter is information given to a function and a local variable is a variable created inside the function.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Somewhat unrelated to lecture (but relevant to the p-set), how would you terminate a program currently running an infinite loop in Pycharm?</p></i>
+               <p><b>A1:&nbsp;</b> Ctrl + C in the terminal</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does the computer call the function? Does it do it first then run through everything, or simutaneously?</p></i>
+               <p><b>A1:&nbsp;</b> it does so step-by-step just like mehran is showing. but it does those steps very fast :)</p>
+        
+               <p><b>A2:&nbsp;</b> Coould you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What was the terminology &quot;stacked frame&quot; used to signify?</p></i>
+               <p><b>A1:&nbsp;</b> ‘Stack frame’ - it’s a collection of all the variables inside a function.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry I mean: is for i in range(1, 1) essentially equivalent to for i in range(0)? Bc like 1-1 is 0?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you just use a diff variable in one of them, like for x in range(3) so it’s less confusing?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but i is pretty conventional</p>
+        
+               <p><b>A2:&nbsp;</b> you could, but “i” is a convention. You will get really used to “scope” rules and it will become truly comfortable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can a user input a parameter?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, using the input() function</p>
+        
+               <p><b>A2:&nbsp;</b> you have to do that in two steps:
+x = input(‘asdfsf’)
+# now you can pass x as a parameter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What was the stack frame, again?</p></i>
+               <p><b>A1:&nbsp;</b> A collection of all the variables in a function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you define a variable like i at the top of the program like a constant, can you reuse it inside a function as well?</p></i>
+               <p><b>A1:&nbsp;</b> It’s not quite that simple so I’d recommend against it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is the diff between a constant and a variable is that the constant is assigned outside the function?</p></i>
+               <p><b>A1:&nbsp;</b> A constant is just a variable whose value shouldn’t change</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we have global variables that are not constants?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but it’s really bad style because it leads to a lot of bugs</p>
+        
+               <p><b>A2:&nbsp;</b> no! dont do it!!! for the children…</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so in a for loop i will take a different value every time for loop runs?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you use a different letter than i in a forloop?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, it’s just a variable so you can give it any name</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;thank you</p></i>
+               <p><b>A1:&nbsp;</b> np</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does -m mean?</p></i>
+               <p><b>A1:&nbsp;</b> Don’t worry about it too much but it basically means to use the ‘doctest’ module which Python comes with</p>
+        
+               <p><b>A2:&nbsp;</b> short for module… its running the doctest module</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you define doc tests outside the def function() ?</p></i>
+               <p><b>A1:&nbsp;</b> (Well, yes, we won’t talk about them in 106A!)</p>
+        
+               <p><b>A2:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do I save a value of a variable from a previous program run and use that same value on a new run? For example, I run the program once. x initializes from 0 and  I put it in a function. The function makes x = 5. In the next run, however, I don’t want x = 0 and update x to 5 before putting it in the function. How do I do this?</p></i>
+               <p><b>A1:&nbsp;</b> By program run, do you mean starting the program from scratch each time, or just calling a function again?</p>
+        
+               <p><b>A2:&nbsp;</b> you would have to use a “file” which is something we will cover later in the class</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the purpose of a doctest again?</p></i>
+               <p><b>A1:&nbsp;</b> make sure your function is healthy!</p>
+        
+               <p><b>A2:&nbsp;</b> Just to specify what the function should return on some inputs as a way of testing your programs</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so in other words, the docttest is basically to confirm the answers the program will give, right?</p></i>
+               <p><b>A1:&nbsp;</b> rock on</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;&#039;@Brahm start/run the program from scratch :)</p></i>
+               <p><b>A1:&nbsp;</b> You’d have to save the value to a file - we’ll get there soon</p>
+        
+               <p><b>A2:&nbsp;</b> yep, files! We will cover those later</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the order of the functions matter in passing parameter values?</p></i>
+               <p><b>A1:&nbsp;</b> the order of “definitions” doesn’t matter. the order of “calling” certainly doesn’t. The order of “parameters” matters</p>
+        
+               <p><b>A2:&nbsp;</b> The order of the parameters should match</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the doctest need to be in the comment or can it be outside?</p></i>
+               <p><b>A1:&nbsp;</b> It needs to be inside the comment</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s the difference between a test and an item?</p></i>
+               <p><b>A1:&nbsp;</b> Same thing</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you assign a name to the portion of the code with the doctest?</p></i>
+               <p><b>A1:&nbsp;</b> The function already has a name</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does doctest know what the function is expecting?</p></i>
+               <p><b>A1:&nbsp;</b> It doesn’t - you do!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does the -m stand for?</p></i>
+               <p><b>A1:&nbsp;</b> module :) its the doctest module</p>
+        
+               <p><b>A2:&nbsp;</b> Module - it means ‘use the doctest program in Python’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Oh I see, you specify it under the function call in the doctest.
+So:
+&gt;&gt;&gt;factorial(3)
+6 &lt;- this is me telling the function what to expect?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we go further than doctest, by getting back an actual evaluation of just a single function? That might be faster than commenting out everything else in your main</p></i>
+               <p><b>A1:&nbsp;</b> You can add a doctest with some random expected value  - it’ll show you what it outputs when it fails!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Should we delete the doctest in the comments once we are done testing it?</p></i>
+               <p><b>A1:&nbsp;</b> no keep it there! Its great style (makes it easier to understand the function) and as mehran said its good for regression testing (you changed the code… does it still work?)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it bad style to refer to x by the same name in the add_five function?</p></i>
+               <p><b>A1:&nbsp;</b> no its normal to reuse names.. but you have to understand exactly how the control flow works!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would happen if you returned x +=5 ?</p></i>
+               <p><b>A1:&nbsp;</b> &gt;&gt;&gt; def add_five(x):
+...   return x += 5
+  File &quot;&lt;stdin&gt;&quot;, line 2
+    return x += 5
+             ^
+SyntaxError: invalid syntax</p>
+        
+               <p><b>A2:&nbsp;</b> x += 5 isn’t an expression, so you can’t return it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;who is running the doctest? is it the same as writing a boolean for the expected value or does doctest function like wrap around and run my program like a shell?</p></i>
+               <p><b>A1:&nbsp;</b> Python has a program called ‘doctest’ built in. That program is running the doctests you write.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we initialize a varaible by writing &quot;x += 5&quot;? Will this this result in an error or with a new variable x with the value 5?</p></i>
+               <p><b>A1:&nbsp;</b> &gt;&gt;&gt; def add_five(x):
+...   return x += 5
+  File &quot;&lt;stdin&gt;&quot;, line 2
+    return x += 5
+             ^
+SyntaxError: invalid syntax</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we need the str(x) in the print function?</p></i>
+               <p><b>A1:&nbsp;</b> To convert it to a string before concatenating it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have to add “return x”?</p></i>
+               <p><b>A1:&nbsp;</b> yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are we able to return more than one piece of information? like returning two values back to the main?</p></i>
+               <p><b>A1:&nbsp;</b> Not yet!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why does it have to be x=add_five(x) rather than just add_five(x)?</p></i>
+               <p><b>A1:&nbsp;</b> mehran is explaining now!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you explain why we still put str to print the final result, please?</p></i>
+               <p><b>A1:&nbsp;</b> you cant add a string and an int. You have to first convert the int to a string…</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are for and while loops considered functions?</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is best practice for variables that are useful across function? When should we pass them from one function to another via parameters and when should we define them as global variables?</p></i>
+               <p><b>A1:&nbsp;</b> Parameters! Global variables are basically never a good idea</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Isn’t it less confusing to not use x as the varibale for both the main() and the add_five function?</p></i>
+               <p><b>A1:&nbsp;</b> it gets very natural to follow “scope” i dont look outside a function when reading variables :)</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, but sometimes the name should be the same for both functions</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you know the order of parameters? Is it the same way they are appear in the main function or the order of how they appear in the function with a parameter?</p></i>
+               <p><b>A1:&nbsp;</b> The order they appear in the def line</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Thanks! What’s would be an example of a time that the name should be the same for both functions?</p></i>
+               <p><b>A1:&nbsp;</b> In some more complex functions, there are some pretty conventional names we give variables of specific types</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you pass by not value?</p></i>
+               <p><b>A1:&nbsp;</b> But short answer, Python makes the call, not you</p>
+        
+               <p><b>A2:&nbsp;</b> We’ll get there in a few weeks :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;in nested functions, are variables in the parent function available in the nested one?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, if they’re declared before the nested function, but unless you have a *really* good reason, you shouldn’t use nested functions.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will there ever be a function that doesn’t have return (with or without a variable behind return, doesn’t matter)?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! All your Karel functions and functions that print things, for example :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it ok to use concepts from the course reader in our assignment that we have not discussed yet in class? For example: The &quot;try except&quot; command or lists? If we are not supposed to use them in the basic assignments, can we use them in the extensions?</p></i>
+               <p><b>A1:&nbsp;</b> You shouldn’t need them in basic assignments (and might be an indication of poor style if you’re overcomplicating things), but you can use them in extensions</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;wait, how do you follow logic? lleft to right or ors before and?</p></i>
+               <p><b>A1:&nbsp;</b> and before or, and then left to right</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain again why earlier in the lecture, the code had to be x=add_five(x) rather than just add_five(x)?</p></i>
+               <p><b>A1:&nbsp;</b> it makes a copy of x… doesnt get the original variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Quick question regarding the honor code and assignments. The Honor Code PDF says that &quot;It is an act of plagiarism to submit work that is copied or derived from the work of others and submitted as your own.&quot;
+
+Would the following scenario be allowed: I remembered the &quot;indirect&quot; command from my work in Excel, which is the same as &quot;eval&quot; in python. Would it be fine to google &quot;excel indirect equivalent in python&quot;, look up the definition of the function and use it in an extension?</p></i>
+               <p><b>A1:&nbsp;</b> thats not plagiarism :-). Plagiarism would be more like… “how do you program khansole academy”</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;WIll this code be posted after class?</p></i>
+               <p><b>A1:&nbsp;</b> It’s already on the lecture page</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why would you use an elif vs. an or statement within an if statement? Still not clear on the exact use of an elif…?</p></i>
+               <p><b>A1:&nbsp;</b> elif and if inside else are the same thing, but elif looks a little cleaner</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason why this program was really well formatted to look and behave like a real calendar, with days of the week and everything, but has “Month #1” instead of January? Is there some particular difficulty with writing out the month? Thinking about this as well in the compute interest homework problem</p></i>
+               <p><b>A1:&nbsp;</b> it wouldnt be too hard. just write a function that takes in the month number and returns the month name!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where can i access calender.py?</p></i>
+               <p><b>A1:&nbsp;</b> You can download it from the lecture page</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain what end = “” does?</p></i>
+               <p><b>A1:&nbsp;</b> makes the value equal to the emptry-string!</p>
+        
+               <p><b>A2:&nbsp;</b> Basically, print doesn’t stick a newline at the end so the next thing you print shows up on the same line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what exactly does the end=&quot;&quot; do again?</p></i>
+               <p><b>A1:&nbsp;</b> Print doesn’t add a new line</p>
+        
+               <p><b>A2:&nbsp;</b> oh that makes it so that it doesn’t add a new-line after printing</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So does this have the same effect as print(“”)?</p></i>
+               <p><b>A1:&nbsp;</b> Not quite. Basically, it makes it so that print doesn’t stick a newline at the end so the next thing you print shows up on the same line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are we expected to build something like this from scratch? This program was kinda compicated…</p></i>
+               <p><b>A1:&nbsp;</b> not now, but you will get there :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How would you assign the names of the months for this program? Just like a print equal to month1, and so on?</p></i>
+               <p><b>A1:&nbsp;</b> it wouldnt be too hard. just write a function that takes in the month number and returns the month name!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are we expected to be able to create at this point a program as complex as that of the calendar?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could you explain please again what print(“”) does?</p></i>
+               <p><b>A1:&nbsp;</b> Just prints a blank line!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;will we have access to the calendar.py program after lecture ?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain the end==</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;To assign a constant, do you basically just do like you would assign a variable but outside main?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If I am missing next Monday lecture, what should I do?</p></i>
+               <p><b>A1:&nbsp;</b> There isn’t lecture - it’s just the diagnostic</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;And you said more information about the diagnostic will be posted after class, right?</p></i>
+               <p><b>A1:&nbsp;</b> Already up!</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

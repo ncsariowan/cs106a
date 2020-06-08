@@ -1,0 +1,770 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/5-ArithmeticExpressions/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:45:05 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+		
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 5: Arithmetic Expressions
+					</h1>
+					<p class="subtleHeading">
+						April 15th, 2020
+					</p>
+
+				</div>
+				
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="5-ArithmeticExpressions.pdf">
+						<i class="far fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture5.zip"><i class="fas fa-code" aria-hidden="true"
+							style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+	
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						Sections start today!
+					</div>
+				</p>
+				<br/>
+				<h3>Learning Goals </h3>
+				<p>
+					<div class="well">
+					The goal of today's class is for you to be able to track through more complex Arithmetic in Python. 
+				</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;wait what button did he hit to make that command into one line?</p></i>
+               <p><b>A1:&nbsp;</b> ‘Enter’ - he’s on powerpoint :) You just need to type it manually!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hi, does this work for numbers of all digits?</p></i>
+               <p><b>A1:&nbsp;</b> These operators? Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can it give a negative
+? (ex. num3=num2-num1)</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where could we get more information on what&#039;s being done in Peru? Fellow Peruvian here wanting to get involved..</p></i>
+               <p><b>A1:&nbsp;</b> Shoot us (in particular Mehran) an email and we can get you some resources!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will you get a float even if there’s an integer answer?</p></i>
+               <p><b>A1:&nbsp;</b> If you combine a float and an integer, you’ll get an integer</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does 5/1 give a float also? Even though it would be an integer answer?</p></i>
+               <p><b>A1:&nbsp;</b> That would be an int, but 5/1.0 or 5.0/1 would be a float!</p>
+        
+               <p><b>A2:&nbsp;</b> Actually, quick correction: 5/1 is also a float (it gives you 5.0)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you not use ^ to raise to a power?</p></i>
+               <p><b>A1:&nbsp;</b> That does something different in Python!</p>
+        
+               <p><b>A2:&nbsp;</b> No, that does something different in Python :)</p>
+        
+               <p><b>A3:&nbsp;</b> Can you not use ^ to raise to a power?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how is the second subtraction sign different from the first?</p></i>
+               <p><b>A1:&nbsp;</b> The first is subtraction and the other is negating a number (multiplying by -1)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does python know you want negation rather than subtraction if they both use the “-“ symbol?</p></i>
+               <p><b>A1:&nbsp;</b> If it’s between two numbers, it’s subtraction - if it’s before the first number, it’s negation. To use both, we’d do something like 42 - (-100)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain the 5 % 2 operation?  What does the 1 mean in this case?</p></i>
+               <p><b>A1:&nbsp;</b> It’s the remainder when you didivde 5 by 2!</p>
+        
+               <p><b>A2:&nbsp;</b> Can you explain the 5 % 2 operation?  What does the 1 mean in this case?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I understand how it is functionally different, but how is it different in terms of how you type it into the computer?</p></i>
+               <p><b>A1:&nbsp;</b> It’s not, same character :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a function for the integer portions of a float in phython ?</p></i>
+               <p><b>A1:&nbsp;</b> there is a function called “floor” which drops everything after the decimal place (though the result is still type float)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why is it always a float when dividing by two ints? Just curious</p></i>
+               <p><b>A1:&nbsp;</b> Dividing an int by an int doesn’t always give you a whole number (i.e. 7/2) but all the other operations do!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when you type num1 + 7 , does python assume that 7 is an integer? (or any number you type)</p></i>
+               <p><b>A1:&nbsp;</b> Yep, provided you don’t surround it with quotes (which would make it a string) or something</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will float() also work on number strings?</p></i>
+               <p><b>A1:&nbsp;</b> Yep - float(“4.2”) will give you back 4.2</p>
+        
+               <p><b>A2:&nbsp;</b> Will float() also work on number strings?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When you assign a variable (i.e. 9), how does python know if it’s an int or a string?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what happens if you write num1=float(num1)?
+Did we replace or created a new value? And if we created a new value, how do we call for the original num1?</p></i>
+               <p><b>A1:&nbsp;</b> We’d replace the contents of the num1 box. You wouldn’t be able to access the whole value.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where is the new value of num1 stored?</p></i>
+               <p><b>A1:&nbsp;</b> Whatever is on the left hand side of the equals sign</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what&#039;s the difference between a float and a string?</p></i>
+               <p><b>A1:&nbsp;</b> A string represents text and is surrounded by quotes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so int(value) is the same thing as floor(value) except that int is an integer and floor is a float ?</p></i>
+               <p><b>A1:&nbsp;</b> Floor isn’t a function in Python!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a function to round values? Might be useful for sorting through data…</p></i>
+               <p><b>A1:&nbsp;</b> There’s a function called round!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we properly round floats? Like we are just chopping off the decimal point but could we also go from like 1.9 to 2</p></i>
+               <p><b>A1:&nbsp;</b> There’s a function called round!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we were to assign a varible to a word, will python automatically know that this is a string or do we always have to put quotation marks around the word?</p></i>
+               <p><b>A1:&nbsp;</b> Nope! If you say str = banter, it will look for a variable called banter so you need to say str = “banter”</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you write num += 1 as num++?</p></i>
+               <p><b>A1:&nbsp;</b> Not in Python</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry but I still don’t understand why num3-1 would be .899999 instead of just .9 ??</p></i>
+               <p><b>A1:&nbsp;</b> Python isn’t able to represent *every* decimal number precisely, so it often has to resort to whatever is closest! Come chat in office hours or post on Ed if you’re interested in why</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the expression num1 = num1 + 1 , mean that num1 then becomes num1 = 6?</p></i>
+               <p><b>A1:&nbsp;</b> Assuming num1 is 5 initially, yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you define your own shorthands</p></i>
+               <p><b>A1:&nbsp;</b> ish :) We’ll get there a little later in the class</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we need float in the average program ? int would have worked too right ?</p></i>
+               <p><b>A1:&nbsp;</b> well then if you tried to average 2.3 and 4.5 it wouldn’t work :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So converting from float to integer will NOT round the number? For example, 4.7 would turn into 4?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a round, ceil, and or floor function?</p></i>
+               <p><b>A1:&nbsp;</b> all three!</p>
+        
+               <p><b>A2:&nbsp;</b> They’re called round, math.ceil and math.floor</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there anything we can do in the way of rounding/some code we can input to get python to truncate the answer and represent it nicely or do we just have to suffer with .899999999</p></i>
+               <p><b>A1:&nbsp;</b> There are, but it’s a little messy - post on Ed or come to office hours if you’re interested!</p>
+        
+               <p><b>A2:&nbsp;</b> we suffer… only way is to use a string representation (which is hard to work with) or i once saw someone represent fractions by storing the numerator and denominator as separate variables… wild world…</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do set a certain number of sig figs? 
+whats the max default anyway?</p></i>
+               <p><b>A1:&nbsp;</b> Its a good question. As you noticed mehran didn’t chose to go too deep into the standard. It does get complex — and you have so much to learn anyways. Floats are limited by their “precision” not by the number of significant figures. Its wild</p>
+        
+               <p><b>A2:&nbsp;</b> It’s a little messy - post on Ed or come to OH if you’re interested! There isn’t really a ‘default’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why isn’t python accurate in terms of the division?</p></i>
+               <p><b>A1:&nbsp;</b> Basically, there are a finite number of decimal numbers that Python can represent precisely so it sometimes needs to just show you whichever decimal is closest to the correct value.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a textbook of some sort that has all of this info like the Karel reader but for python?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, we have some handouts - I’ll post those later today</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are there any constants built into python?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! We’ll talk about how to use those a little later this quarter.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What&#039;s the defualt number of decimal places that a float returns? Like if I did 22/7 how many decimal places will be returned?</p></i>
+               <p><b>A1:&nbsp;</b> no. floats always have many decimal points. The limitation is is in precision, not on decimal points</p>
+        
+               <p><b>A2:&nbsp;</b> There isn’t really one - when you try to print it, it truncates after a few but it’s really just a question of how it’s represented internally.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are any constants built into python? Or do they all need to be entered by the user?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! We’ll get to how to access them later on this quarter.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is PI built into python or do you as the programmer have to assign it a value?</p></i>
+               <p><b>A1:&nbsp;</b> It is, but we’ll talk about how to access it later!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there any difference between a constant and a variable except for the all-caps?</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;To just to make sure, “magic numbers” are like 0 and 1?</p></i>
+               <p><b>A1:&nbsp;</b> They’re numbers that just randomly appear in your code without any explanation of why they have that value</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is “feet” defined as in that example?</p></i>
+               <p><b>A1:&nbsp;</b> It’s just a float variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;re: Vincent Xie&#039;s question Variables vs Constants, don&#039;t Variables only apply to the specific function you apply them to? we discussed Scope of Variables?</p></i>
+               <p><b>A1:&nbsp;</b> Oh, good point! I meant that the way they store values is the same. Yes, constants are available everywhere.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is the math library built into python or the IDE? or do we have to download it separately?</p></i>
+               <p><b>A1:&nbsp;</b> python! no download necessary</p>
+        
+               <p><b>A2:&nbsp;</b> is the math library built into python or the IDE? or do we have to download it separately?</p>
+        
+               <p><b>A3:&nbsp;</b> It’s built in!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a way to check if a function or constant is in the math library?</p></i>
+               <p><b>A1:&nbsp;</b> https://docs.python.org/3/library/math.html is the definitive reference</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so these commands cannot be used if math is not imported?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would you define a constant above or below the import math</p></i>
+               <p><b>A1:&nbsp;</b> Before import math and above the functions</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we print an integer or float without first casting it as a string?</p></i>
+               <p><b>A1:&nbsp;</b> Provided you’re not adding it to a string, yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Question?
+
+def math.pi():
+     PI=3.1415</p></i>
+               <p><b>A1:&nbsp;</b> defining the constant should go outside any function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where is math being imported from? why do we have to explicitly import it instead of being “built in” ?</p></i>
+               <p><b>A1:&nbsp;</b> It’s built in to Python, but we want it to be available in this particular program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so when you download a library, you do library.something to acess that object in the library?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you only print string-type things? Like you couldn’t print num1 as an integer?</p></i>
+               <p><b>A1:&nbsp;</b> You can, but only because if you print(7), Python automatically converts the 7 to a string before you print. If you add it to a string, you need to manually do it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don’t computers have “true” randomness?</p></i>
+               <p><b>A1:&nbsp;</b> Great question! It turns out this is an incredibly difficult thing to do unless you have access to an actually random process (like universal background radiation or radioactive decay). This is because computers are totally deterministic machines.</p>
+        
+               <p><b>A2:&nbsp;</b> its really hard to know what true randomness is! one of the world experts is a prof here Percis Diacanosis. The gold standard comes from background radiation from space and some super specific computer have random numbers based on space!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;isn’t uniform for uniform distribution?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you multiply random.random() to get a wider range?</p></i>
+               <p><b>A1:&nbsp;</b> You get a number between 0 and 1. If you want to get a number between 0 and 10, just multiply the random number by 10 :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is Mehran running py rolldice.py so quickly? is there a shortcut to avoid writing down the whole file name?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I’m a little confused as to why you would want to seed multipe times</p></i>
+               <p><b>A1:&nbsp;</b> Basically, so that the random numbers you get each time are the same, which is useful as you test</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What happens when you increase the value of seed?</p></i>
+               <p><b>A1:&nbsp;</b> Nothing predictable - it’s just that the random numbers you get back are different.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does 1 in the random.seed() mean?</p></i>
+               <p><b>A1:&nbsp;</b> Just the input to the random number generation process</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you random.seed(random.random())?</p></i>
+               <p><b>A1:&nbsp;</b> You can, but that wouldn’t be very helpful :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain what the random.seed(x) function does again?</p></i>
+               <p><b>A1:&nbsp;</b> Basically, random number generation is a process that starts with some initial value that is different very time. Random.seed(x) sets that value to be equal to x at the beginning, so the random numbers you get back are the same.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does random.uniform do?</p></i>
+               <p><b>A1:&nbsp;</b> random.uniform(a, b) returns a random number between a and b. All numbers are uniformly likely to be returned.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is &quot;import&quot; for ?</p></i>
+               <p><b>A1:&nbsp;</b> To make the random library available in this program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Shouldn’t PEP-8 require Mehran to have two speces in between his functions?</p></i>
+               <p><b>A1:&nbsp;</b> Yes - we’re not tremendously fussy about that right now.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you always put a 1 in the seed(1)</p></i>
+               <p><b>A1:&nbsp;</b> You can put any number in there, it doesn’t really matter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So typing random.seed(1) will seed any program?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;“Just the input to the random number generation process”
+but what happens if we enter 2?</p></i>
+               <p><b>A1:&nbsp;</b> 2 is input into the process and you get a different bunch of random numbers back! If you stick around after Q&amp;A we can talk about it in more detail</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to call the die1 variable from main() in the roll_die() fcn?</p></i>
+               <p><b>A1:&nbsp;</b> Not yet :) Stick around for a few lectures!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So if die 1 is in roll_dice and roll_dice is in main, can die_1 be used in main and vice versa?</p></i>
+               <p><b>A1:&nbsp;</b> die1 in those two functions are separate variables</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it good practice to reuse the variable name? Why would I use die1 twice?</p></i>
+               <p><b>A1:&nbsp;</b> sometimes! It makes it clear that they are the same conceptually</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you use a for i in range for roll_dice?</p></i>
+               <p><b>A1:&nbsp;</b> yes well talk more about that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the purpose of defining die1 in main?</p></i>
+               <p><b>A1:&nbsp;</b> Just to show you that it’s separate from die1 in roll_dice</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you do for i in range (3): roll dice ?</p></i>
+               <p><b>A1:&nbsp;</b> yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the 1 in the parentheses next to NUM_SIDES</p></i>
+               <p><b>A1:&nbsp;</b> its the minimum value for the random number</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;stylistically, why might you define a function before main()?</p></i>
+               <p><b>A1:&nbsp;</b> i think its good practice to put main first..</p>
+        
+               <p><b>A2:&nbsp;</b> stylistically, why might you define a function before main()?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if we want to keep a better style, is it better not to use the same variable name across different functions?</p></i>
+               <p><b>A1:&nbsp;</b> Not really! The variable name should communicate its purpose in that function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there any way to change colors for &quot;die1&quot; in Main vs &quot;die1&quot; in any random function in order to make the scope of the variable visually obvious?</p></i>
+               <p><b>A1:&nbsp;</b> that would be sweet. But no, that is pycharm to decide</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why the different color “10”?</p></i>
+               <p><b>A1:&nbsp;</b> to make it clear its a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So what is the point of stating die1 in the main function?</p></i>
+               <p><b>A1:&nbsp;</b> Just to show you that it’s not the same as the one in roll_dice!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so is it a bad idea to have the same name in different functions?</p></i>
+               <p><b>A1:&nbsp;</b> no its very common. Its hard to think of new names all the time</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does it matter where and when you define a constant? Does it have to be under main function?</p></i>
+               <p><b>A1:&nbsp;</b> thats the standard!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;whats the point of die1 in main()?</p></i>
+               <p><b>A1:&nbsp;</b> pedagogy</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you make is so that the output of the functions that are called *do* affect/ update your variables in &quot;main&quot;?</p></i>
+               <p><b>A1:&nbsp;</b> good question. Well talk about parameters and returns on monday</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to comment out a lot of lines of code at once?</p></i>
+               <p><b>A1:&nbsp;</b> teach you</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what was the purpose of defining die1 as 10 in main?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+		
+
+
+	
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

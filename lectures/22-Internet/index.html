@@ -1,0 +1,482 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/22-Internet/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:02:57 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+
+
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="pageHeader">
+          <br />
+          <h1>
+            Lecture 22: Internet
+          </h1>
+          <p class="subtleHeading">
+            May 29th, 2020
+          </p>
+
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <h3>Lecture Materials </h3>
+    <p>
+    <div class="row">
+      <div class="col-sm-2"><a href="22-Internet.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Slides</span>
+        </a>
+      </div>
+      <div class="col-sm-2">
+        <a href="Lecture22.zip"><i class="fas fa-code" aria-hidden="true"
+            style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:6px">Lecture Code</span>
+        </a>
+      </div>
+    </div>
+    </p>
+
+    <div class="row">
+      <div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Which island if I can ask?</p></i>
+               <p><b>A1:&nbsp;</b> Probably worth asking at the end of lecture, I don’t want to interrupt this story :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you need Dog.py saved to your pycharm in order to use the Dog function?</p></i>
+               <p><b>A1:&nbsp;</b> yes, it should be in the same folder as the program making the dog.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you need bark(self) or just ()?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to create a lot of instances of a class with different names (i.e. from Wednesday&#039;s lecture, ball1, ball2... ball50) at once (maybe within a loop) without writing ball1 = Ball() 50 times?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - if you want to refer to it by name, you need to make it explicitly. One way to get around this is by putting them in a list or a dict and refer to by index or key.</p>
+        
+               <p><b>A2:&nbsp;</b> You could have a list of balls.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are both the messages sent and received by the client strings?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Wait, is Facebook primarily written in Python?</p></i>
+               <p><b>A1:&nbsp;</b> Lots of it is, but it’s not *just* Python! The idea is that it could be made with Python, though</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where is SimpleServer.run_server coming from?</p></i>
+               <p><b>A1:&nbsp;</b> There’s a SimpleServer library that’s imported at the top of the file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is SimpleInternet?</p></i>
+               <p><b>A1:&nbsp;</b> A library that’s imported into this program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;SimpleServer.run_server &lt;- do we always use this? is this generalizable beyond this example?</p></i>
+               <p><b>A1:&nbsp;</b> Any example in 106A will use this - other tools have different ways of setting up a server</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you call it response? why cant you just ask to request something to the server</p></i>
+               <p><b>A1:&nbsp;</b> You request something from the server, and it sends you back a response - those are different things - it’s like requests are parameters and the response is a return value</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is the internet address the IP address?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you use any server port? what made chris choose 8000
+?</p></i>
+               <p><b>A1:&nbsp;</b> It’s the ‘default’ one for servers, but you can choose basically any port (some are reserved for other things) and there’s a maximum number but I don’t know what it is :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we need to run it in pycharm as we go, or can we just refresh in the borwser?</p></i>
+               <p><b>A1:&nbsp;</b> Any time the server is changed, you’ll need to restart it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if i search localhost:8000 on my computer right now will it show this site?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - it’s just on Chris’ computer (that’s what localhost means)</p>
+        
+               <p><b>A2:&nbsp;</b> No.  You&#039;d need to run a server on your own computer (at port 8000) for that to work.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do the variables under __init__ apply only when you create the instance? I notice that the hits aren’t going back to 0 (which we don’t want anyway), so is it passing over that initial variable?</p></i>
+               <p><b>A1:&nbsp;</b> The first time the request is made, we increase the count before we print, so we didn’t see the 0</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So to send the command via the link, we put a “/“ first, and if we want to send the parameter, we put a “?” first?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so does the client send a message made up of a dictionary with two keys, and the server prints a list with two strings?</p></i>
+               <p><b>A1:&nbsp;</b> It sends a request, which contains a string command and a dictionary of parameters</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does it mean when people say the server “crashed”?</p></i>
+               <p><b>A1:&nbsp;</b> It just means that the program the server was running had an error and stopped working.  This is often the result of a bad message.</p>
+        
+               <p><b>A2:&nbsp;</b> Mehran answered this in the chat: in short, that the server program crashed</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you send an image over the server if it has to be a string? Are you just sending over the rgb values?</p></i>
+               <p><b>A1:&nbsp;</b> There’s actually a way of converting images to strings by representing their RGB values!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What was the bug??</p></i>
+               <p><b>A1:&nbsp;</b> What was the bug??</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when will assignment 7 be released?</p></i>
+               <p><b>A1:&nbsp;</b> Monday</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What was msg = params[‘msg’] (or something like that)? What does that do?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so json dumps converts strings to dictionaries?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+               <p><b>A2:&nbsp;</b> other way around! variables to strings</p>
+        
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+  </div>
+
+</body>

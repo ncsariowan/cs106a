@@ -1,0 +1,569 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/handouts/diagnosticgrades.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:30:19 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../plugins/prism/prism.js"></script>
+<link href="../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../plugins/probability/gaussian.js"></script>
+<script src="../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div style="height: 20px;"></div>
+        <h1>
+          CS 106A Diagnostic Grades
+        </h1>
+        <hr />
+
+        <div class="alert alert-info">
+          <b>Getting Your Diagnostic Grade:</b> Diagnostic Grades have been
+          released on
+          <a href="https://www.gradescope.com/courses/126989">Gradescope</a>. If
+          you don't see your grade there, please email Brahm as soon as
+          possible.
+        </div>
+
+        <h2>
+          Questions & Solutions
+        </h2>
+        <br />
+        <div class="row">
+          <div class="col-sm text-center">
+            <a href="https://weblogin.stanford.edu/login/?RT=Xt2wyyFmqV07trgI5SXNOF34johhbotl0rjj3+KS0N6aWuwVZLNt7RjJ2otB0l6XwxR2ai1Z4256+OIlQihqMnzkl0Ig2YYKMdMUCnPQImYx/V0jOErpZAkyLPoAlJGn/l/15IK2UwUp7XggKosuC7/HJ4AigY/kb3ZLJY9y4iXPB9poJuUayWxPw+urfIqCXFsH/7OWG4zwQzjD6kSwCC48H2NuqoQdVN6w84cvzdbGefEx/OiSMUUmp8HPyj/bLd29NsVUYeSsJhBYC/GddhcvO0TL5LF1h1EWjPGx+qwe9jm4;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==">
+              <i
+                class="fas fa-file-pdf"
+                aria-hidden="true"
+                style="font-size: 5em; margin-left: 0px;"
+              ></i>
+              <br /><br />
+              <span style="margin-left: 3px;">Diagnostic</span>
+            </a>
+          </div>
+          <div class="col-sm text-center">
+            <a href="https://weblogin.stanford.edu/login/?RT=Xt2wzBDEMiX88umtv6rL/rFjSo4c8DUqurVeYsG4b4X7cvR46usnShOtjl1K5s+HVAaL+hjspiv3wGGH+955NKGLUUIoi6ZgmKlgL+8dOG5pc4GrQP8mAkO4iQNkHTAFQ9Tw+xgsSqXrdRPhJ8REBMyzDH5gRpB5qcqM1+UAYiEOYD1udj1Y6OyyOHHhYaQ36ZQzGVHeZka9YasjipwnkowVw1SXqiwexEjVW4VrxbCq2MBcTPehOQdXNk7Kd7t+hcY+g+qppoDaCqiYXrrJLwKrz7oTyw/eWfMNXMsyNOhE+qs4wKYh1GhiS5RQcusiE+houw==;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==">
+              <i
+                class="fas fa-file-pdf"
+                aria-hidden="true"
+                style="font-size: 5em; margin-left: 0px;"
+              ></i>
+              <br /><br />
+              <span style="margin-left: 3px;">Diagnostic Solutions</span>
+            </a>
+          </div>
+        </div>
+
+        <br />
+
+        <h2>Statistics</h2>
+
+        <p>
+          The median score on the CS 106A Diagnostic was 47/50 and the mean
+          score was 44.5. The standard deviation was 6.49. A full score
+          distribution is reproduced below:
+        </p>
+
+        <img
+          src="../img/handouts/diagnosticscoredistribution.png"
+          alt="Score Distribution for Diagnostic"
+          style="width: 80%; margin: 0 auto;"
+          class="img-fluid mx-auto d-block"
+        />
+        <br /><br />
+
+        <p>
+          While the most important signal the diagnostic provides is on your own
+          understanding of the material, we provide you these statistics so that
+          you have a sense of where you might be expected to be at this point.
+          Given this, perhaps the most important piece of information here is
+          the median score: if you had a result that was around or above the
+          median, you are likely where we expect most students to be at this
+          point in the class. If your score is significantly lower than the
+          median, that might be a sign that it's worth recosidering your
+          strategy in the class, and we'll discuss how we can help you with that
+          later in this handout.
+        </p>
+
+        <h2>
+          Regrade Requests
+        </h2>
+        <p>
+          We try to grade as consistently as possible, but we are human and we
+          might make mistakes. If you feel like one of your problems was
+          misgraded, please file a regrade request on Gradescope between
+          <b>Wednesday May 6th at 12pm</b> and <b>Sunday May 10th at 12pm</b>.
+          Note that this is the <b>only</b> way to have your regrade request
+          considered; in particular, asking your section leader to take a quick
+          look to see whether a problem was misgraded isn't a way of short
+          circuiting this process. We want you to have the credit you deserve,
+          but filing a formal request helps us make sure that your request goes
+          to the right person.
+        </p>
+        <p>
+          Note that we graded your diagnostics according to a clear rubric, so
+          we won't be considering regrade requests that simply claim a
+          particular deduction is too harsh, but rather those that argue that a
+          particular criteria was misapplied to a solution.
+        </p>
+        <br />
+        <h2>Interpreting your Diagnostic Grade</h2>
+
+        <p>
+          In general, we were very pleased with how students did in the
+          diagnostic. It had some tricky questions on it and as a whole, the
+          results indicate that you all have a very solid grasp on the most
+          important takeaways of the last few weeks.
+        </p>
+
+        <p>
+          That said, the primary goal of the diagnostic was to provide you with
+          a perspective on where you were in the class, as well as what offer
+          feedback on what to work towards moving forwards. With that in mind,
+          we wanted to provide some general guidelines and things to think about
+          as you go over your solutions and perhaps your strategy:
+        </p>
+
+        <h3>I did great on the diagnostic! What does this mean?</h3>
+
+        <p>
+          Congratulations! Doing well on the diagnostic is an indication that
+          you're comfortable with the tools you've learned about thus far in the
+          class.
+        </p>
+
+        <p>
+          With the only formal assessment in the class out of the way, you now
+          have the opportunity to sink your teeth into applying this
+          understanding to a variety of exciting contexts. The assignments
+          coming up will cover a variety of such applications, and we encourage
+          you to think about ways you could extend their functionality to
+          practice what you know. Stopping by office hours to discuss parts of
+          the class that interest you is also a really good way of developing
+          your mastery of course material.
+        </p>
+
+        <p>
+          Keep in mind that you should continue to make sure that your
+          understanding of course material has a solid foundation; it's easy to
+          become complacent and that can present a challenge in the later part
+          of the course.
+        </p>
+
+        <h3>I did okay on the diagnostic! What does this mean?</h3>
+
+        <p>
+          If you scored around or slightly below the median score on the
+          diagnostic, you're where we expect you to be - you likely have at
+          least a decent sense of how the material fits together, although there
+          We'd strongly recommend you take a look at the things you missed in
+          your solutions. Often, these are simple conceptual issues or cases you
+          forgot to consider, and while these are easy fixes, it's important
+          that you start instituting them early to make your life easier in the
+          long run.
+        </p>
+
+        <p>
+          Once you've identified the areas that you're a little shaky on, start
+          thinking about ways you might reinforce your understanding. Consider
+          stopping by office hours, the Conceptual LaIR, posting on Ed, or going
+          through the
+          <a href="../pythonreader/index.html" target="_blank">Python Reader</a
+          >. Additionally, note that all the resources discussed in the next
+          section are also available to you.
+        </p>
+
+        <h3>
+          I didn't do as well as I wanted to on the diagnostic. What does this
+          mean?
+        </h3>
+
+        <p>
+          Computer Science is a hard thing to learn. For most people taking CS
+          106A (including Brahm!), it's the first time they are ever exposed to
+          a subject that requires this mode of thought and it's totally
+          understandable to take some time adjusting to it. We know that this
+          class asks a lot of you, and we want you to know that this diagnostic
+          is not a statement of your potential as a Computer Scientist, or even
+          of your potential to succeed in this class. We believe in you!
+        </p>
+
+        <p>
+          That said, now might be a good time to revisit your approach to the
+          class, and we're providing a few resources for you here:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              We are going to be holding some additional help sessions next week
+              reviewing the material from earlier this quarter. You can find the
+              times, zoom links and descriptions of these sessions on the
+              <a
+                href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==#diagnostic-review-sessions"
+                >Zoom Information page</a
+              >.
+            </p>
+          </li>
+          <li>
+            Stopping by Mehran, Chris or Brahm's individual office hours is a
+            great opportunity to discuss your specific strategy and how to
+            proceed with the class moving forward. Your section leader is also a
+            great person to have this conversation with. If you're unable to
+            make our regularly-scheduled office hours, feel free to shoot us an
+            email to arrange an alternate time to talk.
+          </li>
+        </ul>
+
+        <p>
+          We know it can be discouraging to see a score on an assessment that
+          isn't as high as you'd want it to be, but keep in mind that if you're
+          able to come out of this with an idea of how to approach the class,
+          the diagnostic has done its job. You have plenty of opportunities to
+          demonstrate your understanding of the material as the class
+          progresses: the diagnostic is 15% of your grade, and the assignments
+          in the class constitute 75% of your grade, so each assignment serves
+          as another diagnostic, or chance to show us what you can do!
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12"></div>
+      <div class="myTocContainer" style="position: absolute;">
+        <div
+          class="position-fixed justify-content-center d-flex flex-column"
+          style="
+            height: 100vh;
+            width: 185px;
+            right: 0px;
+            top: 0px;
+            margin-top: -20px;
+          "
+        >
+          <nav id="toc" data-toggle="toc" class="myToc"></nav>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

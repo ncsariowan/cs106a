@@ -1,0 +1,549 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/21-Memory/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:01:14 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+
+
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="pageHeader">
+          <br />
+          <h1>
+            Lecture 21: Memory
+          </h1>
+          <p class="subtleHeading">
+            May 27th, 2020
+          </p>
+
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <h3>Lecture Materials </h3>
+    <p>
+    <div class="row">
+      <div class="col-sm-2"><a href="21-Memory.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Slides</span>
+        </a>
+      </div>
+      <div class="col-sm-2">
+        <a href="Lecture21.zip"><i class="fas fa-code" aria-hidden="true"
+            style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:6px">Lecture Code</span>
+        </a>
+      </div>
+    </div>
+    </p>
+
+    <div class="row">
+      <div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;How are we doing today friends!</p></i>
+               <p><b>A1:&nbsp;</b> It’s too hot here and my laptop is freaking out!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will we get some practice with object-oriented-programming with our last assignment?</p></i>
+               <p><b>A1:&nbsp;</b> Yep - we haven’t decided whether it’ll be mandatory or an extension but it’ll likely be there!</p>
+        
+               <p><b>A2:&nbsp;</b> You will certainly get experience with building a larger scale program.  You&#039;re going to make a search engine!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is variable type and class the same thing?</p></i>
+               <p><b>A1:&nbsp;</b> A class defines a new variable type, but some already come built into Python, like ints and lists!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is in this slide the function &quot;bark()&quot; an example of a method?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;wouldn&#039;t you call bark(simba) instead of simba.bark() ?</p></i>
+               <p><b>A1:&nbsp;</b> Python fills in the &quot;self&quot; parameter with the object that the method is called on.</p>
+        
+               <p><b>A2:&nbsp;</b> Nope, because it’s a method of the Dog class. It’s just like doing list.append() rather than append(list)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Variables = instances?</p></i>
+               <p><b>A1:&nbsp;</b> Instances of a class are stored in variables</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you use other classes while defining a new class? Say if I want to define ball, can I use tkinter in that definition?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;They can&#039;t all use the same variable for oval?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, because they’re separate ovals on the screen</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;building off of Bianca’s question… having trouble distinguishing instances and variables</p></i>
+               <p><b>A1:&nbsp;</b> Instances are objects that are stored in a variable.  So the variable essentially refers to the object (which is an instance of a class)</p>
+        
+               <p><b>A2:&nbsp;</b> Instances are actual objects defined using the blueprint that a class provides. Variables just store values (which might be instances of a class)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I have been working on an extension of this exact problem for a few weeks now, where the balls represent molecules. I have used lists within lists, but as the number of &#039;molecules&#039; increases over 100, the animation becomes kind of chunky (slow). I am wondering if there is a particular collection/data structure which will allow the animation to run in live time faster than others?</p></i>
+               <p><b>A1:&nbsp;</b> That’s probably not a data structures problem so much as it is just a lot of balls need to be moved before you update the canvas, so it looks a little stuttered. If you’re interested in more sophisticated solutions to this issue, feel free to post on Ed!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so you can have 10 dictionaries in the list balls, all with the same name “ball” ?</p></i>
+               <p><b>A1:&nbsp;</b> It’s just a list of 10 dictionary addresses - none of them are called ‘ball’ in the list</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;The 5 and 15 is locking the angle the balls are always moving at?</p></i>
+               <p><b>A1:&nbsp;</b> It’s a random range between 5 and 15, but yes, those are fixed</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do the balls in the list stay different if they’re named the same?</p></i>
+               <p><b>A1:&nbsp;</b> The name is just how they’re referred to in the for loop - remember that they’re stored at different addresses, and those addresses are stored in the list</p>
+        
+               <p><b>A2:&nbsp;</b> Items in lists aren&#039;t named.  The list isn&#039;t a dictionary.  The list is just storing a bunch of dictionaries.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the .update method for ball and canvas different?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, we’ll show it to you in a sec</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so the create.ball is a new class pass from this new program to the main one, right?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So there’s no reason to import tkinter to Ball.py?</p></i>
+               <p><b>A1:&nbsp;</b> You don&#039;t need to import tkinter in Ball since you&#039;re not directly using functions from tkinter.  The functions you are calling are through the canvas.</p>
+        
+               <p><b>A2:&nbsp;</b> Nope, because the canvas has an update method</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so python can read from different files at the same time without having to be in the same “window”?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, Python doesn’t care what you have open in PyCharm</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it possible to define your class in your primary program file? i can see how it would be bad style but would it also malfunction?</p></i>
+               <p><b>A1:&nbsp;</b> You can do that, but it’s not ideal style</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how is each ball variable differentiated?</p></i>
+               <p><b>A1:&nbsp;</b> Each ball is stored at a different location in your computer’s memory</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so calling ball.etc calls that file?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so classes are like a more robust function instead of decompsition within a program you decompose across multiple .py files</p></i>
+               <p><b>A1:&nbsp;</b> Amongst other advantages, yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So when you say simba = Dog(), you’re just saying that the simba variable is the dog class?</p></i>
+               <p><b>A1:&nbsp;</b> An instance of the dog class, yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does creating juno after simba not overwrite the previous simba dog?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, it’s just like making two lists</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;but all the many dogs created just could be called simba and juno, right? or how does it work with for loops</p></i>
+               <p><b>A1:&nbsp;</b> The name is just how they’re referred to in the for loop - remember that they’re stored at different addresses, and those addresses are stored in the lis</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if you did want to make that many dogs with the for loop what would the body look like? like how do you make a different variable for each loop</p></i>
+               <p><b>A1:&nbsp;</b> dogs = [] for i in range(400):     dog = Dog()     dogs.append(dog)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don’t you have to define times_barked as a dictionary?</p></i>
+               <p><b>A1:&nbsp;</b> Python sets up the dictionary to keep track of attributes (instance variables) of an object</p>
+        
+               <p><b>A2:&nbsp;</b> It’s just an instance variable int inside the class - because it’s a count, it can just be an int and not a dictionary. The __dict__ method makes that dictionary for you</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is simba or times barked the instance variable? And what do you call whatever (simba or times barked) is not the instance variable?</p></i>
+               <p><b>A1:&nbsp;</b> Simba is the instance, and times_barked is the instance variable!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Wasn’t the data for immutable types stored in stack?</p></i>
+               <p><b>A1:&nbsp;</b> The reference (memory address) is stored in the stack.  The value is stored in the heap.</p>
+        
+               <p><b>A2:&nbsp;</b> That was a simplification earlier in the quarter; as a matter of fact, in Python, only references are stored on the stack</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;weird question: why wouldn&#039;t the references (numbers) for x,y,z be sequential?</p></i>
+               <p><b>A1:&nbsp;</b> Not a weird question at all! The way your operating system allocates memory is not necessarily sequential (or perhaps another program grabbed the memory address immediately after)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does that reference (456…) lives in the ram memory?</p></i>
+               <p><b>A1:&nbsp;</b> All of this is in RAM!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is it 0?  because it is a new variable?</p></i>
+               <p><b>A1:&nbsp;</b> The 0 was the reference count, which was how many variables refer to that int. When the 6 is created, no variables are referring to it yet so it has a refcount of 0.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how is using URLs efficient? it seems like you need space for these long tags and space for the variable itself, thats like double</p></i>
+               <p><b>A1:&nbsp;</b> The answer is it’s not :) Python variables take up a bunch of space, which is one of the reasons that for systems with very little memory, Python isn’t used very frequently. Python errs on the side of making life easier for the programmer</p>
+        
+               <p><b>A2:&nbsp;</b> It can be inefficient.  But Python is more focused on ease of use than efficiency.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;sorry, I should have been more specific. if I want to see the attributes of ball #5, what variable name would i use to find ball #5?</p></i>
+               <p><b>A1:&nbsp;</b> balls[4]</p>
+        
+               <p><b>A2:&nbsp;</b> If the balls are in a list called &quot;balls&quot;, you&#039;d refer to balls[4]</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are reference URLs created randomly, like how does python decide what an address is</p></i>
+               <p><b>A1:&nbsp;</b> Python asks your OS for a memory location and your OS gives you back a memory address with enough space for whatever you’re trying to make?</p>
+        
+               <p><b>A2:&nbsp;</b> There is a memory manager that determines where there is &quot;free&quot; memory to be used.  The memory manager gives Python memory addresses that can be used to store new values.</p>
+        
+               <p><b>A3:&nbsp;</b> That was supposed to be an ! at the end :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Whats an OS?</p></i>
+               <p><b>A1:&nbsp;</b> Operating System!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the __dict__ function with the simba example, what is the ‘times barked’ and ‘2’? Are they the value and ref count?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do functions also have special “values” that can be referenced?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+  </div>
+
+</body>

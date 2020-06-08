@@ -1,0 +1,1000 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/handouts/objectsandclasses.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:32:06 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../plugins/prism/prism.js"></script>
+<link href="../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../plugins/probability/gaussian.js"></script>
+<script src="../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- add after bootstrap.min.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div style="height: 20px;"></div>
+        <h1>
+          Objects & Classes
+        </h1>
+        <p class="subtleHeading">
+          May 25th, 2020
+        </p>
+        <hr />
+        <p>
+          <i>
+            Written by Brahm Capoor
+          </i>
+        </p>
+
+        <p>
+          This handout is intended to provide an overview of object-oriented
+          programming in Python. For another approach to the material, check out
+          <a href="../lectures/20-ClassesObjects/index.html"
+            >the lecture slides and code.</a
+          >
+        </p>
+
+        <h2>Programming Paradigms</h2>
+
+        <p>
+          Thus far in CS 106A, you have been employing a form of programming
+          known as <i>imperative</i> programming, in which the programmer
+          directly invokes commands which modify the state of the program.
+          Examples of such commands are calling functions you've written, as
+          well as the use of loops, if statements and variables.
+        </p>
+        <p>
+          Another incredibly common programming paradigm is known as
+          <i>Object Oriented Programming</i> (OOP), in which a programmer
+          defines <i>objects</i> which are characterized by their properties and
+          behaviours, and programs consist mostly of interactions between these
+          objects.
+        </p>
+        <p>
+          Python allows for programmer to adopt many paradigms; however,
+          imperative programming and Object-Oriented Programming are two of the
+          most commonly used.
+        </p>
+
+        <h2>Overview of Object Oriented Programming</h2>
+
+        <p>
+          Object Oriented Programming is built upon the idea of <i>classes</i>,
+          which act like blueprints for objects that need to be represented in a
+          program. Each class defines a new <i>type</i> to be used in our
+          program, just like we can use the <code>int</code>,
+          <code>SimpleImage</code> and <code>dict</code> types. Whenever we
+          declare a variable of this new type, we are making an object that is
+          an <i>instance</i> of the class (formally, making this variable is
+          known as <i>instantiating</i> the class). Just as with other variable
+          types, a programmer can make as many objects, or instances of a class,
+          as they need to.
+        </p>
+        <p>
+          Properties in a class are represented by what we refer to as
+          <i>instance variables</i>, and behaviours by <i>methods</i>.
+        </p>
+        <p>
+          In the abstract, this seems a far reach from how you're used to
+          programming, but it turns out that you've been taking advantage of
+          classes throughout your work in CS 106A.
+        </p>
+        <ul>
+          <li>
+            <code>SimpleImage</code> is a class that represents a digital image,
+            with properties like its pixels and dimensions and behaviours like
+            the ability to set and get pixels. Equally, pixels come from the
+            <code>Pixel</code> class, which has as attributes a red, green and
+            blue component.
+          </li>
+          <li>
+            The canvases you have worked with in graphical projects are
+            instantiations of the <code>Canvas</code> class which represent a
+            drawable canvas, with properties such as its dimensions and drawn
+            objects, and behaviours such as moving the objects on it.
+          </li>
+          <li>
+            Lists are objects of the <code>list</code> class that represent
+            ordered lists, with properties such as length, and behaviours such
+            as appending to the list, extending the list and popping from the
+            list.
+          </li>
+        </ul>
+        <p>
+          Indeed, other than integers, floating-point numbers and booleans, most
+          of the variable types you have worked with in CS 106A have been
+          objects of a particular class. Thinking about what properties and
+          behaviours they have is a very useful exercise.
+        </p>
+
+        <h2>Advantages of Object-Oriented Programming</h2>
+        <p>
+          Representing information through classes has three related benefits:
+        </p>
+        <ul>
+          <li>
+            <i>Representing conceptual entities</i>: Classes allow a programmer
+            the ability to represent complex entities for the purposes of
+            <i>abstraction</i>. For example, objects of the
+            <code>SimpleImage</code> class can encapsulate tens of thousands of
+            pixels without a programmer having to explicitly maintain that many
+            Pixel variables.
+          </li>
+
+          <li>
+            <i>Facilitating shared information</i>: Classes allow a programmer
+            to share information between a group of related functions. For
+            example, the <code>pop</code>, <code>get</code>, <code>keys</code>,
+            <code>values</code> and <code>items</code> methods in a dictionary
+            all need to know what the elements of the dictionary are, but this
+            bookkeeping is taken care of us by the <code>dict</code> class.
+            Without the <code>dict</code> class, we’d have to write each of
+            those methods as functions and pass in a dictionary object to those
+            functions, leading to a lot of repeated code across our different
+            programs.
+          </li>
+
+          <li>
+            <i>The ability to create several instances of a class</i>: Since
+            we're making a new variable type, we can make as many objects of
+            that type as we like. For example, it's easy for us to make many
+            <code>list</code> objects to use in our BabyNames program.
+          </li>
+        </ul>
+
+        <h2>Defining a class</h2>
+        <p>
+          Suppose we are writing a program much like Axess to manage information
+          about students enrolled at a university. While it would be useful to
+          reason about students as separate conceptual entities, Python does not
+          define a <code>Student</code> type for us. Therefore, we define the
+          class in a file called <code>student.py</code> and then start making
+          variables of type <code>Student</code> in another file like
+          <code>axess.py</code>, like so:
+        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-muted">student.py</h4>
+            <hr />
+            <pre class="lang-python">
+                <code>
+class Student:
+    pass
+
+
+
+
+
+
+
+                </code>
+            </pre>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">axess.py</h4>
+            <hr />
+            <pre class="lang-python">
+              <code>
+from student import Student 
+
+def main():
+    student_1 = Student()
+    student_2 = Student()
+    student_3 = Student()
+
+if __name__ == "__main__":
+    main()
+              </code>
+            </pre>
+          </div>
+        </div>
+        <br />
+        <p>
+          This code is short, but dense. There are several important things to
+          note:
+        </p>
+        <ul>
+          <li>
+            The <code>Student</code> class is defined in
+            <code>student.py</code>. As a stylistic convention classes are named
+            in <code>UpperCamelCase</code>, and the files they are defined in
+            have the same name in lowercase.
+          </li>
+          <li>
+            In <code>student.py</code>, we define a new type with the
+            <code>class Student</code> statement, which indicates to Python that
+            we are defining a new type. For now, we leave the implementation of
+            the class blank, leaving in the <code>pass</code> keyword as a
+            parameter
+          </li>
+          <li>
+            The purpose of <code>student.py</code> is simply to define the
+            <code>Student</code> class. Thus, it doesn't need a
+            <code>main</code> function.
+          </li>
+          <li>
+            In <code>axess.py</code>, we make our new <code>Student</code> class
+            available by including the line
+            <code>from student import Student</code>, which <i>imports</i> the
+            <code>Student</code> class from <code>student.py</code>. Notice that
+            the line of code does not include the <code>.py</code> extension.
+          </li>
+          <li>
+            Once the <code>Student</code> class has been imported in
+            <code>axess.py</code>, we can make variables of type
+            <code>Student</code> as we do with <code>student_1</code>,
+            <code>student_2</code> and <code>student_3</code>. This is exactly
+            akin to making multiple <code>SimpleImage</code> variables:
+            <code>student_1</code>, <code>student_2</code> and
+            <code>student_3</code> are entirely separate and unaware of each
+            other's existence. In our computer's memory, each variable is a
+            reference to a new <code>Student</code> object.
+          </li>
+          <img
+            src="../img/handouts/classesandobjects/empty_students.png"
+            alt="A memory diagram for the axess program above; student_1, student_2 and student_3 are each pointing at a separate empty Student object"
+            style="width: 60%; margin: 0 auto;"
+            class="img-fluid mx-auto d-block"
+          />
+        </ul>
+
+        <h2>Giving our class properties</h2>
+        <p>
+          Whilst being able to define and instantiate our own classes is a step
+          in the right direction, it only really becomes a powerful tool when we
+          can imbue our classes with properties and ways of interacting with
+          those properties. For our purposes, let us assume that every
+          <code>Student</code> has a name, an ID number and a number of
+          completed units. In actuality, such an object would likely contain
+          many other properties as well, but this subset is sufficient for our
+          purposes.
+        </p>
+        <p>
+          Properties are represented by <i>instance variables</i> in a class.
+          Instance variables are defined like so in a class:
+        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-muted">student.py</h4>
+            <hr />
+            <pre class="lang-python">
+                    <code>
+class Student:
+    
+    def __init__(self):
+        self.name = ""
+        self.id = 0
+        self.num_units = 0
+
+
+
+
+
+
+
+                    </code>
+                </pre>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">axess.py</h4>
+            <hr />
+            <pre class="lang-python">
+                <code>
+from student import Student 
+
+def main():
+    student_1 = Student()
+    student_2 = Student()
+    student_3 = Student()
+    
+    student_1.name = "Brahm"
+    student_2.name = "Mehran"
+    print("Student 1's name is " + student_1.name)
+
+if __name__ == "__main__":
+    main()
+                </code>
+                </pre>
+          </div>
+        </div>
+        <br />
+        <p>
+          Yet again, this code is concise but dense. The key features are
+          outlined below:
+        </p>
+        <ul>
+          <li>
+            A new <i>method</i> (which is the term for a function defined inside
+            a class) <code>__init__</code> is defined inside the
+            <code>Student</code> class. This method is known as the
+            <i>constructor</i> for the <code>Student</code> class, and its job
+            is to set up the properties of a particular Student object, encoding
+            those properties as <i>instance variables</i>. The constructor
+            accepts a parameter called <code>self</code>, which allows us to
+            refer to the specific instance of the object being created (indeed,
+            every method in a class will have a <code>self</code> parameter).
+          </li>
+          <li>
+            <p>
+              Inside the class constructor, we initialize each of the instance
+              variables for the object being constructed. Instance variables are
+              named as such because they are variables specific to an
+              <i>instance</i> of a class: just as the pixels or dimensions of
+              two <code>SimpleImage</code>s have no relationship, the instance
+              variables of separate <code>Student</code> objects will be
+              unrelated. An instance variable is defined just like any variable
+              in Python, except the name of the variable is prefaced by
+              <code>self.</code> to inidcate that we are referring the the
+              instance variable of the object being constructed.
+            </p>
+            <p>
+              In this particular case, we define three instance variables for
+              the <code>Student</code> class: <code>name</code>,
+              <code>id</code> and <code>num_units</code>. The first is
+              initialized to a blank string and the next two are initialized to
+              <code>0</code>.
+            </p>
+          </li>
+          <li>
+            In <code>axess.py</code>, when we make a student variable by calling
+            <code>Student()</code>, we are implicitly calling the constructor
+            for the <code>Student</code> class. What this means is that each of
+            <code>student_1</code>, <code>student_2</code> and
+            <code>student_3</code> will have their own sets of instance
+            variables, which can be modified separately. As a result, we can set
+            instance variables just as you might have set color components in a
+            pixel, and as we do in the line that says
+            <code>student_1.name = "Brahm"</code>. This line has the effect of
+            modifying the <code>name</code> instance variable for the
+            <code>student_1</code> object. Thus, running
+            <code>axess.py</code> has this output:
+          </li>
+          <pre class="text">
+            <code>
+$ python3 axess.py 
+Student 1's name is Brahm
+            </code>
+          </pre>
+          <li>
+            Now that each of our <code>Student</code> objects has instance
+            variables, our computer's memory looks like this before the
+            <code>main</code>
+            function ends:
+          </li>
+          <img
+            src="../img/handouts/classesandobjects/explicit_init.png"
+            alt="A memory diagram for the axess program above; student_1, student_2 and student_3 are each pointing at a separate Student object with name, id and num_units fields. For student_1, name is Brahm and for student 2, name is Mehran. All students have id and num_units of 0"
+            style="width: 60%; margin: 0 auto;"
+            class="img-fluid mx-auto d-block"
+          />
+        </ul>
+
+        <h3>Parameters in the constructor</h3>
+        <p>
+          In the previous example, the constructor for the
+          <code>Student</code> object initialized each of the instance variables
+          without outside input. However, a programmer might wish to specify the
+          name and ID number of the student at the time that the
+          <code>Student</code> object is created. In order to do this, we can
+          modify the constructor for the <code>Student</code> class like so:
+        </p>
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-muted">student.py</h4>
+            <hr />
+            <pre class="lang-python">
+                    <code>
+class Student:
+    
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+        self.num_units = 0
+
+
+
+
+
+
+
+                    </code>
+                </pre>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">axess.py</h4>
+            <hr />
+            <pre class="lang-python">
+                <code>
+from student import Student 
+
+def main():
+    student_1 = Student("Brahm", 42)
+    student_2 = Student("Mehran", 1)
+    student_3 = Student("Chris", 25)
+    
+
+    print("Student 1's name is " + student_1.name)
+
+    
+if __name__ == "__main__":
+    main()
+              </code>
+            </pre>
+          </div>
+        </div>
+        <br />
+        <p>
+          Note that the <code>__init__</code> method in the
+          <code>Student</code> class now accepts a <code>name</code> and
+          <code>id</code> parameter in addition to <code>self</code>. In the
+          body of the constructor, the <code>name</code> and <code>id</code>
+          <i>instance</i> variables are set to be equal to the values of the
+          <i>parameters</i> passed into the constructor.
+        </p>
+        <p>
+          When constructing the object in <code>axess.py</code>, we need to
+          supply values for these parameters (except <code>self</code>, which
+          Python takes care of). <code>student_1</code> is created with a name
+          of <code>"Brahm"</code> and an id of <code>42</code>,
+          <code>student_2</code> with a name of <code>"Mehran"</code> and an id
+          of <code>1</code>, and <code>student_3</code> with a name of
+          <code>"Chris"</code> and an id of <code>25</code>. As a result, we no
+          longer need to manually set the instance variables in
+          <code>axess.py</code> but rather allow the constructor to take care of
+          that for us.
+        </p>
+        <p>
+          Note finally that values for all the instance variables in the class
+          do not need to be provided as parameters to the constructor. For
+          example, the designer of the class can assert that every student
+          begins their Stanford career with 0 units, and so the
+          <code>num_units</code> instance variable can be set to
+          <code>0</code> in the constructor without need for a parameter.
+        </p>
+        <p>
+          Running <code>axess.py</code> in this case, because the constructor
+          sets up the instance variables, produces the same output:
+        </p>
+        <pre class="text">
+            <code>
+$ python3 axess.py 
+Student 1's name is Brahm
+            </code>
+        </pre>
+        <p>
+          The memory of our computer looks like this before the program ends:
+        </p>
+        <img
+          src="../img/handouts/classesandobjects/init_in_constructor.png"
+          alt="A memory diagram for the axess program above; student_1, student_2 and student_3 are each pointing at a separate Student object with name, id and num_units fields. student_1 has name Brahm and id 42. student_2 has name Mehran and id 1. student_3 has name Chris and id 25."
+          style="width: 60%; margin: 0 auto;"
+          class="img-fluid mx-auto d-block"
+        />
+
+        <h2>Adding Behaviours to a class</h2>
+        <p>
+          With the introduction of instance variables to our class, we now have
+          a new variable type that successfully encapsulates other, more atomic
+          variable types into a larger conceptual entity that we can reason
+          about. However, while our <code>Student</code> objects now have
+          properties, they become even more useful if we give them
+          <i>behaviours</i>, which we can do by introducing new methods to our
+          class.
+        </p>
+        <p>
+          For instance, a student at Stanford might have taken some number of
+          classes in high school that qualify them of units at Stanford, up to a
+          limit of 45 units. As we consider how to implement a method for this
+          ability, it is incredibly helpful to assess how such behaviour would
+          affect the <i>properties</i>, or instance variables, of the class. In
+          this case, it is fairly clear that the instance variable in question
+          is <code>num_units</code>, which is set to the smaller of 45 or the
+          number of units the student took in high school. This logic can be
+          implemented as follows:
+        </p>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-muted">student.py</h4>
+            <hr />
+            <pre class="lang-python">
+                    <code>
+class Student:
+    
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+        self.num_units = 0
+
+
+    def set_initial_units(self, num_units):
+        if num_units > 45:
+            self.num_units = 45
+        else:
+            self.num_units = num_units
+
+                    </code>
+                </pre>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">axess.py</h4>
+            <hr />
+            <pre class="lang-python">
+                <code>
+from student import Student 
+
+def main():
+    student_1 = Student("Brahm", 42)
+    student_2 = Student("Mehran", 1)
+    
+    student_1.set_initial_units(21)
+    student_2.set_initial_units(60)
+
+    print("Student 1 units: " + str(student_1.num_units))
+    print("Student 2 units: " + str(student_2.num_units))
+
+if __name__ == "__main__":
+    main()
+              </code>
+            </pre>
+          </div>
+        </div>
+        <br />
+        <p>There are several points of interest in this code:</p>
+        <ul>
+          <li>
+            <p>
+              We defined a new method in the <code>Student</code> class called
+              <code>set_initial_units</code> which accepts as parameters
+              <code>self</code> and an integer <code>num_units</code> and whose
+              responsibility is to modify the <code>num_units</code> instance
+              variable of the <code>Student</code> class.
+            </p>
+            <p>
+              Defining a method for this-rather than just directly setting the
+              <code>num_units</code> instance variable in
+              <code>axess.py</code>-is advantages because it allows us to
+              perform validation of the new number of units to ensure it is
+              within a specified range. Additionally, if there were other
+              instance variables which depended on the number of units the
+              student had, they could be updated in tandem with the
+              <code>num_units</code> instance variable.
+            </p>
+          </li>
+          <li>
+            Now, in <code>axess.py</code>, we can call
+            <code>set_initial_units</code> for both our
+            <code>student_1</code> and <code>student_2</code> objects with
+            different parameters (note that we don't need to pass in a parameter
+            for <code>self</code>), and each object's instance variables will be
+            updated accordingly. Running <code>axess.py</code> produces this
+            output:
+          </li>
+          <pre class="text">
+              <code>
+$ python3 axess.py 
+Student 1 units: 21
+Student 2 units: 60
+              </code>
+          </pre>
+        </ul>
+
+        <p>
+          We might also wish for a student object to be able to determine
+          whether the student can graduate, where graduation is allowed as long
+          as the student has at least 180 units. We can define a function like
+          so:
+        </p>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <h4 class="text-muted">student.py</h4>
+            <hr />
+            <pre class="lang-python">
+                    <code>
+UNITS_TO_GRADUATE = 180
+
+class Student:
+    
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+        self.num_units = 0
+
+    # other methods defined here
+    
+    def can_graduate(self):  
+        return self.num_units >= 180
+        
+                </code>
+            </pre>
+          </div>
+          <div class="col-sm-6">
+            <h4 class="text-muted">axess.py</h4>
+            <hr />
+            <pre class="lang-python">
+                <code>
+from student import Student 
+
+def main():
+    student_1 = Student("Brahm", 42)
+    
+    student_1.set_initial_units(21)
+
+    if student_1.can_graduate():
+        print("Student can graduate!")
+    else:
+        print("Not yet!")
+
+if __name__ == "__main__":
+    main()
+              </code>
+            </pre>
+          </div>
+        </div>
+        <br />
+        <p>
+          The
+          <code>can_graduate</code> method takes in no parameters other than
+          <code>self</code>, and returns whether or not the
+          <code>num_units</code> instance variable is greater than a constant
+          <code>NUM_UNITS_TO_GRADUATE</code>, defined in
+          <code>student.py</code>.
+        </p>
+        <p>Running <code>axess.py</code> produces this output:</p>
+        <pre class="text">
+            <code>
+$ python3 axess.py 
+Not yet!
+            </code>
+        </pre>
+      </div>
+
+      <h2>A note on style</h2>
+      <p>
+        As soon as you instantiate a <code>Student</code> object, you are free
+        to access each of its instance variables and modify them however you
+        wish. However, in order to emphasize the abstraction that a class
+        provides, a common practice is to define <i>getter</i> and
+        <i>setter</i> methods for each instance variable. A <i>getter</i> method
+        would be a method like <code>get_name(self)</code>, which would simply
+        return the <i>name</i> instance variable, and a setter method would be
+        like the <code>set_initial_units</code> method defined above.
+      </p>
+
+      <div class="myTocContainer" style="position: absolute;">
+        <div
+          class="position-fixed justify-content-center d-flex flex-column"
+          style="
+            height: 100vh;
+            width: 185px;
+            right: 0px;
+            top: 0px;
+            margin-top: -20px;
+          "
+        >
+          <nav id="toc" data-toggle="toc" class="myToc"></nav>
+        </div>
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

@@ -1,0 +1,662 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/11-Animation/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:48:20 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 11: Animation
+					</h1>
+					<p class="subtleHeading">
+						May 1st, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="11-Animation.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture11.zip"><i class="fas fa-code" aria-hidden="true"
+							style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="../../handouts/graphics-reference.html">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:9px">Graphics Reference</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will it be recorded? I have class then…</p></i>
+               <p><b>A1:&nbsp;</b> We’re waiting to hear from Pixar as to whether or not we can record it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why is canvas height capitalized</p></i>
+               <p><b>A1:&nbsp;</b> It’s a constant</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What happens if you put in a pixel which is not an integer? For example is SQUARE_SIZE = 15; 15 / 2 = 7.5000</p></i>
+               <p><b>A1:&nbsp;</b> Good question.  I don’t remember from the top of my head - try it out!</p>
+        
+               <p><b>A2:&nbsp;</b> What happens if you put in a pixel which is not an integer? For example is SQUARE_SIZE = 15; 15 / 2 = 7.5000</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is SQUARE_SIZE a constant values defined above main?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When I try to move a square or brick on my screen by moving x,y values I have as argumetns, it changes the dimensions as opposed to the location. Might this be because the function parameters need to be altered?</p></i>
+               <p><b>A1:&nbsp;</b> Which function are you calling?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if you named the canvas something other than ‘canvas’ could you still use canvas.create_rectangle or how would you adjust accordingly?</p></i>
+               <p><b>A1:&nbsp;</b> If the canvas variable is called mycanvas, you’d call mycanvas.create_rectangle</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is SQUARE_SIZE basically the area of the square so width * height?</p></i>
+               <p><b>A1:&nbsp;</b> It’s the length of the square’s side</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;i’m calling a function I wrote for the def create_brick task in pyramid</p></i>
+               <p><b>A1:&nbsp;</b> Well, it depends on how you ultimately use your parameters. I’m guessing you’re passing them into the wrong place.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do computers count time?</p></i>
+               <p><b>A1:&nbsp;</b> They have an internal clock.  You can wait at a resolution of milliseconds.</p>
+        
+               <p><b>A2:&nbsp;</b> Stop by OH if you want to find out how this works on the level of hardware and software!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the dealy in time.sleep counts in seconds?</p></i>
+               <p><b>A1:&nbsp;</b> yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;time.sleep(DELAY) is DELAY in seconds?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+               <p><b>A2:&nbsp;</b> yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;or how do we pick the measure</p></i>
+               <p><b>A1:&nbsp;</b> Decimal places!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are end_y and start_y functions or variables?</p></i>
+               <p><b>A1:&nbsp;</b> Variables</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do we decide to pass 1/50 t0 sleep()?</p></i>
+               <p><b>A1:&nbsp;</b> It’s how long you want between frames - 1/50 means 50 frames a second</p>
+        
+               <p><b>A2:&nbsp;</b> It&#039;s a reasonable amount of time between frames in the animation.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Wouldn’t we still get the same result/animation without time.sleep?</p></i>
+               <p><b>A1:&nbsp;</b> Kind of, but things would move so quickly you wouldn’t see them at all.</p>
+        
+               <p><b>A2:&nbsp;</b> All the moves would happen so fast, you couldn&#039;t see it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When we say canvas.move, is canvas the name we gave the canvas? If we called the canvas “cat” for example, would we write cat.move?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;But isn’t it gonna go forever? with the while True</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Did the square move off the canvas?(is it not bounded by it)</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when you are getting left x is that the x-coordinate of the top left corner of the rectangle?</p></i>
+               <p><b>A1:&nbsp;</b> It&#039;s the coordinate of the left hand side.</p>
+        
+               <p><b>A2:&nbsp;</b> The whole left side of the rectangle, yeah</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is get_left_x measured to the center of the rectangle or upper left?</p></i>
+               <p><b>A1:&nbsp;</b> They have the same x coordinate!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what happens when you move by more than 1 pixel? does it make it move faster?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why did we add the canvas.update() and time.sleep() functions? What do they do and when do we add them?</p></i>
+               <p><b>A1:&nbsp;</b> update() causes the canvas to update the drawing to reflect the move.  sleep() make the computer wait between updates -- otherwise all the updates would happen so fast, you couldn&#039;t see them (the square would just jump to it&#039;s final location).</p>
+        
+               <p><b>A2:&nbsp;</b> canvas.update actually moves stuff around on the screen, and time.sleep adds a pause in between frames so you can see each frame. They go after you’ve updated all the locations of stuff on your canvas</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does the return line in get_left_x tell us? What is the [0] for?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll get there on Monday!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is rect a variable now that you can always get information from no matter where it ends up on the canvas?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when an object moves off screen, what canvas object does it exist on?</p></i>
+               <p><b>A1:&nbsp;</b> it&#039;s still on the same canvas.  it&#039;s just in a place that you can&#039;t see.</p>
+        
+               <p><b>A2:&nbsp;</b> The same one</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would chris’ code still work if he used an if statement in his is_rect_left_of_center as opposed to using return curr_x &lt;= max_x</p></i>
+               <p><b>A1:&nbsp;</b> It depends on what you’d want to do inside that if statement - try it out using the lecture code we’ve posted!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when defining the size of a canvas, does that mean its just a window into a bigger canvas i can;t see?</p></i>
+               <p><b>A1:&nbsp;</b> Yeah, that’s a good way of thinking about it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if we didn’t pause?</p></i>
+               <p><b>A1:&nbsp;</b> The rectangle would move *really* fast</p>
+        
+               <p><b>A2:&nbsp;</b> all the updates would happen so fast, you couldn&#039;t see them</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the numbers just change the slope of the diagonal direction, right?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how are graphics objects stored, the luggage of the object is so much bigger than an integer or a float so is the luggage tag bigger?</p></i>
+               <p><b>A1:&nbsp;</b> We’re going to get there very very soon :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there supposed to be a period after time.sleep(1/50.)</p></i>
+               <p><b>A1:&nbsp;</b> That’s just to indicate that 50 is a float (it’s a decimal place)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is the true referring to?</p></i>
+               <p><b>A1:&nbsp;</b> In the while loop? That just makes it go forever</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there any reason the ball looks kind of cut off</p></i>
+               <p><b>A1:&nbsp;</b> It&#039;s just how it renders on the video.</p>
+        
+               <p><b>A2:&nbsp;</b> Zoom being weird!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When is it false?</p></i>
+               <p><b>A1:&nbsp;</b> The loop is an infinite loop.</p>
+        
+               <p><b>A2:&nbsp;</b> It’s not - that loop will always execute</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does canvas get deleted and called for every frame? that seems like a lot of function calls</p></i>
+               <p><b>A1:&nbsp;</b> Nope, what makes you think it would?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What location within the ball is the reference (x,y)?</p></i>
+               <p><b>A1:&nbsp;</b> upper left hand corner of bounding box for the circle</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is there a period after 1/50 in the sleep function?</p></i>
+               <p><b>A1:&nbsp;</b> Just to indicate it’s a float</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How did Chris know select the parameters canvas and ball?</p></i>
+               <p><b>A1:&nbsp;</b> You need access to both those variables inside the function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is ball_top_y a ready made command in Python?</p></i>
+               <p><b>A1:&nbsp;</b> That command is something that Chris wrote previously.  It would be, for example, a function we might give you in the starter code (if we gave you an animation assignment).</p>
+        
+               <p><b>A2:&nbsp;</b> No, it’s a variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how could you get ball_bottom_y?</p></i>
+               <p><b>A1:&nbsp;</b> If you know the top Y, you could just add the height of the ball to it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where did top_y come from in get_top_y?</p></i>
+               <p><b>A1:&nbsp;</b> tk has a function to do give you.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a way to keep the ball round as it’s moving?</p></i>
+               <p><b>A1:&nbsp;</b> It is - Zoom is just being weird about it</p>
+        
+               <p><b>A2:&nbsp;</b> It actually is round.  It jusy looks like a wedge due to video rendering issues.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is that the ball changes its shape when moving? because the speed of the move?</p></i>
+               <p><b>A1:&nbsp;</b> It’s just Zoom being weird, it actually doesn’t change shape.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you put a lower value as the parameter in time.sleep(…), like 1/100, do you get a higher frame rate?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, but at some point your computer screen won’t be able to keep up with it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;ok..maybe a dumb question. How is a top left point on a ball defined? Based on Chris’s code, that point correpsond to the northern pole</p></i>
+               <p><b>A1:&nbsp;</b> Not a dumb question! Imagine a box drawn around the ball. The top left point is the top left corner of that box.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How are objects stored in the heap different from global variables in their usage?</p></i>
+               <p><b>A1:&nbsp;</b> Those ideas are unrelated - the heap is where a variable is stored in your memory, and a global variable is where a variable is declared in your code.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does this sharing variables only happen in graphs and animations?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - we’ll talk about other applications of this in later lectures</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if you don&#039;t want changes to be saved to large variables?</p></i>
+               <p><b>A1:&nbsp;</b> Python makes that pretty difficult but you’ll have to make a copy!</p>
+        
+               <p><b>A2:&nbsp;</b> Then you&#039;d need to manually make a copy.  We&#039;ll talk more about this next week.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if there wasn’t a URL, we would have to add return at the end of make_ball, 
+right?</p></i>
+               <p><b>A1:&nbsp;</b> It’s more a question of where the URL actually points</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are heaps bigger than stacks?
+do new heaps get allocated for every program like a stack and then get stacked up on each other like a stack but fatter?</p></i>
+               <p><b>A1:&nbsp;</b> We&#039;ll talk more about memory in a few weeks.  But there is generally one stack and one heap in Python programs.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So do you not need a return line in make_ball(canvas)?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when does your computer clear the information stored in heap?</p></i>
+               <p><b>A1:&nbsp;</b> When it detects you are done using the object and clears it from the heap.  When the program ends, anything left on the heap is also cleared.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So this means we don’t have to return the canvas?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.</p>
+        
+               <p><b>A2:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to get the information about the location of all the pixels in a drawing like a circle?</p></i>
+               <p><b>A1:&nbsp;</b> You can compute that because you know the size and location of the circle.  But there are ways to determine if a particular pixel is contained in an object like a circle.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so you don&#039;t have to return variables that act like URLs</p></i>
+               <p><b>A1:&nbsp;</b> Yes, because changes are being made to the actual variable, not a copy.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do we let our mouse control the pad?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;This is so cool! Will we learn in this class how to “export” the python code into a stand-alone software that people can install and play games?</p></i>
+               <p><b>A1:&nbsp;</b> Stop by office hours and we can talk about it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;This is somewhat unrelated, but is there a way to import an image to be used as an object?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where will the link to the Pixar event be posted?</p></i>
+               <p><b>A1:&nbsp;</b> It’s already on the website in the announcements.</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

@@ -1,0 +1,794 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/7-FunctionsAndParameters/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:45:56 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 7: Functions & Parameters
+					</h1>
+					<p class="subtleHeading">
+						April 20th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a
+						href="7-FunctionsAndParameters.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture7.zip"><i class="fas fa-code"
+							aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						The diagnostic is next Monday. We'll be posting review materials 
+						by Wednesday, and if you're expecting OAE accommodations or an 
+						alternate time, you should have received an email from Brahm 
+						already.
+					</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;if there’s time, could we quickly go over logical operators? for some reason my brain has a hard time understanding where they fit in…</p></i>
+               <p><b>A1:&nbsp;</b> We’ll be reviewing them quickly :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is diagnostic open note?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it due this Friday or next?</p></i>
+               <p><b>A1:&nbsp;</b> Assignment 2 is due this Friday</p>
+        
+               <p><b>A2:&nbsp;</b> This coming Friday (April 24)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will the diagnostic be like an online quiz format like on Canvas?</p></i>
+               <p><b>A1:&nbsp;</b> No, it will be writing code.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we have a true variable, whats the difference between:
+if variable
+
+and 
+
+if variable == true
+
+or is there a difference?</p></i>
+               <p><b>A1:&nbsp;</b> They both achieve the same thing, and the second one is slightly worse style because it’s redundant</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you clear the terminal?</p></i>
+               <p><b>A1:&nbsp;</b> Type ‘clear’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what was the “locked” thing in the game show behind door 2</p></i>
+               <p><b>A1:&nbsp;</b> It was a boolean variable that stored whether or not ‘prize’ was odd</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hey Chris, thank you for the teaching! Would it be possible for you to annotate/write on the slides? I&#039;ve found this really helpful especially when you&#039;re moving faster through a concept :)!</p></i>
+               <p><b>A1:&nbsp;</b> We&#039;ll try to do that where possible, but there have been some issues with tablets for writing annotations recently.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can a and b be thought of as variables?</p></i>
+               <p><b>A1:&nbsp;</b> That’s exactly what they are!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if you want to have multiple outputs?</p></i>
+               <p><b>A1:&nbsp;</b> There is a way to do that in Python but we won&#039;t talk about that now becuase it uses concepts you haven&#039;t seen.</p>
+        
+               <p><b>A2:&nbsp;</b> What if you want to have multiple outputs?</p>
+        
+               <p><b>A3:&nbsp;</b> For not, you can only return one thing from a funciton - if you’re trying to return multiple values, you should rethink your decomposition</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we use the new concepts we learn this week on the homework due this Friday?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is this different from input()</p></i>
+               <p><b>A1:&nbsp;</b> Input takes in text from a user - here, the user isn’t supplying the values (the program is just giving them to the average function)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we need to descriptively name the parameters, which is what we must do for variables, or is it fine to just use placeholder letters for the parameters?</p></i>
+               <p><b>A1:&nbsp;</b> You should give them descriptive variable names wherever you can</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if we want to divide by the number of parameters within the parentheses?</p></i>
+               <p><b>A1:&nbsp;</b> You don’t have immediate access to that number, but remember that you specify how many parameters a function accepts in the def line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For this average function, you can only fil with two parameters. Will it call an error if you input more than two?</p></i>
+               <p><b>A1:&nbsp;</b> Yep. Try it out!</p>
+        
+               <p><b>A2:&nbsp;</b> Yes (given what you&#039;ve seen so far).  It&#039;s an error if you give a function a different number of parameters than it expects.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we use concepts of this class for assignemnt 2?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you explain more on “evaluate”?</p></i>
+               <p><b>A1:&nbsp;</b> That just means to calculate what a particular expression’s value is</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if we already did assignment 2 should we go back and change it to use this? Would doing it without these functions be bad style?</p></i>
+               <p><b>A1:&nbsp;</b> Compute Interest should use these ideas, and a few other ones could probably benefit from it as well.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it possible to return some value while simultaneously continuing a function, say store a value in a varible?</p></i>
+               <p><b>A1:&nbsp;</b> No.  When you return a value, the function is done.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you have to use return (couldn’t you just put sum / 2 without the return before it)? In other words, what’s the value of the return function?</p></i>
+               <p><b>A1:&nbsp;</b> The return statement allows the average function to actually give them sum variable back to the function that calls it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Would you ever put return alone at the end of the function?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, that&#039;s possible.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does return print the value in the terminal? Or do you need the extra print(mid)?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+               <p><b>A2:&nbsp;</b> Return does not print anything.  If you want to print out to the console, you&#039;d need to use print(...)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do you have to input the same type into the function as you return?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s the main difference between print and return?</p></i>
+               <p><b>A1:&nbsp;</b> Print(...) prints output to the console.  Return is returning a value in your program -- it doesn&#039;t print anything to the console.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do you have to use return? Could you just have calculated the average in a new line under the average function?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but you need to return in order to give back the average to the main function.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why not print mid as a string?</p></i>
+               <p><b>A1:&nbsp;</b> If you’re not concatenating, the int automatically turns into a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you use the return function if you the function you define doesnt require parameters/arguments?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you define variables in main and have those be your inputs when you call a function? Like if the user had input 5 and 10.2, and we had assigned them to variables and wanted to call the average?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! We have an example of that later on</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you have to create mid, how come you cannot just command average(5,10.2)</p></i>
+               <p><b>A1:&nbsp;</b> You can, but you need to store the return value in some way, so we put it in the mid variable.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we can use floats, as parameters even though we didn’t mention floats anywhere in the function?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could you please talk about the way that this “conversation” between the user who is giving the inputs and the programmer who is making these? How should we think about this when writing functions?</p></i>
+               <p><b>A1:&nbsp;</b> Think about a conversation between functions: essentially, when a function has parameters, we promise that we’ll be supplying it some information. When it returns something, it’s promising it’ll give you back some useful information.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are parameters inherently a specific type of variable?</p></i>
+               <p><b>A1:&nbsp;</b> No.  Python does not set specific types for parameters.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is mid?</p></i>
+               <p><b>A1:&nbsp;</b> mid is a variable that is assigned the value returned by the average function.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a way to automatically insert number calculations for a and b values? Or do these always need to be inserted manually?</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s the difference between “print” and “return”</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if you want to be able to change the number of numbers you&#039;re taking an average of? Can python tell how many numbers you put in to the function?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll learn about a few cool ways of doing that later, but for now, the average function accepts a fixed number of numbers.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;and is there a space betweem sum and =</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but it&#039;s not required.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you always need a return to end a function</p></i>
+               <p><b>A1:&nbsp;</b> Nope! If you don’t want to return something, you don’t need to return</p>
+        
+               <p><b>A2:&nbsp;</b> No.  Functions without a return don&#039;t return a value.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does return give us a float and print a string ?</p></i>
+               <p><b>A1:&nbsp;</b> Return just returns a value.  It doesn&#039;t print anything.  You call to call the print() function to print things out.</p>
+        
+               <p><b>A2:&nbsp;</b> A float is returned, but when you print it, it gets automatically converted to a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;shouldnt the . be printed also?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, good catch</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Thanks, and why would you do that?</p></i>
+               <p><b>A1:&nbsp;</b> It’s a nice way of immediatelly ending the function (don’t worry about this for now)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have to define the functions before calling the main function?</p></i>
+               <p><b>A1:&nbsp;</b> The order doesn’t matter, but you should be consistent</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could the arguments be inputs from the user? (if a function uses parameters, when we call the function can we ask the user to input the arguments?)</p></i>
+               <p><b>A1:&nbsp;</b> Sure!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the if (num==5) be set? or it automatically put 5 because the paramenter?</p></i>
+               <p><b>A1:&nbsp;</b> What do you mean by ‘be set’?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does print_opinion() have to have a number inside?</p></i>
+               <p><b>A1:&nbsp;</b> Whenever it gets called, we need to supply a parameter, yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you have two parameters in the sub function, can you pass one argument and leave the second argument blank?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, you need to provide as many parameters as the function expects</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if we wanted the user to input whatever number they wanted for print opinion would we say  something like print_opinion(int(input(“enter a number”))) or can users not input their own parameters?</p></i>
+               <p><b>A1:&nbsp;</b> They can, and it would look like that!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In the previous example, the variable num no longer exists? So if there is a later function in main that calls num, is num no longer assigned the value (5) that was input earlier?</p></i>
+               <p><b>A1:&nbsp;</b> Correct!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could you make your parameters be input from the user?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+               <p><b>A2:&nbsp;</b> You would read values from the user using input() and then pass those values as parameters.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;like… the program only works with 5</p></i>
+               <p><b>A1:&nbsp;</b> Yes, he just hardcoded that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if we wanted to prompt the user for a number?</p></i>
+               <p><b>A1:&nbsp;</b> You could do so like we did in friday’s class</p>
+        
+               <p><b>A2:&nbsp;</b> You would use the input function to get a value from the user.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do these functions always need to be before main()?</p></i>
+               <p><b>A1:&nbsp;</b> No, but you should be consistent</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so would just writing
+
+meters_to_cm(5.2)
+
+withouth defining result produce an error or do noting?</p></i>
+               <p><b>A1:&nbsp;</b> You’d get back the 520 and throw it away without storing it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why wouldn’t you do print(str(result))</p></i>
+               <p><b>A1:&nbsp;</b> Numbers get converted automatically to strings if you’re not concatenating them</p>
+        
+               <p><b>A2:&nbsp;</b> If you&#039;re just printing a number (and no other text), you don&#039;t have to cast the number to a string.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you print in the same function where you define a parameter after “return”?</p></i>
+               <p><b>A1:&nbsp;</b> No, return ends the function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;But can the input be a word too or only numbers?</p></i>
+               <p><b>A1:&nbsp;</b> Parameters can be strings, but that wouldn’t do what you expect it to in this program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So exaclty what is the point of the return?</p></i>
+               <p><b>A1:&nbsp;</b> So that the meters_to_cm function can give back the number to main</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why does it return a float rather than an int</p></i>
+               <p><b>A1:&nbsp;</b> Because meters is a float, and multiplying a float by an int gives you a float</p>
+        
+               <p><b>A2:&nbsp;</b> Because the parameter value passed in was a float.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the called function store the arguments even after the function is finished running?</p></i>
+               <p><b>A1:&nbsp;</b> No.  Each time you call the function, you get new argument values.</p>
+        
+               <p><b>A2:&nbsp;</b> No, the variables all vanish when the function ends</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you get multiple outputs from one function (ie. in matlab you can do [x,y] = func(inputs)</p></i>
+               <p><b>A1:&nbsp;</b> For now, you can’t! If that feels necessary you might want to reconsider your decomposition</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a missing else in this statement?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+               <p><b>A2:&nbsp;</b> You don&#039;t need an else, because the function will end as soon as it reaches a return statement.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does it know num1 and num2 are integers? is it assumed to be an integer unless otherwise specified?</p></i>
+               <p><b>A1:&nbsp;</b> Good variable names :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is there no “else” in chris’ example??</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When would it go to the next return?</p></i>
+               <p><b>A1:&nbsp;</b> When num1 &lt; num2 and the if statement doesn’t execute</p>
+        
+               <p><b>A2:&nbsp;</b> No.  A function is done as soon as it reaches a return statement.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so in this case you wouldnt need an “else” to go with the if</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why don’t we have to put in an “else” like between the first and second return?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so once it reaches return, program is done, correct?</p></i>
+               <p><b>A1:&nbsp;</b> The function is done, yes</p>
+        
+               <p><b>A2:&nbsp;</b> The *function* is done when you reach return.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So there’s no need for an else?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;once “return” is excuted, the function is done?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we say that the second return worked like the else in Karel?</p></i>
+               <p><b>A1:&nbsp;</b> Not quite - the only reason it’s like that is because the first return ends the function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the variable larger only exist in function main?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so return variable gives the parameter not the variable?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, it returns a variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;he keeps assinging the parameteres but what if we are solving a min, max problem where the user is inputing the numbers</p></i>
+               <p><b>A1:&nbsp;</b> You can read in numbers from the user using input(...) and then pass those values to the max function.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we need to have a line between the two return statements?</p></i>
+               <p><b>A1:&nbsp;</b> No, you don&#039;t need to blank line</p>
+        
+               <p><b>A2:&nbsp;</b> A blank line? No, but it looks nice :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just a question about the homework assignment for this week, are we expected to use return functions?</p></i>
+               <p><b>A1:&nbsp;</b> You can if there are helpful to solving the problem for you.</p>
+        
+               <p><b>A2:&nbsp;</b> You’re welcome to if you’d like, but it depends on your decomposition strategy</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does pass mean?</p></i>
+               <p><b>A1:&nbsp;</b> ‘Do nothing’ - We just put it in so that Python doesn’t complain about a function with no body</p>
+        
+               <p><b>A2:&nbsp;</b> It means &quot;do nothing&quot; in Python.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does it mean to print without the enter?</p></i>
+               <p><b>A1:&nbsp;</b> prints without a &quot;new line&quot; to move to the next line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do functions take in any type of values? For example, for print_io(), would it take real numbers, negative?</p></i>
+               <p><b>A1:&nbsp;</b> Yes - it’s the programmer’s responsibility to make sure the parameters are the right type</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does he mean by “not having to put a return after any of them?”</p></i>
+               <p><b>A1:&nbsp;</b> A return is a newline</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;but did we define “n”</p></i>
+               <p><b>A1:&nbsp;</b> n is parameter passed in to print_n_spaces(n)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you need print_no_return as opposed to just print?</p></i>
+               <p><b>A1:&nbsp;</b> To prevent the newline after each space</p>
+        
+               <p><b>A2:&nbsp;</b> print(...) adds a &quot;new line&quot; (or enter) after it prints the text you give it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how come when chris runs his code he types “python” instead of “python3”? I tried running “python” instead of “python3” for hw but it ruined my division cause / became integer division, so should I be using python3 or python to run</p></i>
+               <p><b>A1:&nbsp;</b> You should use python3.</p>
+        
+               <p><b>A2:&nbsp;</b> Force of habit for him! Use python3 :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;will chris’s code be available somewhere to look at? I don’t understand it all too well and would like to look back through it</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain what print_return does?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we use the same number of n spaces before printing i or then how come they don’t print on top of each other?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I’m sorry I still haven’t understood print_no_return</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

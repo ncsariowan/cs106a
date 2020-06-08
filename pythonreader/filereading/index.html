@@ -1,0 +1,462 @@
+<!doctype html>
+<!doctype html>
+
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/pythonreader/filereading/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 04:18:33 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>    <div class="container">
+        <h1>Python File Reading</h1>
+
+<p>Python makes it easy to read the data out of a text file. There are a few different forms, depending on if you want to process the file line by line or all at once.
+
+<p>Here is the canonical code to open a file, read all the lines out of it, handling one line at a time.
+
+<pre>
+with open(filename) as f:
+    for line in f:
+        # look at line in loop
+        print(line, end='')
+</pre>
+
+<p>Can be written this way: <code>open(filename, 'r')</code> where the 'r' means reading. Reading mode is the default, so the 'r' can be omitted as above. The mode <code>'w'</code> is for file writing, shown below.
+
+<p>When reading lines out of a file, each line has a '\n' char at its end.
+The lines from the file are fundamentally <b>text</b>. Use functions like int() to convert text to int:
+
+<pre>
+>>> line = '123\n'   # line is textual
+>>> int(line)        # Compute int value
+123
+</pre>
+
+<p>Use s.split() with a parameter to separate one line into parts, like this:
+
+<pre>
+>>> line = 'apple,12,donut\n'
+>>> line.split(',')  # note ',' param
+['apple', '12', 'donut\n']
+</pre>
+
+<p>Use s.strip() to remove whitespace
+
+<pre>
+>>> line = '   this   \n'
+>>> line.strip()
+'this'
+</pre>
+
+<p>The advantage of processing 1 line at a time is that it does not require memory to hold every byte of the file at once. It's not uncommon to have a text file with millions of lines of data. With this form, only one line at a time must be stored in RAM, not all of the lines at once.
+
+<h2>Unicode Encoding</h2>
+
+<p>The form <code>open(filename, encoding='utf-8')</code> can specify the encoding to use to interpret the text file as unicode.
+
+<p>If reading a file crashes with a "UnicodeDecodeError", probably the reading code needs to specify an encoding as above. Try the 'utf-8' encoding first, as many files are encoded with it.
+
+<h2>Other Ways To Read A File</h2>
+
+<p>Suppose we have this 2 line file:
+
+<pre>
+Roses are red
+Violets are blue
+</pre>
+
+<h2>2. text = f.read()</h2>
+
+<p>(Can try these in >>> Interpreter, running Python3 in a folder that has a text file in it we can read, such as the "wordcount" folder.)
+
+<p>Read the whole file into 1 string - less code and bother than going line by line. Handy if the code does not need to go line by line. Can use with split() to process the whole file at once. This will require memory in Python to store all of the bytes of the file. As an estimate, look at the byte size of the file in your operating system file viewer.
+
+<pre>
+with open(filename, 'r') as f:
+    text = f.read()
+    # Look at text str
+</pre>
+
+<p>In this example text is the string <code>'Roses are red\nViolets are blue\n'</code>
+
+<p>The read() function is designed to be called <b>once</b>, and it returns the entire contents of the file. Do not call read() a second time; store the text string returned by the first call and use that.
+
+
+<p>Recall the function s.split() with no parameters, splits on whitespace, returning a list of "words". Whitespace includes '\n', and the no-param form of split merges multiple whitespace chars together. 
+
+<p>Therefore, split() works nicely with the whole text of a file, treating '\n' like just another whitespace char:
+
+<pre>
+text = 'Roses are red\nViolets are blue\n'
+>>> text.split()
+['Roses', 'are', 'red', 'Violets', 'are', 'blue']
+</pre>
+
+<p>So text = f.read() may be followed by a words = text.split(). Now we have a
+list of words easily, and we do not bother with lines or looping.
+
+<p>Demo - read the whole book into 1 string, split into words. Python looks powerful here.
+
+<pre>
+>>> with open('alice-book.txt') as f:
+...   text = f.read()
+>>> len(text)   # num chars,  len > 149,000 !
+149103
+>>> 
+>>> text[:200]
+"Alice's Adventures in Wonderland\n\n                ALICE'S ADVENTURES IN WONDERLAND\n\n                          Lewis Carroll\n\n               THE MILLENNIUM FULCRUM EDITION 3.0\n\n\n\n\n                     "
+>>>
+>>> words = text.split()
+>>> len(words)  # num words
+26963
+>>> words[:20]
+["Alice's", 'Adventures', 'in', 'Wonderland', "ALICE'S", 'ADVENTURES', 'IN', 'WONDERLAND', 'Lewis', 'Carroll', 'THE', 'MILLENNIUM', 'FULCRUM', 'EDITION', '3.0', 'CHAPTER', 'I', 'Down', 'the', 'Rabbit-Hole']
+</pre>
+
+<p>Conclusion: 3 lines of Python, can just have a list of all the words, ready for a loop or whatever.
+
+<h2>3. lines = f.readlines()</h2>
+
+<p>f.readlines() returns a list of strings, 1 for each line. Sometimes it's more useful
+to have all the lines at once, vs getting them 1 at a time in the standard loop. Can slice etc. to control which lines we access.
+
+<pre>
+with open(filename, 'r') as f:
+    lines = f.readlines()
+    # use lines list lines[0], lines[1], ..
+</pre>
+
+<p>Here lines is <code>['Roses are red\n', 'Violets are blue\n']</code>. The lines list is analogous to the for-line-in-f loop, but in the form of a list.
+
+<h2>What The "With" Does</h2>
+
+<p>The <code>with open(...)</code> form automates closing the file reference when the code is done using it. Closing the file frees up some memory resources associated with keeping the file open. In older versions of Python (and in other languages) the programmer is supposed to call <code>f.close()</code> manually when done with the file. Here is an example of file reading written the old way:
+
+<pre>
+# old way to do it, call f.close() manually
+f = open(filename)
+...use f...
+f.close()
+</pre>
+
+<p>Nowadays, using the <code>with open(..)</code> structure, code can concentrate on reading and the closing is automatic and we don't have to think about it.
+
+<h2>File Writing</h2>
+
+<p>File "writing" is the opposite direction of reading - taking data in Python and writing it out to a text file. The CS106a projects typically do lots of reading, which is the most common form.
+
+<p>Here is example code writing to file (and you can try this in the interpreter). First specify <code>'w'</code> in the open(). Then call <code>print('Hello', file=f)</code> to print data out to the file as a series of text lines. This is the same <code>print()</code> function that writes to standard output, here used to write to the opened file.
+
+<pre>
+>>> with open('out.txt', 'w') as f:
+...   print('Hello there', file=f)
+...   print('Opposite or reading!', file=f)
+</pre>
+
+<p>After running those lines, a file <code>out.txt</code> now exists in the directory from which we ran Python:
+
+
+<pre>
+$ <b>cat out.txt</b>
+Hello there
+Opposite or reading!
+</pre>
+
+&nbsp;
+
+    </div>
+</body>
+
+
+
+

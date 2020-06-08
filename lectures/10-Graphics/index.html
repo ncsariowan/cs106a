@@ -1,0 +1,703 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/10-Graphics/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:47:14 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 10: Graphics
+					</h1>
+					<p class="subtleHeading">
+						April 20th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="10-Graphics.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture10.zip"><i class="fas fa-code" aria-hidden="true"
+							style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="../../handouts/graphics-reference.html">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:9px">Graphics Reference</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;When and how will we get our diagnostic grades?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Was there an error in the code for the Karel question? I think the program that was supposed to be turn_around was named turn_left</p></i>
+               <p><b>A1:&nbsp;</b> Yep - we won’t deduct based on this, though.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How did he get that data?</p></i>
+               <p><b>A1:&nbsp;</b> In 106A that quarter, we had a tool that provided snapshots of students as they were writing code so we could provide them feedback on their process!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Did Chris say he wrote the algorithm for instagram filters?</p></i>
+               <p><b>A1:&nbsp;</b> No :) He’s going to show you one of the algorithms that Instagram also uses!</p>
+        
+               <p><b>A2:&nbsp;</b> That would have been awesome, though</p>
+        
+               <p><b>A3:&nbsp;</b> No.  He said he didn&#039;t use Instgram for sepia filtering.  He&#039;s writing his own algorithm.  But Instragram was started by Stanford alums!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there lecture code for this lecture? When I try to download, I’m navigated to an object not found page.</p></i>
+               <p><b>A1:&nbsp;</b> I’ll look into it</p>
+        
+               <p><b>A2:&nbsp;</b> Fixed!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does the second line in the main function do?</p></i>
+               <p><b>A1:&nbsp;</b> It loads the image into an image file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;stylistically are those two pixel grab functions the same?</p></i>
+               <p><b>A1:&nbsp;</b> Unless you need the coordinates, you can use the former</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;whats up with the “image/ “ part of simpleimage?</p></i>
+               <p><b>A1:&nbsp;</b> The image is in a folder called ‘image/‘</p>
+        
+               <p><b>A2:&nbsp;</b> The images are in a directory called &quot;images&quot;.  So adding &quot;images/&quot; before the file name let&#039;s Python know that the image is an directory called &quot;images&quot;.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how can the pixel variable used in function sepia_pixel() able to modify pixel information of the image in main()?</p></i>
+               <p><b>A1:&nbsp;</b> You&#039;ll see more on this soon.  But pixels are actually something you can change in a function and the change will persist.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is this the same idea for black and white (greyscale) images too? Are there exact values to multiply by for that type of filter?</p></i>
+               <p><b>A1:&nbsp;</b> In general, greyscale is made by setting R, G, and B to the average of the three components</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, same idea for greyscale.  A simply way is to average over the RGB value for the pixels.  A slightly more robust way is given in the files from Lecture 9 last week.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where is that folder? how do you acess images from different places?</p></i>
+               <p><b>A1:&nbsp;</b> It’s in the PyCharm project - try downloading the lecture code to see where it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it wrong to consider this double for loop basically as an area function?</p></i>
+               <p><b>A1:&nbsp;</b> You are basically looping over the area of the image, yes.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;in the sepia example, is the &#039;images/&#039; the folder in which the image is saved? So if my image is in a nested folder, will my code have to say &#039;folder1/folder2/folder3&#039; instead?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what are we importing on the line &quot;import ...&quot;?</p></i>
+               <p><b>A1:&nbsp;</b> Check out the lecture code</p>
+        
+               <p><b>A2:&nbsp;</b> You are importing a library called &quot;tkinter&quot;.  There more information about it in the handout on Graphics that was released today.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are these canvas commands part of simpleimage or are they python commands?</p></i>
+               <p><b>A1:&nbsp;</b> They’re part of a library called tkinter which you can import like simpleimage</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does it already know what “blue” is?</p></i>
+               <p><b>A1:&nbsp;</b> It’s in the tkinter library, which we’re importing at the top!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what happened to the if __name__ == “main()” part?</p></i>
+               <p><b>A1:&nbsp;</b> It’s just not visible right now, it’s still there</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we need to import any library to use make_canvas?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  You&#039;ll need to import tkinter.</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, it’s called tkinter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is make_canvas a preexisting function?</p></i>
+               <p><b>A1:&nbsp;</b> Yeah, you won’t need to write it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How would we encode a named argument into a function?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll get there later in the class!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is canvas the name of the variable where the rectangle
+ is stored?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, the canvas knows everything that’s drawn on it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Black outline by default? How can you change the color of the line?</p></i>
+               <p><b>A1:&nbsp;</b> Black outline by default? How can you change the color of the line?</p>
+        
+               <p><b>A2:&nbsp;</b> We’ll get there soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;where can I find defaults for all these graphical functions?</p></i>
+               <p><b>A1:&nbsp;</b> Check out the graphics reference we just posted</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you do fill = custom color and create a color with an RGB value that you specify?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, I believe so!</p>
+        
+               <p><b>A2:&nbsp;</b> Yes.  But see the graphics handout.  There&#039;s a reference to a huge list of predefined named colors.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Doesn’t the rectangle that we make end up being a different size in comparison to the original canvas? Would we still need to make the original canvas before creating the rectangle?</p></i>
+               <p><b>A1:&nbsp;</b> You specify the size of the rectangle in pixels, so it doesn’t matter what the size of the containing canvas is. Does that answer your question!</p>
+        
+               <p><b>A2:&nbsp;</b> The canvas is measured in pixels as are the coodinates of the rectangle.  Rectangles (and other shapes) apprear on a canvas.  So you have to create the canvas first.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does canvas.mainloop() maintain the file? In terms of the instructions it tells the computer.</p></i>
+               <p><b>A1:&nbsp;</b> This command lets the canvas know that it should be rendering the shapes that were created in it.  And it maintains the drawing (in case the graphics window moves for example).  The full internals are beyond the scope of this class.</p>
+        
+               <p><b>A2:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what happens if we put something after canvas.mainloop()?</p></i>
+               <p><b>A1:&nbsp;</b> It doesn’t execute until the canvas is closed</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are some of these graphics principles used in photoshop? as in when it autodetects people or leaves etc?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! Those algorithms look a little more like what we talked about on Friday - sto by OH if you want to learn more about how they work!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the bottom right corner of the canvas (canvas width-1, canvas height -1)?</p></i>
+               <p><b>A1:&nbsp;</b> That’s the coordinate of the bottom right pixel, yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so the default outline is black?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we assign these to be objects? like oval= create.oval()</p></i>
+               <p><b>A1:&nbsp;</b> Yes, these functions return identifiers for the graphical objects</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are there other way to define an oval?</p></i>
+               <p><b>A1:&nbsp;</b> You could write functions to do that if you have something specific in mind.</p>
+        
+               <p><b>A2:&nbsp;</b> Do you have anything particular in mind?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;canvas.create… is a variable from the library, right? So, the program knows what to do?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do the ‘ or “ matter</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Remind me what is “anchor=“w””?</p></i>
+               <p><b>A1:&nbsp;</b> The (x, y) coordinate is the left side of the text</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just wondering if there are other predefined functions for that. Thanks</p></i>
+               <p><b>A1:&nbsp;</b> create_oval is the most common way</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why is the image of simba on the bottom left if you entered ‘nw’, not the top left?</p></i>
+               <p><b>A1:&nbsp;</b> the &#039;nw&#039; stands for &quot;north west&quot;, which means the top-left corner is the place your are specifying with you x,y coordinates.</p>
+        
+               <p><b>A2:&nbsp;</b> The anchor is which part of the image is at the coordinate. In this case, (0, 300) is the northwest (top left) of the image of simba</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when you run a program and it finishes, does it delete all the stacks we talked about earlier or can I access that canvas in this case later?</p></i>
+               <p><b>A1:&nbsp;</b> The stack frames are cleared from your memory</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does w in anchor stand for west of anchor?</p></i>
+               <p><b>A1:&nbsp;</b> West of the text</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So if we want to right in arabic for example we would change anchor ?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! I think so</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what are the alternatives to ‘w’</p></i>
+               <p><b>A1:&nbsp;</b> ‘w’ is West and all of the cardinal directions, and the diagonal ones, are options</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what about the size of the text?it can be change with the x,y position?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, there are other parameters you can specify otherwise</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why is the anchor always w?</p></i>
+               <p><b>A1:&nbsp;</b> It makes your life easier :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does &quot;from PTL import Image&quot; do?</p></i>
+               <p><b>A1:&nbsp;</b> Imports the Pillow Library into your program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;oh, christ hasnt worked on that, right?</p></i>
+               <p><b>A1:&nbsp;</b> No</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I love the new &#039;example&#039; section! Will you also put examples from previous classes? (e.g. the burrito one)</p></i>
+               <p><b>A1:&nbsp;</b> Yeah, we’ll get some more up there</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does python actually draw? assigning pixel colors left to right? zig zag?</p></i>
+               <p><b>A1:&nbsp;</b> That’s actually up to your screen to decide! I think under the hood, Python will just set the pixels in whatever order is easiest and then your screen will refresh to show the new canvas.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do x + size and y + size rather than just size alone</p></i>
+               <p><b>A1:&nbsp;</b> To build suspense :)</p>
+        
+               <p><b>A2:&nbsp;</b> You want to specify the x,y location of the lower right corner of the square, which is at x + size, y + size since size if the size of the square (not the absolute coordinate of the lower left corner).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why are we doing x+ SIZE and not just x?</p></i>
+               <p><b>A1:&nbsp;</b> To build suspense :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain what SIZE is?</p></i>
+               <p><b>A1:&nbsp;</b> The number of pixels high/width that each square should be.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s the canvas paramenter in draw_square(canvas, col) doing?</p></i>
+               <p><b>A1:&nbsp;</b> draw_square needs the canvas as a parameter to draw on it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why is SIZE = CANVAS_SIZE / N_ROWS - 1 ?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What’s the point of the -1 on the SIZE constant formula</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;refresher on why we don’t have to define col?</p></i>
+               <p><b>A1:&nbsp;</b> The for loop defines it for you</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason our SIZE is not 800/8?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just wondering is there any particular reason why we need to minus 1 when calculate size? To not overlap blocks?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do we have to multiply by the size of the entire canvas, then?</p></i>
+               <p><b>A1:&nbsp;</b> No.  The canvas is large enough to hold all the squares.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are col and row already in canvas or they are created</p></i>
+               <p><b>A1:&nbsp;</b> They’re defined in the for loop on lines 20 and 23</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the for x in range(y) define x as a new variable in terms of y?</p></i>
+               <p><b>A1:&nbsp;</b> No, it’s just a new variable that starts off at 0 and goes up until y - 1</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the canvas the size of the whole board?</p></i>
+               <p><b>A1:&nbsp;</b> There’s like a tiny bit of padding on the borders, but basically, yeah</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;isnt the print missing? Because the last line says return only</p></i>
+               <p><b>A1:&nbsp;</b> You don’t need to print the color</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we finish assignment3 after this lecture ?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;ohhh, i think he answered, but can you explain further, please :( ?</p></i>
+               <p><b>A1:&nbsp;</b> get_color doesn’t need to print colors to the terminal</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;in_to_color is built in?</p></i>
+               <p><b>A1:&nbsp;</b> No, Chris, wrote it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry just to clarify, when returning black and white, it is built in to color them?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;WOW whats a function that goes both ways to make 3 numners into 1???????</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So do you make the canvas before you use the whole canvas?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;WOW! that’s so cool!!!</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I want to test out ghost.py with my own pictures how could I do that? I added them into a folder on pycharm but it says list index out of range</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don’t you have to specify tkinter.make_canvas()? Does python just know?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

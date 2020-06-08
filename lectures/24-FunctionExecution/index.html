@@ -1,0 +1,543 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/24-FunctionExecution/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:05:52 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+
+
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="pageHeader">
+          <br />
+          <h1>
+            Lecture 24: Function Execution
+          </h1>
+          <p class="subtleHeading">
+            June 3rd, 2020
+          </p>
+
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <h3>Lecture Materials </h3>
+    <p>
+    <div class="row">
+      <div class="col-sm-2"><a href="24-FunctionExecution.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Slides</span>
+        </a>
+      </div>
+      <div class="col-sm-2">
+        <a href="lecture24.zip"><i class="fas fa-code" aria-hidden="true"
+            style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:6px">Lecture Code</span>
+        </a>
+      </div>
+    </div>
+    </p>
+
+    <div class="row">
+      <div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does this policy include the &#039;diagnostic&#039; as well?</p></i>
+               <p><b>A1:&nbsp;</b> yes, it will include the diagnostic</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Brahm, what is the screen-pointing/flashlight tech you are using? I&#039;ve seen several people using it and always wondered what it is/where I can try it out</p></i>
+               <p><b>A1:&nbsp;</b> its a special logitech clicker!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we access the course lecture materials (slides, code) and zoom recordings after the course ends this quarter? I would like to go back to some assignments to practice writing the extensions over the Summer.</p></i>
+               <p><b>A1:&nbsp;</b> The cs106a website will get reset over the summer, since there will be a new offering of cs106a over the summer, so you might want to download the slides/code before then.</p>
+        
+               <p><b>A2:&nbsp;</b> Yes for slides and code. As I understand it, the university canvas page doesn’t allow you to see the videos.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So you will also be able to append to list1?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when you rename a list, can you refer to that list with the original name?</p></i>
+               <p><b>A1:&nbsp;</b> if you do 
+x = []
+y = x
+
+you can refer to it as x or y!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is a “frame” exactly? Is it something physical? Is it just a model we use to visualize what is going on? What’s really happening inside the computer?</p></i>
+               <p><b>A1:&nbsp;</b> its a model. In your computer the frame exists as a set of sequential blocks of memory.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a reason you need the double underscores for __name__ and __main__?</p></i>
+               <p><b>A1:&nbsp;</b> __name__ is a special variable in namespace which stores __main__ only if this was the file that was run</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So does it mean, that in reality you can call other functions in the if__ statement, not necesarilly main?</p></i>
+               <p><b>A1:&nbsp;</b> yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are there different contest prizes now that everyone gets to drop their lowest grade anyways?</p></i>
+               <p><b>A1:&nbsp;</b> Well, beside the glory of winning the contest :-), we&#039;ll replace your next lowest grade with a 100%.  So, after we drop your lowest grade, you&#039;ll get a 100% on the next lowest.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So all global variables are in the program namespace?</p></i>
+               <p><b>A1:&nbsp;</b> Global variables are in the namespace of the &quot;module&quot; they are defined in.  If you only have one file/program, then they are in the namespace for that file/program.</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If a function is just an object, why do I need “def” in front of it? Why not be like 
+foo(params) = 
+(stuff in teh body of the function)?</p></i>
+               <p><b>A1:&nbsp;</b> thats a good point! There is a slight difference in python in syntax</p>
+        
+               <p><b>A2:&nbsp;</b> Using def is the way python defines it.  There are other languages that do something more akin to what you&#039;re suggesting.  There is also something called a lambda function in python that you might want look up online that has some similarities to what you suggest.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you clarify what you mean by an instance variable? I think i may have misunderstood</p></i>
+               <p><b>A1:&nbsp;</b> An instance variable is a variable inside an object (instance of a class).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why does brahm say “binding” when he refers to like assigning a name to a function object?</p></i>
+               <p><b>A1:&nbsp;</b> its a formal term for what you described</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the difference between binding and assignment</p></i>
+               <p><b>A1:&nbsp;</b> same thing!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is a function object different from a class?\</p></i>
+               <p><b>A1:&nbsp;</b> A class has both varables/attributes and a bunch of functions associated with it.  You can create instances of the class, which are objects.  A function is just a single function.  It does not define a new type.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so can we say that a function is like an “advanced” level of variables what can be assigned?</p></i>
+               <p><b>A1:&nbsp;</b> the idea is that you can store a function in a variable, or pass it as a parameter as a variable.  So, you can just think of a function like a value in a variable, except that the function is something that can executed (not just a value you look up).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so when you put things in a function, it changes the function object itself?</p></i>
+               <p><b>A1:&nbsp;</b> Not sure what you mean by putting things in a function.  A function is an object that can be assigned to a variable or passed as a parameter.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so you do not need () for copy of foo = foo ?</p></i>
+               <p><b>A1:&nbsp;</b> without the () it uses the function reference. With (), it calls the function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we need a copy of the function?</p></i>
+               <p><b>A1:&nbsp;</b> If you want to have more than one way to refer to the function.  It&#039;s not something that you commonly do.  Rather, passing functions as paramters is a more common thing that happens in programs.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we don’t need to put ()? -&gt; copy_of_foo() = foo() instead of copy_of_foo = foo?</p></i>
+               <p><b>A1:&nbsp;</b> correct. If you put the () your program will try and execute the function!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does it purposefully not have a space between key , the equal sign, and get_len (ie key = get_len)</p></i>
+               <p><b>A1:&nbsp;</b> It&#039;s a stylistic convention in python.  You could have spaces before/after the equal sign, but it stylistically not recommended in this case.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;And how can the program recognize the mouse click?</p></i>
+               <p><b>A1:&nbsp;</b> coming soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you control where to place the button on the canvas?</p></i>
+               <p><b>A1:&nbsp;</b> Brahm is planning to talk about this soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so command is another function?</p></i>
+               <p><b>A1:&nbsp;</b> correct!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So would it return True or False if the bottom was pressed? I don’t get what this specifically return</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you not put paratheses after click_handler in the line command = click_handler</p></i>
+               <p><b>A1:&nbsp;</b> the parens make a big difference here. With the parens, python calls the function. With no parens, python uses it as a variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;But why do we want just to print that, if instead we want to go to another screen or do another function?</p></i>
+               <p><b>A1:&nbsp;</b> It&#039;s just to keep the program simple for class.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How did Brahm add the eye emoji to the terminal lol</p></i>
+               <p><b>A1:&nbsp;</b> Its a character in strings :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;brahm are you wearing a karel shirt</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  Many swirling Karels!!</p>
+        
+               <p><b>A2:&nbsp;</b> why not :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;But, can we do it?</p></i>
+               <p><b>A1:&nbsp;</b> Do what?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the default location of the button is at 0,0? how do you place it at another spot of the canvas</p></i>
+               <p><b>A1:&nbsp;</b> it gets a little more complex. You need a container, and there are a few choices</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Wow I love Brahm’s commitment. Brought out a WHOLE mouse to click</p></i>
+               <p><b>A1:&nbsp;</b> ha :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Isn’t the starter code for sand full of global variables?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  It wasn&#039;t written by us :-).  Some python programmers will use globals when building applications for GUIs.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Make the clicker_function to show another screen with new functions?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you make a class for a type of function?</p></i>
+               <p><b>A1:&nbsp;</b> you can have a class with a function?</p>
+        
+               <p><b>A2:&nbsp;</b> You can make a kind of class called a functor that is probably what you might have in mind for this.  Search for &quot;python functor&quot; and you&#039;ll get a bunch of information.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is scrolling through a photo gallery on a smartphone similar to hitting the previous and next photo buttons on a computer?</p></i>
+               <p><b>A1:&nbsp;</b> The key difference between scrolling and using “pagination” like with previous and next, is the scroll bar. On the web you can put elements in scrollable panes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can the constest deadline be extended if needed, please?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+  </div>
+
+</body>

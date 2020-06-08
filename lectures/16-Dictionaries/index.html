@@ -1,0 +1,567 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/16-Dictionaries/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:53:56 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 16: Dictionaries
+					</h1>
+					<p class="subtleHeading">
+						May 13th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+		<div class="row">
+			<div class="col-sm-2"><a href="16-Dictionaries.pdf">
+					<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:3px">Slides</span>
+				</a>
+			</div>
+			<div class="col-sm-2">
+				<a href="Lecture16.zip"><i class="fas fa-code" aria-hidden="true"
+						style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:6px">Lecture Code</span>
+				</a>
+			</div>
+		</div>
+		</p>
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;I am working on programming a visualization tool for teaching science. I would really like to make a GUI to make the tool more approachable for users. Will we learn how to make a GUI in this class?</p></i>
+               <p><b>A1:&nbsp;</b> I can put together a video about this towards the end of the class! It’s not on our formal syllabus, though</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could the constant punctuation be defined as a list?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;always got confused about the parameter filename - do we include the extension .txt in the name?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is split() default delimiter for strings is spaces?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+               <p><b>A2:&nbsp;</b> is split() default delimiter for strings is spaces?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;for line.split() don’t you have to pass in what to split it by? i.e. ‘,’ or ‘ ‘</p></i>
+               <p><b>A1:&nbsp;</b> It defaults to spaces</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don’t you have to cast filename as a string when printing?</p></i>
+               <p><b>A1:&nbsp;</b> It’s already a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do the values have to be unique</p></i>
+               <p><b>A1:&nbsp;</b> No</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry, I missed about &quot;r&quot; in open(filename, &quot;r&quot;). What is &quot;r&quot;?</p></i>
+               <p><b>A1:&nbsp;</b> You want to ‘r’ead through the file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is this different to a variable, as variables have some kind of unique identifier that’s linked to some piece of information?</p></i>
+               <p><b>A1:&nbsp;</b> You can store as many keys and values as you want in a dictionary, without havng to explicitly write their names when you’re writing the program.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why not just make a list of lists?</p></i>
+               <p><b>A1:&nbsp;</b> A few reasons! 1) Lists require indices, and dictionaries use keys (which can be of any type) 2) Lists require a sense of order, and dictionaries don’t 3) DIctionaries are much, much faster (we’ll get there soon)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how is this different from a list?</p></i>
+               <p><b>A1:&nbsp;</b> It’s not indexed, nor is it ordered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What happens if we have commas or colons in the names within a dictionary?</p></i>
+               <p><b>A1:&nbsp;</b> If it’s within the quotes in a string, that’s fine</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do mixed-type dictionaries exist?</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean? Where are the types being mixed?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we add new pair directly using the assigning thing</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so dictionaries are passed y reference in the heap?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;e.g. a val of str, a val of float, and a val of int or a key of str a key of float and a key of int</p></i>
+               <p><b>A1:&nbsp;</b> Keys and values can have any types (although typically, all the keys are all the same type and the values are all the same type)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So dictionaries are mutable?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there are names funtion where you can print all the keys in a dictionary?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, it’s alled .keys()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;on a more general level when would we use list vs. dictionary vs. regular varible as they serve some what similar roles (storing information that can be acessed later )</p></i>
+               <p><b>A1:&nbsp;</b> We’ll talk about that later on!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are values assumed to be strings?</p></i>
+               <p><b>A1:&nbsp;</b> No, they can be any type</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the dictionary more like 2-dimensional list or 1D list with additional info about elements? What happens if we ask a statement like &quot;if 32 in ages&quot; for the previous example?</p></i>
+               <p><b>A1:&nbsp;</b> 1) It doesn’t really have a ‘dimension’ 2) It searches through the keys, so that would be False</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can values only be strings?</p></i>
+               <p><b>A1:&nbsp;</b> They can be any type</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you add using [] instead of {}?</p></i>
+               <p><b>A1:&nbsp;</b> You index into a dict or list using []</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do we create a dictionary out of a file (eg 2 columns of information)?</p></i>
+               <p><b>A1:&nbsp;</b> Once this lecture is over, you should try and write the code to do that!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the value type of a key? char?</p></i>
+               <p><b>A1:&nbsp;</b> Any type you want</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are keys case sensitive?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you say phone[Pat] = Jenny?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, although that would be a strange phone number :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if you wanted to search through the values and not the keys?</p></i>
+               <p><b>A1:&nbsp;</b> That’s a pretty uncommon thing to need to do, but you can use the .values() function to get back the values</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is that why there cannot be duplicate usernames on websites/runescape/etc? There needs to be unique key values?</p></i>
+               <p><b>A1:&nbsp;</b> Great thought! We don’t *quite* use dictionaries to represent this but the principle is exactly the same :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;sorry, to clarify, could you alter Pat so that it holds whatever number is stored in Jenny’s value</p></i>
+               <p><b>A1:&nbsp;</b> Oh, that would be phones[‘Pat’] = phones[‘Jenny’]</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is the difference between primitive and immutable?</p></i>
+               <p><b>A1:&nbsp;</b> ‘Immutable’ is the formal name!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;And what if you wanted it to print a list of the entire dictionary?</p></i>
+               <p><b>A1:&nbsp;</b> What do you mean by a list of the entire dictionary?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;instead of a list of all the keys, a list of the keys and their values</p></i>
+               <p><b>A1:&nbsp;</b> dict.items() does something similar, but it doesn’t return a *list*</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we need to string cast “key” in print(str(key) + … ?</p></i>
+               <p><b>A1:&nbsp;</b> We didn’t really need to because they were strings, good catch!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could we use the for loop for values to return spectific keys for those values?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have a summary of all the list and dictionary functions?</p></i>
+               <p><b>A1:&nbsp;</b> Do we have a summary of all the list and dictionary functions?</p>
+        
+               <p><b>A2:&nbsp;</b> In the Python reader</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does it mean to “return something similar to a range of keys/values”? Doesn’t it just return the exact range?</p></i>
+               <p><b>A1:&nbsp;</b> It does - it’s just not the same return type as the range function, although it behaves similarly and contains all the keys or values</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is you had two keys with the same name, what would dict.pop(key) do then?</p></i>
+               <p><b>A1:&nbsp;</b> Keys have to be unique</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we always type the file name when running the program in the terminal?</p></i>
+               <p><b>A1:&nbsp;</b> Depends on how the program works</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you write a code that overrides the case sensitivity? So that it will could more and MORE as the same?</p></i>
+               <p><b>A1:&nbsp;</b> You can convert each of the words to lowercase or uppercase using .lower() or .upper()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For a word-count tool it might be helpful to print the list of the words sorted by how many times they appear—would you have to convert to a list to do that, or is there a way to sort the entries in the dictionary and print that?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll talk about sorting  like that later this quarter! Great question :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you not use curly brackets on the dictionary to look up the value. i.e. dict{key}?</p></i>
+               <p><b>A1:&nbsp;</b> can you not use curly brackets on the dictionary to look up the value. i.e. dict{key}?</p>
+        
+               <p><b>A2:&nbsp;</b> Nope, you always use [] to ‘index’ into a data structure</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to alter all values at once? Say add 1 to everyones&#039; age?</p></i>
+               <p><b>A1:&nbsp;</b> Only in a for loop!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just to clarify, one key can have multiple values?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If the Key’s are case sensative, why can I have multiple people with the same “key” and value in my phone contact list? 
+
+That is probably a silly question — cellphones are pretty complicated. But conceptually, why can you do that?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

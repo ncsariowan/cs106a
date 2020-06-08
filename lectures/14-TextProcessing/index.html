@@ -1,0 +1,593 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/14-TextProcessing/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:52:19 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 14: Text Processing
+					</h1>
+					<p class="subtleHeading">
+						May 8th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+		<div class="row">
+			<div class="col-sm-2"><a href="14-TextProcessing.pdf">
+					<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:3px">Slides</span>
+				</a>
+			</div>
+			<div class="col-sm-2">
+				<a href="Lecture14.zip"><i class="fas fa-code" aria-hidden="true"
+						style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:6px">Lecture Code</span>
+				</a>
+			</div>
+		</div>
+		</p>
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a recording of the pixar talk yesterday?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, it’s on canvas</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is Alan Turing the person that the Turing award is named after?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is this what the infamous heap allocator is?</p></i>
+               <p><b>A1:&nbsp;</b> The heap allocator basically finds a spot in your computer’s memory for a variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How are they stored? (like in URL)</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but there’s a nuance - we’ll get there soon.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I may have missed it but what did the 28 represent in the previous slide?</p></i>
+               <p><b>A1:&nbsp;</b> Just the address of that String</p>
+        
+               <p><b>A2:&nbsp;</b> It was the &quot;address&quot; (URL) where the string lives in memory.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;The code is really small, could he possibly zoom in?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;As a result, you can also modify the lists as Mehran taught yesterday?</p></i>
+               <p><b>A1:&nbsp;</b> For strings it&#039;s a little different.  You&#039;ll see that soon.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could we us for elem in example:</p></i>
+               <p><b>A1:&nbsp;</b> Yes, we’ll get there</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a particular reason he did range(len(example)) rather than range(length) since he created that variable already?</p></i>
+               <p><b>A1:&nbsp;</b> He could have used length.  He just wanted to show what the loop would look like if you didn&#039;t use a separate variable.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the difference between doing: example=“Hi mom” and example=[‘h’, ’i’, ‘ ’, ‘m’, ‘o’, ‘m’]?</p></i>
+               <p><b>A1:&nbsp;</b> The first is a string and the next is a list - we’ll talk about the difference between them in a second</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you explain again what “len” is?</p></i>
+               <p><b>A1:&nbsp;</b> Returns the length of the string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how come you cant command it to print(example[i])?</p></i>
+               <p><b>A1:&nbsp;</b> You can</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you type the emoji?</p></i>
+               <p><b>A1:&nbsp;</b> Depends on your OS! You can just copy and paste if need be.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you include emoji&#039;s in Python?</p></i>
+               <p><b>A1:&nbsp;</b> Depends on your OS! You can just copy and paste if need be.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does a string version of a number get stored?  For example is x = ’28’ and list with only one element equal to 28 or with 2 elements, the first 2 and the second 8?</p></i>
+               <p><b>A1:&nbsp;</b> Here, x is really a string, which is has some similarities to a list (link indexing to get characters), but it&#039;s not actually a &quot;list&quot;.  It&#039;s a different type.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In the example, the print function took two statements to print (both i and the letter). How many different statements can you add to the print function to print?</p></i>
+               <p><b>A1:&nbsp;</b> As many as you want</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;should that be x.strip() or strip(x) or something, otherwise how does strip “know” it’s referring to x?</p></i>
+               <p><b>A1:&nbsp;</b> Good point! That should be x.strip()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we use string functions mentioned here on lists?</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does x.find tell you where it is?</p></i>
+               <p><b>A1:&nbsp;</b> Yeah, it tells you the index of the string you’re searching for</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, it returns the index of the first appearance of the string you&#039;re trying to find.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s strip again?</p></i>
+               <p><b>A1:&nbsp;</b> It removes whitespace from the start and end of the string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So digit is like “integer” for Python?</p></i>
+               <p><b>A1:&nbsp;</b> A digit in this context is ‘0’-‘9’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;sorry would you mind clarifying the final 3 again?</p></i>
+               <p><b>A1:&nbsp;</b> isdigit - whether a string comprises entirely of digits isalpha - whether a string comprises entirely of letters isspace - whether a string comprises entirely of spaces</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What did x.alpha do? And the one where the answer was #2?</p></i>
+               <p><b>A1:&nbsp;</b> x.isalpha() returns whether the string consists entirely of alphabetical characters, and .find returns the index of a string you’re searching for.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are periods and commas alphas?</p></i>
+               <p><b>A1:&nbsp;</b> No, they’re not letters.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what ch stands for?</p></i>
+               <p><b>A1:&nbsp;</b> character, but it’s just a variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;you forgot to print! how did it print?</p></i>
+               <p><b>A1:&nbsp;</b> it’s printed in main.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Would only_number = [] not work for making a new string?</p></i>
+               <p><b>A1:&nbsp;</b> No, that makes a list</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How can you run a doctest again?</p></i>
+               <p><b>A1:&nbsp;</b> In the terminal: `python3 -m doctest -v foo.py`  In Pycharm: right-click and select ‘run doctest’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would only_number += ch work?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just to confirm, when we use replace or other commands, it creates a new string; it doesn’t modify it?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So ord takes a value and gives you the index value for your character?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what do the 28 and 91 mean?</p></i>
+               <p><b>A1:&nbsp;</b> They are addresses in memory where those strings live</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does x.replace work then?</p></i>
+               <p><b>A1:&nbsp;</b> It returns a modified string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you delete strings youre not using anymore?</p></i>
+               <p><b>A1:&nbsp;</b> del var_name</p>
+        
+               <p><b>A2:&nbsp;</b> But that’s not a particularly common thing to do</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;but once you change your string can you access the old one if they share the same name?</p></i>
+               <p><b>A1:&nbsp;</b> Nope!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we then search through the heap to find the &#039;original&#039; string
+before any concatenation happens?</p></i>
+               <p><b>A1:&nbsp;</b> Not in Python, but that would also be _really_ slow</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;just to be sure, you can’t access it but it still exists?</p></i>
+               <p><b>A1:&nbsp;</b> At some point, your OS or Python will clear it up, but yes, it doesn’t get deleted when the reference gets reassigned</p>
+        
+               <p><b>A2:&nbsp;</b> Python will reclaim the memory for that string eventually.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What about string.replace? does it modify the string or make a new one</p></i>
+               <p><b>A1:&nbsp;</b> Makes a new string.</p>
+        
+               <p><b>A2:&nbsp;</b> Returns a new one</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you also do negative numbers to go backwards through indexes of a string like you can for lists</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how are you changing result everytime if strings are immutable? or is each iteration different?</p></i>
+               <p><b>A1:&nbsp;</b> You are assigning a new strong over result no each iteration of the loop.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is this a situation where you could also do ‘for ch in str: result = ch + result’?</p></i>
+               <p><b>A1:&nbsp;</b> yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the third version of reverse string, are you allowed to have a function with nothing in it but a return?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why can strings be normalized if they are immutable?</p></i>
+               <p><b>A1:&nbsp;</b> All string functions return a new function!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If strings are immutable, why can we normalize a string one character at a time?</p></i>
+               <p><b>A1:&nbsp;</b> We make a new string each time we add a new character!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so it also counts the characters besides from beign a palindrome?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;will the review sessions recorded</p></i>
+               <p><b>A1:&nbsp;</b> yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will there be YEAH hours for assignment 4?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when looking at the three reverse string functions, i didn’t understand how the first two were able to reverse the str.</p></i>
+               <p><b>A1:&nbsp;</b> it built a new string! one character at a time</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does the program find this huge sentence as a palindorme since there are spaces in different places when you reverse it? Does it ingore the spaces?</p></i>
+               <p><b>A1:&nbsp;</b> normalize removes all the space and punctuation. Check out the worked example (look in the navbar on cs106a.stanford.edu)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;but you were looping through the string in the forward direction and then adding them. Wouldn’t that just return the same string?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

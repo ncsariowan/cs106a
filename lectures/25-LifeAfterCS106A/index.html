@@ -1,0 +1,569 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/25-LifeAfterCS106A/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:10:46 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+
+
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="pageHeader">
+          <br />
+          <h1>
+            Lecture 25: Life after CS 106A
+          </h1>
+          <p class="subtleHeading">
+            June 5th, 2020
+          </p>
+
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <h3>Lecture Materials </h3>
+    <p>
+    <div class="row">
+      <div class="col-sm-2"><a href="25-LifeAfterCS106A_1.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Part 1 Slides</span>
+        </a>
+      </div>
+      <div class="col-sm-2">
+        <a href="lecture25.zip"><i class="fas fa-code" aria-hidden="true"
+            style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:6px">Part 1 Code</span>
+        </a>
+      </div>
+      <div class="col-sm-2"><a href="25-LifeAfterCS106A_2.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Slides 2</span>
+        </a>
+      </div>
+    </div>
+    </p>
+
+    <div class="row">
+      <div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;When will the video recordings be available until?</p></i>
+               <p><b>A1:&nbsp;</b> End of the quarter.</p>
+        
+               <p><b>A2:&nbsp;</b> They’ll be removed at the end of the quarter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;6/12?</p></i>
+               <p><b>A1:&nbsp;</b> Probably then or shortly thereafter.  The university actually controls video access, so it&#039;s not under our control.</p>
+        
+               <p><b>A2:&nbsp;</b> I believe it’d be the 10th or 11th</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how did you measure retention?</p></i>
+               <p><b>A1:&nbsp;</b> And attending section/watching lecture videos!</p>
+        
+               <p><b>A2:&nbsp;</b> Students completing assignments</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;awesome! do you think you will do code in place again next year?</p></i>
+               <p><b>A1:&nbsp;</b> We&#039;ve been thinking about what to do next.  We&#039;ll probably try to do something again like it in the future, but with a different structure.  We&#039;re still trying to figure it out.</p>
+        
+               <p><b>A2:&nbsp;</b> We think it was an experiment very worth doing but we’re going to take some time to reflect and figure out what the best way to move forward it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Were the lecture videos made differently for code in place students vs stanford students? Curious about the logistics!</p></i>
+               <p><b>A1:&nbsp;</b> They were very similar (we often reused videos), but we’d segment them into different sections rather than one one 50 minute video</p>
+        
+               <p><b>A2:&nbsp;</b> There were also some videos that were specific for Code in Place.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are we allowed to sell the projects we make for 106A?</p></i>
+               <p><b>A1:&nbsp;</b> The code you write is your own intellectual property, but we ask you to please not distribute your source code as others might copy that in the future and submit it as their own.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is different between new file and new python file</p></i>
+               <p><b>A1:&nbsp;</b> A python file is just like a file with a .py extension</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you convert text to .py easily?</p></i>
+               <p><b>A1:&nbsp;</b> Or rename it to end with .py!</p>
+        
+               <p><b>A2:&nbsp;</b> Just copy and past it into a .py file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;or the other way round?</p></i>
+               <p><b>A1:&nbsp;</b> Copy/paste the other way around</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a reason you might want one over the other ?</p></i>
+               <p><b>A1:&nbsp;</b> You need it to end with .py for Python to be able to run it, just like it needs to end with .docx for Microsoft word to recognize it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a reason you might want a new file OVER a python file or the other way around *** ?</p></i>
+               <p><b>A1:&nbsp;</b> ‘New file’ just means a file with text in it, usually. A python file contains python code.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What language would you recommend us to do after python?</p></i>
+               <p><b>A1:&nbsp;</b> Depends on what you&#039;d like to do.  The choice of language really depends on the problem you&#039;re trying to solve.</p>
+        
+               <p><b>A2:&nbsp;</b> We’ll get there soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Or does it depend on the things we want to do?</p></i>
+               <p><b>A1:&nbsp;</b> Kind of!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Thanks Mehran! How can I prevent people from inspecting my source code? Do I turn my py to exe files?</p></i>
+               <p><b>A1:&nbsp;</b> Yep - I made a post on Ed with some links as to how to learn about this.</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, you would create executables.  See Brahm&#039;s Ed post on this.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Thank you! What’s the name of the post if I may ask?</p></i>
+               <p><b>A1:&nbsp;</b> It’s pinned - ‘some new resources’. Look for the part about PyInstaller</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you write javascript in pycharm? or any of the other lanuages? would you open a new file (non python file) to do so?</p></i>
+               <p><b>A1:&nbsp;</b> There are other editors for those languages! PyCharm can do it, but it’s best for Python</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there an easy way to convert between languages?</p></i>
+               <p><b>A1:&nbsp;</b> There are some tools, but their use is relatively restricted - it’s usually best to do it yourself :)</p>
+        
+               <p><b>A2:&nbsp;</b> Not really.  There are some conversion tools between a few languages, but they don&#039;t usually support the full set of features in a language.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So, would you say Java would be a good fit for interactive (dinamic) outputs like websites?</p></i>
+               <p><b>A1:&nbsp;</b> Javascript, but yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what are the benefits of sublime over pycharm?</p></i>
+               <p><b>A1:&nbsp;</b> Sublime is way more lightweight and can be customized to be really useful for other languages as well. Really, it doesn’t make a ton of difference though beyond your personal preference!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you give us some suggestions for classes we should take if we want to go further with Python and data science?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll be talking about that very soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So AI works better as we put many different conditions representing features?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, that’s one of the things we can do! Chris is talking about a few other approaches we can take which do some of that work for you.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it true that all of the “prove you’re not a robot” select picture tests are just for AI training?</p></i>
+               <p><b>A1:&nbsp;</b> They’re used for a bunch of different things but they certainly are handy for data collection!</p>
+        
+               <p><b>A2:&nbsp;</b> Some of them are (but not all).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does Mehran believe in strong AI or weak AI? :)))</p></i>
+               <p><b>A1:&nbsp;</b> hes teaching now, so it will have to remain a mystery :-)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is nn.?
+Just curious because is very repetitive.</p></i>
+               <p><b>A1:&nbsp;</b> Stands for Neural Network!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Did the invention of Google break the 2nd of thermodynamics?</p></i>
+               <p><b>A1:&nbsp;</b> No, but its growth was similarly mindboggling!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the difference between B and X?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll talk about it at the end!</p>
+        
+               <p><b>A2:&nbsp;</b> Not much in practice. But X is thought of as going slightly deeper. But I took B and it was a good time. And I turned out fine :-)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For grad students in the medical realm, what class would you suggest we take if we would like to learn more CS to apply to the medical field?</p></i>
+               <p><b>A1:&nbsp;</b> Computational Bio!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would you say about the difference of Biocomputation and Biomedical computation?</p></i>
+               <p><b>A1:&nbsp;</b> Different names for the same idea</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;CS198 is to help in all the complementary resources, right?</p></i>
+               <p><b>A1:&nbsp;</b> It manages all the section leaders</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have sufficient skills to go onto  graduate computation bio classes or would 106B be needed?</p></i>
+               <p><b>A1:&nbsp;</b> 106B would probably be helpful, but it’s never too soon!</p>
+        
+               <p><b>A2:&nbsp;</b> If you have time CS106B is useful. Its nice to have a solid foundation so you can get the full compbio experience. But as brahm said, you could jump right in if you want!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Now what would you say about Bio computation and Bioengineering? hehe… I am so unsure what I want to do now.</p></i>
+               <p><b>A1:&nbsp;</b> Two awesome paths which both lead to really cool things. I bet there is a ton of overlap</p>
+        
+               <p><b>A2:&nbsp;</b> Bioengineering is a more general term for using engineering techniques to solve problems in biology (like drug delivery mechanisms or synthetic limbs)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is the symsys core the same as the cs core?</p></i>
+               <p><b>A1:&nbsp;</b> Pretty different - I can chat about it after lecture or in office hours!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is green EE?</p></i>
+               <p><b>A1:&nbsp;</b> environmental research with EE</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I am premed, and I am wondering what you recommend. I am choosing between biomedical computation major and a bio computation track under the cs major</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Brahm did you take CS 106A?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Any recommendations for bioinformatics/data science/data mining courses for a PhD student in the biomedical sciences? Preferably one I would be equipped for after CS106a (I’m hopefully graduating this year!)</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;As a grad student with limited CS experience, do you have recommendations for classes to take with a focus on Python and data science?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I heard that 198 wont be open next quarter. I was wondering if you have any information about when being a section leading will be an option again?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would are recommendations for someone looking to tie in sustainability/energy
+ engineering with CS? Are there current tracks for that, or would that be better done via an individually-designed track?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+  </div>
+
+</body>

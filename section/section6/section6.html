@@ -1,0 +1,1166 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/section/section6/section6.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:23:43 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- add after bootstrap.min.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <div class="col-sm-12">
+      <div style="height: 20px;"></div>
+      <h1>
+        Section #6: Nested Structures
+      </h1>
+      <p class="subtleHeading">
+        May 17th, 2020
+      </p>
+      <hr />
+      <p>
+        <i>
+          Written by Brahm Capoor, Juliette Woodrow, Peter Maldonado, Kara Eng,
+          Tori Qiu and Parth Sarin
+        </i>
+      </p>
+
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <a href="Section6.zip">
+            <i
+              class="fas fa-download"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            PyCharm Project
+          </a>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="https://us.edstem.org/courses/325/lessons/1298">
+            <i
+              class="fas fa-laptop-code"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Online IDE
+          </a>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="section6-soln.html">
+            <!--TODO-->
+            <i
+              class="fas fa-file-pdf"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Solutions
+          </a>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <h2>Counting by Consonants</h2>
+
+    <p>
+      Implement the following function:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def count_by_consonants(filename):
+    """
+    Reads in the file whose name is filename and returns a dictionary
+    that contains counts of words that share the same consonants in order.
+    """
+      </code>
+    </pre>
+
+    <br />
+    <p>
+      For example, if the file <code>consonants.txt</code> contains this text:
+    </p>
+    <pre class="plaintext">
+      <code>
+great
+grate
+teeny
+greet
+tiny
+bump
+      </code>
+    </pre>
+    <p>
+      calling <code>count_by_consonants('consonants.txt')</code> will return the
+      dictionary <code>{'grt': 3, 'tny': 2, 'bmp': 1}</code>.
+    </p>
+
+    <br />
+
+    <h2>Drawing Friend Graphs</h2>
+    <p>
+      Python is commonly used to help analyze data sets by creating
+      visualizations of said data. One common example of data visualization is
+      to look at relationships between users social networks. Programmers can
+      use python to help draw the network. The visual can be used to measure
+      statistics of the network or to find clusters, which are groups of
+      individuals who have many of the same friends. There are many reasons to
+      search for close-knit groups in social networks - for instance, to create
+      targeted marketing schemes or to suggest groups they'd like to be a part
+      of. Cluster analysis has been also used to
+      <a
+        href="http://theory.stanford.edu/~nmishra/Papers/clusteringSocialNetworks.pdf"
+      >
+        identify terrorist cells.</a
+      >
+    </p>
+    <p>
+      In this problem, you are going to use your python programming skills to
+      create a visual representation of a social network where users can follow
+      each other. More specifically, you will use information from two text
+      files and draw lines representing the relationships in the network. If a
+      user follows another user, your output should have a line connecting the
+      two people.
+    </p>
+    <p>
+      You will be given two files through command-line arguments. The first file
+      is a list of each person in the network, each on a separate line, where
+      their name is followed by a colon and then a list of all the people that
+      they follow. The second file is a list of coordinates. Each line has the
+      name of a person in the network, followed by a colon and then a comma
+      separated list of two integers representing the x and y coordinates you
+      will use to place the node representing that person on the canvas. For
+      example, two matching files, <code>users.txt</code> and
+      <code>coords.txt</code>, might look like this (note that the users needn't
+      necessarily be in the same order in both files):
+    </p>
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="text-muted">users.txt</h4>
+        <hr />
+        <pre class="text">
+          <code>
+Juliette: Brahm, Nick, Julie, Cynthia
+Brahm: Juliette, Nick, Cynthia, Mehran, Chris, Cynthia
+Mehran: Oliver, Chris
+Chris: Mehran, Oliver
+Nick: Juliette, Julie, Keith
+Julie: Juliette, Nick, Cynthia
+Oliver: Mehran, Chris
+Cynthia: Juliette, Julie, Keith
+Keith: Nick, Cynthia
+          </code>
+        </pre>
+      </div>
+      <div class="col-sm-6">
+        <h4 class="text-muted">coords.txt</h4>
+        <hr />
+        <pre class="text">
+          <code>
+Brahm: 141, 343
+Chris: 390, 65
+Cynthia: 100, 250
+Julie: 185, 670
+Juliette: 238, 409
+Keith: 30, 400
+Mehran: 550, 145
+Nick: 14, 585
+Oliver: 699, 18
+          </code>
+        </pre>
+      </div>
+    </div>
+    <p>
+      Your job is to implement the following function:
+    </p>
+    <pre class="lang-python">
+      <code>
+def draw_friend_graph(canvas, friends_file, coordinates_file):
+    """
+    Draws a graph representing the friend network. For each user, 
+    draw a circle at their respective coordinates and a label with their name. 
+    Next, draw lines connecting that circle to the circle of each person they
+    follow. 
+    """
+      </code>
+    </pre>
+    <p>
+      As you consider how best to approach the problem and store your data, keep
+      in mind that relationships aren't necessarily symmetric. For example, note
+      that Brahm follows several users in the example above, but despite his
+      best efforts to use in-vogue hashtags, has but a single humble follower.
+    </p>
+    <p>
+      You may assume that the two files provided are valid and represent the
+      same users, but an interesting extension to this problem might be to
+      verify that.
+    </p>
+
+    <br />
+
+    <h2>First Letter Index</h2>
+    <p>
+      Implement the following function:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def first_list(strs):
+    """
+    Given a list of strings, create and return a dictionary whose 
+    keys are the unique first characters of the strings and whose 
+    values are lists of words beginning with those characters, in 
+    the same order that they appear in strs.
+
+    >>> first_list(['banter', 'brahm', 'aardvark', 'python', 'antiquated'])
+    {'b': ['banter', 'brahm'], 'a': ['aardvark', 'antiquated'], 'p': ['python']}
+    """
+      </code>
+    </pre>
+
+    <br />
+
+    <h2>Cryptography</h2>
+    <p>
+      Cryptography is the study of techniques for communicating messages
+      secretly. Imagine that Alice and Bob want to send messages to each other,
+      but Eve can snoop on the messages they're sending and read them. Alice
+      wants to figure out way to "encrypt" her messages so that if Eve reads the
+      message, she won't be able to understand it, but Bob will be able to
+      "decrypt" the message. We're going to write a program to help Alice and
+      Bob do this.
+    </p>
+
+    <p>
+      Alice decides that she'll replace every letter in her original message
+      with a different letter. She's defined a variable in the program called
+      <code>ENCRYPTION_DICT</code> that keeps track of these associations:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+ENCRYPTION_DICT = {
+ 'A': 'T',
+ 'B': 'H',
+ 'C': 'E',
+ 'D': 'Q',
+ 'E': 'U',
+ 'F': 'I',
+ 'G': 'C',
+ 'H': 'K',
+ ...
+}
+      </code>
+    </pre>
+
+    <p>
+      Alice and Bob exchanged this dictionary before we went into quarantine, so
+      they both know that this is the strategy, but Eve doesn't know that! Note
+      that in order to avoid ambiguity, the values in this dictionary are unique
+      (that is, each letter is a value in the dictionary exactly once).
+    </p>
+
+    <h3>
+      Encryption
+    </h3>
+
+    <p>
+      To start us off, implement the following function:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def encrypt(plaintext):
+    """
+    Takes in plaintext as an input and returns 'ciphertext': the result 
+    of substituting each letter in the plaintext by its corresponding 
+    encrypted character in ENCRYPTION_DICT. 
+
+    The plaintext comprises entirely of uppercase letters and non-alphabetic 
+    characters like punctuation. Non-alphabetic characters needn't be encrypted, 
+    but rather should appear in the plaintext in their original form. 
+
+    >>> encrypt("HEY, HOW'S IT GOING?")
+    "KUD, KXZ'S BV CXBFC?"
+    >>> encrypt("I LOVE CS 106A!")
+    'B WXLU ES 106T!'
+    >>> encrypt("UNICORNS ARE THE MOST BEAUTIFUL ANIMALS IN EXISTENCE")
+    'AFBEXPFS TPU VKU NXSV HUTAVBIAW TFBNTWS BF UYBSVUFEU'
+    """
+      </code>
+    </pre>
+
+    <h3>
+      Decryption
+    </h3>
+    <p>
+      Now that Bob has received Alice's encrypted message, he needs to "decrypt"
+      it, or convert it back to the original message. To help him do so,
+      implement the following function:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def decrypt(ciphertext):
+    """
+    Uses ENCRYPTION_DICT to decrypt each of the alphabetic characters of
+    ciphertext.
+
+    >>> decrypt("KUD, KXZ'S BV CXBFC?")
+    "HEY, HOW'S IT GOING?"
+    >>> decrypt('B WXLU ES 106T!')
+    'I LOVE CS 106A!'
+    >>> decrypt('AFBEXPFS TPU VKU NXSV HUTAVBIAW TFBNTWS BF UYBSVUFEU')
+    'UNICORNS ARE THE MOST BEAUTIFUL ANIMALS IN EXISTENCE'
+    """
+      </code>
+    </pre>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h2 class="mb-0 card-title" data-toc-skip>
+            <button
+              class="btn btn-link btn-block text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Hint
+            </button>
+          </h2>
+        </div>
+
+        <div
+          id="collapseOne"
+          class="collapse hide"
+          aria-labelledby="headingOne"
+          data-parent="#accordionExample"
+        >
+          <div class="card-body">
+            <p>
+              Note that in order to successfully decrypt a message, you need the
+              'reverse' of <code>ENCRYPTION_DICT</code>: rather than associating
+              plaintext characters with their encrypted counterparts, we need to
+              go the other way.
+            </p>
+            <p>
+              We suggest writing a function
+              <code>reverse_encryption_dict</code> to decompose out this
+              problem. In class, we saw an example of this wherein a reversed
+              dictionary associated keys with lists of values, because multiple
+              keys can share the same value. Note that this doesn't apply to the
+              case of <code>ENCRYPTION_DICT</code>, because each character is
+              guaranteed to have a unique character. How does this affect how
+              you implement <code>reverse_encryption_dict</code>?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <p>
+      This is an interesting encryption scheme (known formally as a
+      <i>substitution cipher</i>), but unfortunately isn't very secure. What
+      issues do you see with it?
+    </p>
+
+    <br />
+
+    <h2>Recipes</h2>
+
+    <p>
+      Inspired by an unhealthy amount of Netflix and quarantine cooking, Parth
+      and Peter are opening up a bakery. To try and keep costs low, they want to
+      automate as much of their inventory tracking as possible.
+    </p>
+    <p>
+      Thanks to 106A, they think they can use dictionaries to help.
+    </p>
+    <p>
+      All of the ingredients they have available will be stored in a
+      <code>pantry</code>
+      dictionary, whose keys are ingredients and values are weights (Of course
+      they're using the metric system), like so:
+    </p>
+    <pre class="lang-python">
+      <code>
+pantry = {
+    'flour': 400,
+    'sugar': 300,
+    'salt': 10,
+    'chocolate': 150
+}
+      </code>
+    </pre>
+    <p>
+      Each <code>recipe</code> is also stored in a dictionary, like the
+      following uninspiring concoction:
+    </p>
+    <pre class="lang-python">
+      <code>
+recipe = {
+  'flour': 200,
+  'salt': 2.5
+}
+      </code>
+    </pre>
+    <p>
+      (As you can tell from the recipe above, it doesn't look like their bakery
+      is going to do very well, but that's not important right now.)
+    </p>
+    <p>
+      Recipes and the pantry are first stored as files, where each key value
+      pair is on a different line, separated by <code>':: '</code>. The pantry
+      list and recipe above would look like:
+    </p>
+    <div class="row">
+      <div class="col-sm-6">
+        <h4 class="text-muted">pantry.txt</h4>
+        <hr />
+        <pre class="text">
+          <code>
+flour:: 400
+sugar:: 300
+salt:: 10
+chocolate:: 150
+          </code>
+        </pre>
+      </div>
+      <div class="col-sm-6">
+        <h4 class="text-muted">recipe.txt</h4>
+        <hr />
+        <pre class="text">
+          <code>
+flour:: 200
+salt:: 2.5
+          </code>
+        </pre>
+      </div>
+    </div>
+    <p>
+      Our goal is to write a few functions to help Parth and Peter run their
+      bakery. Begin by implementing the following function:
+    </p>
+    <pre class="lang-python">
+      <code>
+def read_dict_from_file(filename):
+    """
+    Takes in the name of a file containing a recipe or 
+    pantry list and reads it into a dictionary.
+    
+    An example doctest using the file above:
+    >>> read_dict_from_file('recipe.txt')
+    {'flour': 200, 'salt': 2.5}
+    """
+      </code>
+    </pre>
+    <p>
+      Once you've developed the infrastructure to construct recipe and pantry
+      list dictionaries, implement the following functions:
+    </p>
+    <pre class="lang-python">
+      <code>
+def can_make(recipe, pantry):
+    """
+    Given the contents of the pantry, returns a boolean indicating 
+    whether or not it is possible to follow the recipe. Note that 
+    the parameters to this function are dictionaries, and not 
+    filenames. The pantry should not be modified in this function
+    """
+    pass
+
+def make_recipe(recipe, pantry):
+    """
+    Given a recipe and a pantry with enough ingredients to make the recipe, 
+    modify the contents of the pantry to remove as many quantities as the 
+    recipe requires. You may modify the pantry in place, but return the modified 
+    pantry in order to test the output using doctests. 
+
+    # using the recipe and pantry defined above
+    >>> make_recipe(recipe, pantry)
+    {'flour': 200, 'sugar': 300, 'salt': 7.5, 'chocolate': 150}
+    """
+    pass
+      </code>
+    </pre>
+    <p>
+      Note that <code>make_recipe</code> assumes the pantry is sufficient for
+      the recipe but this is not necessarily always the case; thus, every call
+      to <code>make_recipe</code> will need to be guarded by a call to
+      <code>can_make_recipe</code>.
+    </p>
+    <p>
+      Whilst implementing <code>can_make</code> function, you might find the
+      dictionary's <code>.get</code> function helpful, which accepts a parameter
+      suggesting what to return if the value is not in the dictionary. For
+      example, calling <code>recipe.get('yeast', 42)</code> will return
+      <code>42</code> if <code>'yeast'</code> is not a key in the
+      <code>recipe</code> dictionary.
+    </p>
+    <p>
+      Finally, implement a <code>main</code> function, which first reads in a
+      pantry file from a user and then continuously asks for recipe filenames
+      from the user and either prints an error message if the pantry does not
+      have sufficient ingredients, or removes the ingredients from the pantry if
+      it does exist, printing the pantry afterwards.
+    </p>
+    <p>
+      A sample run of the program is below, which repeatedly tries to make the
+      recipe above in the vain hope that someone will actually want to eat it.
+      Note that your program should be able to accept any valid recipe filename,
+      though. User input is <b><i>bolded and italicized</i></b
+      >.
+    </p>
+    <pre class="plaintext">
+      <code>
+$ python3 pantry_manager.py 
+Enter pantry filename: <b><i>pantry.txt</i></b>
+What recipe should we bake next (Press enter to quit.)? <b><i>recipe.txt</i></b>
+You can make that recipe! Your pantry now looks like this:
+{'flour': 200, 'sugar': 300, 'salt': 7.5, 'chocolate': 150}
+
+What recipe should we bake next (Press enter to quit.)? <b><i>recipe.txt</i></b>
+You can make that recipe! Your pantry now looks like this:
+{'flour': 0, 'sugar': 300, 'salt': 5, 'chocolate': 150}
+
+What recipe should we bake next (Press enter to quit.)? <b><i>recipe.txt</i></b>
+You can't make that recipe. 
+
+What recipe should we bake next (Press enter to quit.)? <span style="color:red;">User presses enter immediately</span>
+      </code>
+    </pre>
+
+    <br />
+    <h2>Anagrams</h2>
+
+    <p>
+      Two words are <i>anagrams</i> if they consist of the same letters in a
+      different order. Your job in this problem is to write a program that
+      allows users to see what words are anagrams of words that they type.
+      Here's some sample output (user input is
+      <b><i>bolded and italicized</i></b
+      >):
+    </p>
+
+    <pre class="plaintext">
+      <code>
+$ python3 anagrams.py
+Word: <b><i>listen</i></b>
+['enlist', 'inlets', 'listen', 'silent', 'slinte', 'tinsel']
+Word: <b><i>race</i></b>
+['acer', 'acre', 'care', 'cera', 'crea', 'race']
+Word: <b><i>python</i></b>
+['phyton', 'python', 'typhon']
+Word: <b><i>programming</i></b>
+['programming']
+Word: <b><i>piech</i></b>
+piech is not in the dictionary
+Word: <b><i>microphone</i></b>
+['microphone', 'neomorphic']
+Word: <span style="color: red;">User presses enter immediately</span>
+      </code>
+    </pre>
+
+    <p>
+      The design of this program is largely up to you, although we have a few
+      suggestions for you:
+    </p>
+    <ul>
+      <li>
+        <p>
+          We've provided a constant <code>LEXICON</code> whose value is the name
+          of a file containing all of the words in the English language. It may
+          be helpful to find some way of associating words with their anagrams.
+        </p>
+      </li>
+      <li>
+        <p>
+          A useful observation is that two anagrams are identical when their
+          characters are sorted. For example, <code>'LISTEN'</code> and
+          <code>'SILENT'</code>, when sorted are both <code>'eilnst'</code>.
+          Python has an inbuilt <code>sorted</code> function, which returns a
+          list of the characters in a string in alphabetical order. This list
+          can then be converted back to a string like so:
+        </p>
+      </li>
+    </ul>
+
+    <pre class="lang-python">
+      <code>
+>>> string = 'banter'
+>>> sorted_characters = sorted('banter')
+>>> sorted_characters
+['a', 'b', 'e', 'n', 'r', 't']
+>>> sorted_string = ''.join(sorted_characters)
+'abenrt'
+      </code>
+    </pre>
+
+    <h2>Big Tweet Data</h2>
+    <p>
+      In this program, you'll write a program that reads through a large
+      collection of tweets and store the data to keep track of how hashtags
+      occur in tweets. This is a great example of how Python can be used in data
+      analysis tasks.
+    </p>
+    <h3>Our Dataset</h3>
+    <p>
+      For the purposes of this problem, each tweet is represented as a single
+      line of text in a file. Each line consists of the poster's username
+      (prefixed by a '@' symbol), followed by a colon and then the text of the
+      tweet. Each character in this file can be a character from any language,
+      or an emoji, although you don't need to do anything special to deal with
+      these characters. One such file in the PyCharm project we provide is
+      <code>small-tweets.txt</code>, which is reproduced here:
+    </p>
+    <pre class="plaintext">
+        <code>
+@BarackObama: Missed President Obama's final #SOTU last night? Check out his full remarks. https://t.co/7KHp3EHK8D
+@BarackObama: Fired up from the #SOTU? RSVP to hear @VP talk about the work ahead with @OFA supporters:
+https://t.co/EIe2g6hT0I https://t.co/jIGBqLTDHB
+@BarackObama: RT @WhiteHouse: The 3rd annual #BigBlockOfCheeseDay is today! Here's how you can participate:
+https://t.co/DXxU8c7zOe https://t.co/diT4MJWQ…
+@BarackObama: Fired up and ready to go? Join the movement: https://t.co/stTSEUMkxN #SOTU
+@kanyewest: Childish Gambino - This is America https://t.co/sknjKSgj8c
+@kanyewest: 😂😂😂🔥🔥🔥 https://t.co/KmvxIwKkU6
+@dog_rates: This is Kylie. She loves naps and is approximately two bananas long. 13/10 would snug softly
+https://t.co/WX9ad5efbN
+@GonzalezSarahA: RT @JacobSmithVT: Just spent ten minutes clicking around this cool map #education #vt #realestate
+https://t.co/iqxXtruqrt
+      </code>
+    </pre>
+    <p>
+      We provide 3 such files for you in the PyCharm Project:
+      <code>small-tweets.txt</code>, <code>big-tweets.txt</code> and
+      <code>huge-tweets.txt</code>.
+    </p>
+    <h3>Building a <code>user_tags</code> Dictionary</h3>
+    <p>
+      Central to this program is a <code>user_tags</code> dictionary, in which
+      each key is a Twitter user's name like <code>'@BarackObama'</code>. The
+      value for each key in this dictionary is a second, nested dictionary which
+      counts how frequently that particular user has used particular hashtags.
+      For example, a very simple <code>user_tags</code> dictionary might be:
+    </p>
+    <div class="text-center">
+      <code>{'@BarackObama': {'#SCOTUS': 4, '#Obamacare': 3}}</code>
+    </div>
+    <br />
+    <p>
+      We'll explore this dictionary in some more detail as we go through this
+      problem, but as a matter of nomenclature, we'll call the inner dictionary
+      the 'counts' dictionary. Our high-level strategy is to
+      <b>change</b> the above dict for each tweet we read, so it accumulates all
+      the counts as we go through the tweets.
+    </p>
+    <h3>1. Warmup questions</h3>
+    <p>
+      Given the dictionary above, what updates we would make to it in each of
+      the following cases?
+    </p>
+    <ul>
+      <li>
+        We encounter a new tweet that reads
+        <code>'@BarackObama: #Obamacare signups now!'</code>.
+      </li>
+      <li>
+        We encounter a new tweet that reads
+        <code>'@kanyewest: 😂😂😂🔥🔥🔥 https://t.co/KmvxIwKkU6'</code>.
+      </li>
+    </ul>
+    <h3>2. Implementing <code>add_tweet</code></h3>
+    <p>
+      The <code>add_tweet</code> function is the core of this whole program, and
+      is responsible for performing the update to a
+      <code>user_tags</code> dictionary described above. The tests shown below
+      represent a sequence of tweets, expressed as a series of Doctests. For
+      each call, you can see the dictionary that is passed in, and the
+      dictionary that is returned on the next line. The first test passes in the
+      empty dictionary (<code>{}</code>) and gets back a dictionary with 1 user
+      and 2 tags. The 2nd test then takes that returned dictionary as its input,
+      and so on. Each call adds more data to the
+      <code>user_tags</code> dictionary.
+    </p>
+    <p>
+      We've provided you with two functions entitled
+      <code>parse_tags</code> and <code>parse_user</code>, both of which take as
+      a parameter the tweet in question and return a list of tags in the tweet
+      and the username that posted the tweet, respectively.
+    </p>
+    <pre class="lang-python">
+        <code>
+def add_tweet(user_tags, tweet):
+    """
+    Given a user_tags dict and a tweet, parse out the user and tags,
+    and add those counts to the user_tags dict which is returned.
+    If no user exists in the tweet, return the user_tags dict unchanged.
+    Note: call the parse_tags(tweet) and parse_user(tweet) functions to pull
+    the parts out of the tweet.
+    >>> add_tweet({}, '@alice: #apple #banana')
+    {'@alice': {'#apple': 1, '#banana': 1}}
+    >>> add_tweet({'@alice': {'#apple': 1, '#banana': 1}}, '@alice: #banana')
+    {'@alice': {'#apple': 1, '#banana': 2}}
+    >>> add_tweet({'@alice': {'#apple': 1, '#banana': 2}}, '@bob: #apple')
+    {'@alice': {'#apple': 1, '#banana': 2}, '@bob': {'#apple': 1}}
+    """
+      </code>
+    </pre>
+    <h3>3. Implementing <code>parse_tweets</code></h3>
+    <p>
+      Use <code>add_tweet</code> in a loop to build up and return a
+      <code>user_tags</code> dict. This should look mostly like other
+      file-reading functions you've written, and your job is to make sure you
+      understand how to follow the pattern of creating and updating a dictionary
+      suggested by the <code>add_tweet</code> function. Restated, the
+      responsibility of <code>add_tweet</code> is to update a dictionary, and
+      <code>parse_tweets</code> must create and maintain that dictionary as it
+      is updated.
+    </p>
+    <h3>Running your program</h3>
+    <p>
+      We provide a <code>main</code> function that calls the
+      <code>parse_tweets</code> function you implemented in a variety of ways.
+      To use it, run the program from the terminal. Run with just 1 argument (a
+      data filename), it reads in all the data from that file and prints out a
+      summary of each user and all their tweets and counts:
+    </p>
+    <pre class="plaintext">
+        <code>
+$ python3 tweets.py small-tweets.txt
+@BarackObama
+ #BigBlockOfCheeseDay -> 1
+ #SOTU -> 3
+@GonzalezSarahA
+ #education -> 1
+ #vt -> 1
+ #realestate -> 1
+      </code>
+    </pre>
+    <p>
+      When run with the <code>'-users'</code> argument, <code>main</code> prints
+      out all the usernames:
+    </p>
+    <pre class="plaintext">
+          <code>
+$ python3 tweets.py -users small-tweets.txt
+users
+@BarackObama
+@kanyewest
+@dog_rates
+@GonzalezSarahA
+          </code>
+        </pre>
+    <p>
+      When run with the <code>'-user'</code> argument followed by a username,
+      the program prints out the data for just that user.
+    </p>
+    <pre class="plaintext">
+      <code>
+$ python3 tweets.py -user @BarackObama small-tweets.txt
+user: @BarackObama
+ #BigBlockOfCheeseDay -> 1
+ #SOTU -> 3
+      </code>
+    </pre>
+
+    <h3>Extension</h3>
+    <p>
+      You probably won't get to this extension in section, but if you have time,
+      implement this additional function which you can then leverage to answer
+      some interesting questions about Hashtag use.
+    </p>
+    <h4>Implementing <code>flat_counts</code></h4>
+    <p>
+      It's natural to be curious about how often tags are used across users.
+      This function takes in a <code>user_tags</code> dictionary and computes a
+      new "flat" count dictionary:
+    </p>
+    <pre class="lang-python">
+        <code>
+def flat_counts(user_tags):
+    """
+    Given a user_tags dicts, sum up the tag counts across all users,
+    return a "flat" counts dict with a key for each tag,
+    and its value is the sum of that tag's count across users.
+    >>> flat_counts({'@alice': {'#apple': 1, '#banana': 2}, '@bob': {'#apple': 1}})
+    {'#apple': 2, '#banana': 2}
+    """
+          </code>
+        </pre>
+    <p>
+      <code>main</code> will call that function with the
+      <code>-flat</code> argument, like so:
+    </p>
+    <pre class="shell">
+      <code>
+$ python3 tweets.py -flat small-tweets.txt
+flat
+ #BigBlockOfCheeseDay -> 1
+ #MAGA -> 2
+ #SOTU -> 3
+ .
+ .
+ .
+      </code>
+    </pre>
+
+    <div class="myTocContainer" style="position: absolute;">
+      <div
+        class="position-fixed justify-content-center d-flex flex-column"
+        style="
+          height: 100vh;
+          width: 185px;
+          right: 0px;
+          top: 0px;
+          margin-top: -20px;
+        "
+      >
+        <nav id="toc" data-toggle="toc" class="myToc"></nav>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release%409.18.1/build/highlight.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    // Trim whitespace around code blocks.
+    $("pre>code").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+    $("pre").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+  });
+
+  hljs.initHighlightingOnLoad();
+</script>
+    <br />
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

@@ -1,0 +1,862 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/9-Images/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:46:34 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 9: Images
+					</h1>
+					<p class="subtleHeading">
+						April 20th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="9-Images.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture9.zip"><i class="fas fa-code"
+							aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="../../handouts/08-image-reference.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:9px">Image Reference</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						We've posted information about the diagnostic and some practice material on
+						<a href="../../handouts/diagnostic.html" target="_blank">this handout</a>.
+						<b>Please make sure to have downloaded and installed BlueBook, our exam platform.</b>
+					</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will the diagnostic start at 1:30 pm on Monday and end at 2:20 pm the same day?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does while True do? Is it an infinite loop?</p></i>
+               <p><b>A1:&nbsp;</b> Yep! You need ‘break’ to end it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;My TA told us about global variables and how to use it, and so I used it in the last assignment. I also checked this programing in LAIR hours. Will I get downgraded?</p></i>
+               <p><b>A1:&nbsp;</b> Shoot me an email</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In any function, should we only be returning one variable?</p></i>
+               <p><b>A1:&nbsp;</b> One or none</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you have to have parameter balance in the deposit function? wouldn&#039;t the code work with only amount?</p></i>
+               <p><b>A1:&nbsp;</b> Looks like you figured it out yourself!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we use “while true” if we want to keep repeating somehting but don’t have a specific condition we want to test?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! Or you want to do some work inside the loop before you check the condition, in which case you break inside the loop</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is the difference between a constant and variable? More specifically with regards to the interest problem, was the original input a constant or variable since it can change with each program run but within a single run, they are a constant number used.</p></i>
+               <p><b>A1:&nbsp;</b> A constant is just a kind of variable - stylistically, it’s defined outside of any function in ALL_CAPS and shouldn’t be changed. In your specific example, the value of any constant should be known *before* the program is run.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it ok for sentinel values to break loops to be set globally?</p></i>
+               <p><b>A1:&nbsp;</b> Constants can be set globally, yeah</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the range of color intensity?</p></i>
+               <p><b>A1:&nbsp;</b> 0-255</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;255 is for 8 bit, can python calculate for 16-bit?</p></i>
+               <p><b>A1:&nbsp;</b> Pretty much every device uses 8 bits (except some really fancy screens), so colors are represented in 8 bits.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what about black?</p></i>
+               <p><b>A1:&nbsp;</b> All 3 intensities are 0</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it the inverse of white?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the entire range of vary is from 0, to 255 for the three colors, right?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, for each of the 3 colors</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If another ocmbination has the same ratio but different numbers, how does it change the pixel. Like will 
+Red: 6/250 Green: 1 Blue 7/250 be the same as the first pixel we were shown?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - the pixel will be darker if the numbers are less, even if the ratios are the same</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will Assignment 3 serve as review for the diagnostic or is it solely on Imaging? Do you anticipate to upload it today?</p></i>
+               <p><b>A1:&nbsp;</b> It’ll be uploaded this weekend or Monday, but the material won’t be on the diagnostic</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you have to redownload pillow in each program</p></i>
+               <p><b>A1:&nbsp;</b> Nope, just once</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have to re-install Pillow everytime we re-start the terminal/pycharm?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, just once!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;“WARNING: You are using pip version 19.2.3, however version 20.0.2 is available.
+You should consider upgrading via the &#039;pip install --upgrade pip&#039; command.”
+Should I do as instructed by pycharm? will that break down anything?</p></i>
+               <p><b>A1:&nbsp;</b> You can, but you don’t need to worry about that message</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Got a warning that I have pip version 19.2.3 and not 20.0.2 is that ok?</p></i>
+               <p><b>A1:&nbsp;</b> Totally fine</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;whats the difference between import simpleimage and from simpleimage import simpleimage?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the file need to be in the same directory?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For my_image.show() is that in the terminal or in the program?</p></i>
+               <p><b>A1:&nbsp;</b> In the program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do we define pixel to use in the loop?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do you need to previously define pixel?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does python determine what dimension to go across in the loop? How does it differ for RGB versus other kinds of images?</p></i>
+               <p><b>A1:&nbsp;</b> row by row, and it doesn’t matter what kind of image it is</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have to import the image into python first, or specify a link like to the desktop etc. ? For the “xx.jpg” part</p></i>
+               <p><b>A1:&nbsp;</b> The image should be in the same folder as the python file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you just access the pixel data of the image and run a regular for loop on that collection?</p></i>
+               <p><b>A1:&nbsp;</b> What do you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you write an if statement within the for loop that affects pixels with only certain RGB values?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so python just automatically knows pixel in “For pixel in image”? can we replace pixel with something else?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In what order does it modify the pixels?</p></i>
+               <p><b>A1:&nbsp;</b> row by row</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;It goes through the pixels vertically before horizontally?</p></i>
+               <p><b>A1:&nbsp;</b> row by row</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the loop go through all (x,0) and then move through (x,1) or does it go down y first?</p></i>
+               <p><b>A1:&nbsp;</b> row by row</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is &quot;pixel&quot; already defined in python ?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do we choose which pixel?</p></i>
+               <p><b>A1:&nbsp;</b> You get the pixel from the for loop</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do functions that mess with image files pass by value?</p></i>
+               <p><b>A1:&nbsp;</b> Which functions are you talking about?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When you change the pixel color, does it change the original file or a copy?</p></i>
+               <p><b>A1:&nbsp;</b> The original pixel</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;for images we don’t use a main function?</p></i>
+               <p><b>A1:&nbsp;</b> You do</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Isn&#039;t this an infinite loop? When does &quot;for each&quot; stop?</p></i>
+               <p><b>A1:&nbsp;</b> After the last pixel</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;coul //=. still be used as a shortcut here?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Isn’t // integer division</p></i>
+               <p><b>A1:&nbsp;</b> Yes, intensities should be ints</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;and then put the .show? to display</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are RGB values always integers?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does return image do?</p></i>
+               <p><b>A1:&nbsp;</b> Check out the last few lectures</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just wondering why the RGB values are on a scale betwen 0 and 255? 255 seems arbitrary is there a specific reason why it’s that number?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! It’s the number of colors that can be represented in a single byte. stop by OH or Ed for more details!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is integer division used because RGB values can only be whole numbers?</p></i>
+               <p><b>A1:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So do we still use main() or we can just use red_channel as our “main” function?</p></i>
+               <p><b>A1:&nbsp;</b> Use main</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does returning an image after modifying it mean the original doesn;t exist anymmore or is the retuned mage a copy?</p></i>
+               <p><b>A1:&nbsp;</b> You’re returning the luggage tag of the image, so the image is the same one</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if r g and b were 0 would it be black?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you answer this question again: is &quot;pixel&quot; already defined in python ? (missed it when it was addressed live)</p></i>
+               <p><b>A1:&nbsp;</b> No, it’s just like the i in a for i in range loop</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason red_channel is taking in the filename instead of a variable that’s already been assigned the filename through SimpleImage?</p></i>
+               <p><b>A1:&nbsp;</b> The red_channel function will make a SImpleImage from the filename</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does returning the image show it or does thee have to be a show statement?</p></i>
+               <p><b>A1:&nbsp;</b> There has to be a show statement</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What order does the for each loop grab the pixels? Like from top-left going right across a row and then down to next row?</p></i>
+               <p><b>A1:&nbsp;</b> row by row</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so all photos must first be downloaded into python they cannot search your computer drive directly</p></i>
+               <p><b>A1:&nbsp;</b> They just need to be in the same folder as your Python file</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can I put original_flower in when I call the function instead of the filename, since the file was assigned to it?</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does red channel do the pixel switch for the original flower or of the grey flower</p></i>
+               <p><b>A1:&nbsp;</b> It depends on which file you’re passing in</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a reason why mehran divided with // as opposed to /? do we need to do integer division for pixels or can we do float division too</p></i>
+               <p><b>A1:&nbsp;</b> RGB values should be ints</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so “red_channel” and “darker” are function already built in pyhton?</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you had red, green and blue all equal 0, would you get black?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are the changes made to the pixels due to the functions permanent?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it necessary to return image when you could simply show image after manipulating it?</p></i>
+               <p><b>A1:&nbsp;</b> It depends on what you want to do with it afterwards</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if you wrote a brighter() function and multiplied the intensities (say by 2) and it resulted in an R,G, or B intensity value of greater than 255, does Python throw an error or just set it to 255?</p></i>
+               <p><b>A1:&nbsp;</b> It’ll set it to 255</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the decision to use green (instead of red or blue) for green screens arbitrary?</p></i>
+               <p><b>A1:&nbsp;</b> Yep! It’s mostly because neon green is slightly less common a color than red or blue</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why are we doing integer division each time instead of regular division? Is there a benefit of getting a whole number?</p></i>
+               <p><b>A1:&nbsp;</b> RGB values should be ints</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What does intensity threshhold mean?</p></i>
+               <p><b>A1:&nbsp;</b> It’s basically a measure of how green a pixel needs to be in order to be considered green</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do the images have to be the same size</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if our images are diff sizes and have diff amounts of pixels?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I&#039;m guessing greenscreening requires your main_files and back_files must be the same size. Do you need to write a program to resize images, then? Also, are there equivalent programs that work with vectors instead of pixels?</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean by working with vectors?</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do you know why greenscreening is so much more widly used?</p></i>
+               <p><b>A1:&nbsp;</b> I think it’s just because bright green is a less common color than blue or red, so you don’t accidentally replace pixels you don’t want to!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason it’s usually a greenscreen and not a bluescreen or redscreen?</p></i>
+               <p><b>A1:&nbsp;</b> I think it’s just because bright green is a less common color than blue or red, so you don’t accidentally replace pixels you don’t want to!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you go over the image.set_pixel and the back.get_pixel a bit more in depth? I am confused where those variables come from are they built in or do we make them?</p></i>
+               <p><b>A1:&nbsp;</b> image and back are loaded in from filenames: we then call set and get pixel to take pixels from back and put them in image</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Rather than putting the filename in as my argument when I call the function, can I write in the variable I had assigned my image to as my argument?</p></i>
+               <p><b>A1:&nbsp;</b> Sure</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;apologies if this is too basic but what is the utility of the return command again then?</p></i>
+               <p><b>A1:&nbsp;</b> Check out the last couple of lectures - it allows a function to give back an image to the function that calls it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do images have to be the same dimensions to be replaced with one another?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I am a little confused on how image.set_pixel is working</p></i>
+               <p><b>A1:&nbsp;</b> It takes in a coordinate (x, y) and a pixel, and puts that pixel at that coordinate</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Then why did Mehran say // cuts it in half? Does it depend if if it divides perfectly</p></i>
+               <p><b>A1:&nbsp;</b> Yep - //2 is close enough to cutting in half that we just can say that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you clarify if background is the screen and the front image is the one you’re drawing pixels from?</p></i>
+               <p><b>A1:&nbsp;</b> front is the one with the green screen</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is get.pixel pre-defined?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it “x” and “y” because of pycharm recognize the coordinates of the image?</p></i>
+               <p><b>A1:&nbsp;</b> No, those are just good variable names</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If I have an image with only black and white pixels, is there a way for me to find the pixels that touch both black and white pixels? If the image had a bunch of white circles on a black background for example, this would ideally find the border pixels of the white circles.</p></i>
+               <p><b>A1:&nbsp;</b> Yes! Once you have a coordinate, you can calculate the coordinates of the neighbouring pixels and do whatever you want with them</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you need both x and y for loops? Why can’t you just have one loop?</p></i>
+               <p><b>A1:&nbsp;</b> You need one loop for x coordinates and one loop for y coordinates</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are nested loops the only way to select all pixels?</p></i>
+               <p><b>A1:&nbsp;</b> If you want their coordinates, yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the for y have to come before the for x or are they interchangable</p></i>
+               <p><b>A1:&nbsp;</b> This is the conventional order, but it generally doesn’t matter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What’s the pixel referring to/What’s it’s function in (x,y,pixel)?</p></i>
+               <p><b>A1:&nbsp;</b> It’s a pixel object we got from the left half of the image</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;wait if it was a for x in range (width), why did the next set of coordinates become (0,1) instead of (1,0)?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When x=50, will the two images overlap?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how would you then save the image you get to your computer?</p></i>
+               <p><b>A1:&nbsp;</b> You can save it once it pops up on your computer</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you add +1?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how to export the images created?</p></i>
+               <p><b>A1:&nbsp;</b> You can save it once it pops up on your computer</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you make the same mirrored image but without the original?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! Try and think about how :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you put the def main(): below the functions in the main?? Shouldn’t they be in front?</p></i>
+               <p><b>A1:&nbsp;</b> Either is fine</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;it doesn’t change the flow?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - Python makes a list of all the functions before starting to run main</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is pixel a variable? do I have to define what pixel is in my code?</p></i>
+               <p><b>A1:&nbsp;</b> It is a variable! no you dont have to define it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;with the burrito mirror example, so when the blank image is added besides the original image, the original image is still referred to as &quot;image&quot; and the blank image added beside it is still referred to as &quot;blank&quot; in the code?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What are the logistics for the diagnostic? Where are we taking it? How? Is there somewhere on the website that has this info?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does python know what  pixel is?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+               <p><b>A2:&nbsp;</b> how does python know what  pixel is?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you use (x+1)?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry could you clarify pixel in (x,y,pixel) live again?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you recommend us to study for the diagnostic?</p></i>
+               <p><b>A1:&nbsp;</b> Strategies are discussed in the handout!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;in the example, in the for x in range loops, why did it become (0,1) instead of (1,0)?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I was really confused with the reflection of the burrito.  What was the mirror.image you used in the bottom part of the code?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;re: prev question on Vectors for Brahm, 
+defining an image with a scalable set of vectors as opposed to using pixels.</p></i>
+               <p><b>A1:&nbsp;</b> I’m not 100% certain I’m catching your drift - I have office hours in 5 minutes so we can chat about it there</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I sent an email but it might be easier for you all to answer now, but is it still possible to sign up for CS 100?</p></i>
+               <p><b>A1:&nbsp;</b> ok we will check when we get the email</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when mehran changed the red sauce in the burrito to leaves, did it matter which pixels from the leaves were put into the burrito? is it possible to put only pixels from a specific area of one image into a specific area of another image?</p></i>
+               <p><b>A1:&nbsp;</b> that is possible! He used “pixels are red” as his condition. But you could certainly use other conditions!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Like I thought mirror was a variable</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we are only returning one variable at a time, and not using global variables, it seems that the main function risks getting rather large. Is it acceptable for the main function to be larger in order to avoid using other techniques for passing variables?</p></i>
+               <p><b>A1:&nbsp;</b> its ok while you are getting started — but we strongly recommend you get used to parameters, returns, and start using them to write elegant code</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can python handle videos as collections of images?</p></i>
+               <p><b>A1:&nbsp;</b> oh yea! That is the advanced version</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does y know to move down rows once one y row is finished?</p></i>
+               <p><b>A1:&nbsp;</b> thats how range works. It gives you values one at a time, increasing by one each time</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we want to change a specific part of an image, instead of a specific color; for example just the “T” on the STOP sign how do we “see” the full range of the pixels so we know what pixels the part of the image we want to change are?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;By “set pixel value” you mean the RGB information?</p></i>
+               <p><b>A1:&nbsp;</b> yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Could you have done 
+
+mirror = SimpleImage.blank 
+mirror.width = width*2
+mirror.height = height?</p></i>
+               <p><b>A1:&nbsp;</b> i dont believe this works, but you should try it and let us know if it does work!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where are we returning mirror to?</p></i>
+               <p><b>A1:&nbsp;</b> who ever called mirror_image! In this case the main function</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is RGB and x y coordinates the only way to define specific pixels? I’m just thinking how you can lasso something using code</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

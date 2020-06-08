@@ -1,0 +1,782 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/6-ControlFlowRevisited/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:45:28 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 6: Control Flow Revisited
+					</h1>
+					<p class="subtleHeading">
+						April 17th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a
+						href="6-ControlFlowRevisited.pdf">
+						<i class="far fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture6.zip"><i class="fas fa-code"
+							aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						Assignment 2 will be released after today's lecture.
+					</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Where can we find the video recording of the lectures?</p></i>
+               <p><b>A1:&nbsp;</b> Canvas</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hey CS106 team, would it be possible to have the slides ahead of time to preview the topics? Even if it is an earlier version of slides, it&#039;d be appreciated :D</p></i>
+               <p><b>A1:&nbsp;</b> Unfortunately they’re usually only ready the morning of the lecture, which is when we post them.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when I close the program, the luggage disappears? or is it on the disk? more locally, does defining a variable in a function only has it available in that function?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! All the luggage disappears when the program ends, and when a function ends, its luggage disappears too</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;After “modifying” age, if you called it again, would you get 30 or age+1?</p></i>
+               <p><b>A1:&nbsp;</b> age = 30
+age = age + 1
+print(age)
+
+This will print 31, as age now has the value 31</p>
+        
+               <p><b>A2:&nbsp;</b> you&#039;d get 31</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I haven’t been able to find any handouts for the new info since Karel, is it on the CS106A website?</p></i>
+               <p><b>A1:&nbsp;</b> There&#039;s a Python reader on the CS106A website.  The link is in the upper right-hand corner.  It&#039;s the reference reader for Python.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;While “True” just assumes it is always true? Or what is true contigent on?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the specific function of being ¨tru¨</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I’m a little confused, what is while “true” as in what specifically is true?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we need to import a math library for the log function?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so the while true: loop just repeats the function over? What are we defining as &quot;true&quot; in the example that Chris just did?</p></i>
+               <p><b>A1:&nbsp;</b> It’s a value that’s defined in Python - we’ll get there soon!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is Chris holding a doggo?</p></i>
+               <p><b>A1:&nbsp;</b> He is! The dog is freaking out because Chris’ fiance had to take a call and it’s feeling separation anxiety :)</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+               <p><b>A3:&nbsp;</b> Yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is a boolean?</p></i>
+               <p><b>A1:&nbsp;</b> A variable type that is either True or False</p>
+        
+               <p><b>A2:&nbsp;</b> Sometime a logical test is also refered to as a boolean condition (e.g., 1 &lt; 2)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is an input always a string (even if the user inputs a number)?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, input always gives you back a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;this would only work once though right?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, it wouldn’t repeat</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we pass the integer 1 into an if statement does that count as true?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but we’ll get there later this quarter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would you not indent as normal with elif?</p></i>
+               <p><b>A1:&nbsp;</b> You do: the indentation should look like what it does in the slide righ now</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we had use num=float(input(….)) should we have written if num == 0.00 ?</p></i>
+               <p><b>A1:&nbsp;</b> Python is clever enough to know that 0 and 0.00 are equal.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would if elif elif ... else work?</p></i>
+               <p><b>A1:&nbsp;</b> Yep, you can have as many elifs as you want.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you do this with a float?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what about if you want to also consider decimals_</p></i>
+               <p><b>A1:&nbsp;</b> You would replace the call to int with a call to float</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;it says integer, only right?</p></i>
+               <p><b>A1:&nbsp;</b> You would replace the call to int with a call to float</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is elif? didnt catch what chris said</p></i>
+               <p><b>A1:&nbsp;</b> ‘Else if’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is elif always written before else? And can we write this code “num === 0 ; num &gt; 0 ; num &lt; 0) after if, elif, or else?</p></i>
+               <p><b>A1:&nbsp;</b> The order is 1) if 2) as many elifs as you want 3) else</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you wrote two “if” statements and then an else, would that have the same purpose as writing an “if”, and “elsif” and an else?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, because both those if statements could happen (depending on their conditions)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to highlight everything you want to comment out rather than individually typing the # before each line?</p></i>
+               <p><b>A1:&nbsp;</b> Highlight the text and press Command/Ctrl + forward slash</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How is a boolean fundamentally different than simply using an if or a while loop on their own</p></i>
+               <p><b>A1:&nbsp;</b> if statements and while loops use booleans to represent whether their condition is true or false. while front_is_clear() is a loop, and front_is_clear() is a boolean condition</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you know whether to use variable or a constant? like for secret_number</p></i>
+               <p><b>A1:&nbsp;</b> a constant would be if you could fix the value whilst you were progamming (say, it was always 42). When the variable has different values on each run, you should make it a variable.</p>
+        
+               <p><b>A2:&nbsp;</b> constants are known when the program runs and don&#039;t change during the run of the program.  Here, secret_number is not known/fixed before the program starts, so it&#039;s a variable.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will the random number this program pulls be the same every time?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - we’re not calling random.seed() first</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does the quotiations inside the brackets in print, mean?</p></i>
+               <p><b>A1:&nbsp;</b> It delimits a string (which represents text), which you then print</p>
+        
+               <p><b>A2:&nbsp;</b> print(&quot;&quot;) is printing an empty string (which is nothing).  It essentially just writes a blank line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when is an empty line printed?</p></i>
+               <p><b>A1:&nbsp;</b> When you call print(“”) or print()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we need the empty line ?</p></i>
+               <p><b>A1:&nbsp;</b> Just to make the output of the program look nicer.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it necessary to say “guess=int(input(“Enter a new guess: “))”? Can’t we just say “guess=input(“Enter a new guess: “)” without the cast/specifying the variable type? I thought python could immediately detect the type of variable we input</p></i>
+               <p><b>A1:&nbsp;</b> input always returns a string, even if the user types a number.  So the user typing 5 would lead to input giving you &quot;5&quot;</p>
+        
+               <p><b>A2:&nbsp;</b> Nope - if you manually set up a variable by using something like n = 7, it’ll detect it, but input() will always give you back a string.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why did chris print an empty line??</p></i>
+               <p><b>A1:&nbsp;</b> Just to make the output look nicer</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If the first number you enter is -1 would the total then be zero becaue the sentenial is satisfied?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is += again?</p></i>
+               <p><b>A1:&nbsp;</b> x += 1 is equivalent to x = x + 1.
+
++= is an operator that adds a value to a variable and stores it back in the that variable.</p>
+        
+               <p><b>A2:&nbsp;</b> total += new_num is the same as total = total + new_num</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So since Chris is using an int() function, if the user gives a real number, does it get rejected?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, the function crashes</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is total=0?</p></i>
+               <p><b>A1:&nbsp;</b> that&#039;s the initial value of total</p>
+        
+               <p><b>A2:&nbsp;</b> The sum is 0 before you have any numbers</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is &quot; +=&quot;</p></i>
+               <p><b>A1:&nbsp;</b> total += new_num is the same as total = toal + new_num</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you cancel the running program to start a new one?</p></i>
+               <p><b>A1:&nbsp;</b> Type ctrl + c in the terminal</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;will float(-1)==int(-1)?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;wait how do I make a new python file?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+               <p><b>A2:&nbsp;</b> Command/Ctrl N in PyCharm and then select ‘new Python file’</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;we can use decomposition, right?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but that’s not quite the only thing we need to do.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could we define new_num outside the loop and then have it replaced every time we enter the loop?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What button on your keyboard can you press again in terminal to run the program you had run before</p></i>
+               <p><b>A1:&nbsp;</b> The up arrow key</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;whats +=</p></i>
+               <p><b>A1:&nbsp;</b> total += new_num is the same as total = total + new_num</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Isn’t it more convenient to solve the fenceposting problem with an if break statement inside the while loop i.e.  if number == -1:
+            break
+?</p></i>
+               <p><b>A1:&nbsp;</b> That’s a different approach, but is also reasonable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we just def new_num at first before the while loop? Would that fix the LocalUnbound error?</p></i>
+               <p><b>A1:&nbsp;</b> You would need to give it an initial value, but yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is the total 60 and not 59?</p></i>
+               <p><b>A1:&nbsp;</b> the sentinel isn’t added to the total</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if you wanted to do the same thing, but instead you wanted the loop to continue until the user input ANY negative number? not just -1</p></i>
+               <p><b>A1:&nbsp;</b> You’d adjust the while loop condition - try and figure out how!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What exactly does the condition += mean?</p></i>
+               <p><b>A1:&nbsp;</b> total += num is a python shorthand for: total = total + num</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a way to do “”” “”” multiple line comment without the “return” appearing and having to delete it?</p></i>
+               <p><b>A1:&nbsp;</b> I think it’s buried somewhere in PyCharm’s settings!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how come you dont need to ask python to print the original command for the first number</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is the total case necessary</p></i>
+               <p><b>A1:&nbsp;</b> It represents the total of all the numbers you’ve already inputted</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;don’t you need to str(total) at the bottome line of the code?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! Good catch</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does &quot;break&quot; jump us out of the inner while loop or the outermost while loop?</p></i>
+               <p><b>A1:&nbsp;</b> Just the innermost one</p>
+        
+               <p><b>A2:&nbsp;</b> innermost loop is what you break out of.  So if you have nested loops, you only break out of the innermost one.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we use break?</p></i>
+               <p><b>A1:&nbsp;</b> You can, but you don’t need to</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does break exit just the loop it is in, or all loops (if there area nested loops)?</p></i>
+               <p><b>A1:&nbsp;</b> Just the loop it is in.</p>
+        
+               <p><b>A2:&nbsp;</b> Just the innermost one</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is break always indented one from the previous line?</p></i>
+               <p><b>A1:&nbsp;</b> It was indented in that case because it was inside an if statement - you don’t need to always do it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If there is no num input within the while loop, would that while loop then become an infinity loop as it will constantly be checking the first num value which is always not equal to -1?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so in the ex we are looking at currently, the first command under the while loop is num = int(input(“enter number….). That command requests the user to enter a number, but you never told python to print that request</p></i>
+               <p><b>A1:&nbsp;</b> input prints the prompt before getting input from the user</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when is hw2 being released and when is it due?</p></i>
+               <p><b>A1:&nbsp;</b> Right after lecture, and it’s due next Friday</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you make multiple lines in python shift to the left  at once (opposite of indent)</p></i>
+               <p><b>A1:&nbsp;</b> Highlight them and hit shift-tab</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have python counterparts to logical operators such as &amp;&amp;, &amp; and |, || ?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, we&#039;ll cover those soon.  It&#039;s &quot;and&quot; and &quot;or&quot; in python.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you go through the example for not</p></i>
+               <p><b>A1:&nbsp;</b> First we check if 2==3 (which is False), and then the ‘not’ inverts it so we have a final result of True</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If the answer was True and False would it evaluate to False?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if it was True or False?</p></i>
+               <p><b>A1:&nbsp;</b> That would be True</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When would i get true and true</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean? That happens when the things on either side of the and evaluate to True</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;its hard trying to thing about what a true and true would cause in the code</p></i>
+               <p><b>A1:&nbsp;</b> True and True evaluates to True</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;4 == 4.0 is this true or false?</p></i>
+               <p><b>A1:&nbsp;</b> True</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;expressions and variables are interchangeable?</p></i>
+               <p><b>A1:&nbsp;</b> The results of expressions can be stored in variables</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;you know how yesterday we talked about how python sometimes does arithmetic in a way that’s totally whack? like it’ll represent .9 as .89999999? does that pose a problem for boolean logic? how do we fix that?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! For some numbers, floats are precise enough that == works. Otherwise, we do run into some issues and the easiest way to fix it is to round the float. That said, this isn’t an issue that frequently, practically speaking.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the food and drink example, would this issue be solved by writing it as not ( food or drinks)?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+               <p><b>A2:&nbsp;</b> Yes.  It&#039;s a place where the English language is ambiguous, but Python requires us to be precise, for example, by adding parentheses about what should get evaluated first.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could you explain more about void()?</p></i>
+               <p><b>A1:&nbsp;</b> That’s not a thing in Python, but it means ‘nothing’. In Python, the equivalent idea is called None</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so we would not have public or private void () in python?</p></i>
+               <p><b>A1:&nbsp;</b> No</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why did i just saw it on screen? Sorry I might have missed something</p></i>
+               <p><b>A1:&nbsp;</b> Might have been a typo! I’ll fix it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you state i = 0 first? And could you do while i &lt; 101?</p></i>
+               <p><b>A1:&nbsp;</b> By convention, we start counting from 0 in computer science.  So if we want to count 100 times, we&#039;d count from 0 to 99.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don&#039;t we get the &#039;referenced before assignment&#039; error when we say for i in range()?</p></i>
+               <p><b>A1:&nbsp;</b> The loop defines the variable for you</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will we have enough knowledge after today&#039;s class to complete assignment 2?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In a For Loop, why do we use i&lt;#, and then add 1 to the count? Couldn&#039;t we simplify the function just by using == #?</p></i>
+               <p><b>A1:&nbsp;</b> By convention we use &lt; # in case you are counting by more than 1 and don&#039;t get exactly the number you are trying to count to.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why don&#039;t you need to put str(i) for print?</p></i>
+               <p><b>A1:&nbsp;</b> If there&#039;s no other text you&#039;re printing, you can just print a variable x with print(x).  We use str(x) when we want to concatenate other text to what we want to print.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so it is not specific to &#039;i&#039;? We could say: for counter in range()? and it would do the same thing, but define a variable called counter?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why don’t we have to define i?</p></i>
+               <p><b>A1:&nbsp;</b> The loop defines i for us</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would …range(0,5,2) do the same?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but we’ll get there later</p>
+        
+               <p><b>A2:&nbsp;</b> You&#039;d get 0, 2, 4 with that range</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you write for in in range(3) if we’re trying to find the first 100 even numbers? (as opposed to for i in range (100))</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you explain about true and true please</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I have a question regarding the second way to use parenthesis in the for loop. (_,_,_) since it skips 2, it will not show 2 as an even number, right?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;:O gotit</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

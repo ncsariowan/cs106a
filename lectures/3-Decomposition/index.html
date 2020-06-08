@@ -1,0 +1,662 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/3-Decomposition/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:44:29 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+		
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 3: Decomposition
+					</h1>
+					<p class="subtleHeading">
+						April 10th, 2020
+					</p>
+
+				</div>
+				
+				<hr>
+			</div>
+		</div>
+
+	
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Lecture Materials </h3>
+				<p>
+				<div class="alert alert-info">
+					<b>Note</b>: Today's Karel problem can be found <a
+						href="../../apps/karelide/index.html#/double" target="_blank">here</a>.
+				</div>
+				<div class="row">
+					<div class="col-sm-2"><a href="3-Decomposition.pdf">
+					<i class="far fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:3px">Slides</span>
+					</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="Lecture3.zip"><i class="fas fa-code" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+							<br /><br />
+							<span style="margin-left:6px">Lecture Code</span>
+							</a>
+					</div>
+				</div>
+				</p>
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						<ol style="padding-left:10px">
+							<li>
+								<b>Section sign ups</b>: The section signup form opened yesterday, and will close this Sunday at 5pm PDT.
+							</li>
+							<li>
+								<b>Early assignment start</b>: Even though assignment 1 isn't due until Friday, get an early start - some of the problems are tricky!
+							</li>
+					</div>
+				</p>
+				<br/>
+				<h3>Learning Goals </h3>
+				<p>
+					<div class="well">
+					The goal of today's class is for you to feel comfortable with the programming strategy called "decomposition" whereby you take a large problem and break it down into smaller pieces (which become their own function). When approaching programming challenges experts often alternate between setting milestones and achieving those milestones via decomposition. 
+				</div>
+				</p>
+				<br/>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;I saw in handout #4 that you test new worlds by clicking the Load World button, but I cannot find it? Do you know where it is located in Pycharm?</p></i>
+               <p><b>A1:&nbsp;</b> It’s in the Karel Window - right below Chris’ cursor right now!</p>
+        
+               <p><b>A2:&nbsp;</b> Load World button is in the Karel window (when it&#039;s running).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do if if statements exist and can we use them in the pset</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  if statements are part of python/Karel</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it possible to put the lecture slides on the website so that we can follow along please?</p></i>
+               <p><b>A1:&nbsp;</b> They are being uploaded right now.  They just take some time to upload.  Apologies for the delay.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a way to do While - Else ?</p></i>
+               <p><b>A1:&nbsp;</b> What would you expect it to do?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the karel review sheet available on the website?</p></i>
+               <p><b>A1:&nbsp;</b> See Chapter 10 of the Karel Reader</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In the assignment sheet it mentions that we can make our own worlds to test programs on— how do we do that?</p></i>
+               <p><b>A1:&nbsp;</b> You would run the WorldEditor.py program that is included in the Assignment 1 project.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are we allowed to use “and” for assignment 1?</p></i>
+               <p><b>A1:&nbsp;</b> But you can use it if you want</p>
+        
+               <p><b>A2:&nbsp;</b> You shouldn’t need to</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are we allowed to use recursion on assignment 1?</p></i>
+               <p><b>A1:&nbsp;</b> If you are comfrotable with it and use it correctly, but it&#039;s not required.  We won&#039;t talk about recursion in class.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can Karel go from East to West facing on the same block?</p></i>
+               <p><b>A1:&nbsp;</b> You could do 2 turn_lefts to have Karel turn around</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;But he&#039;ll upside down</p></i>
+               <p><b>A1:&nbsp;</b> Then you just have Karel turn around again.  Sound like you might want to write a function like move_backward() that might do all the steps needed to accomplish this :-).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I&#039;m wondering if he can turn west while having head up</p></i>
+               <p><b>A1:&nbsp;</b> Karel can only move the direction that Karel is facing</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is API?</p></i>
+               <p><b>A1:&nbsp;</b> Think of it as the list of things you can ask Karel to do (e.g. moving and turning)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;for stylisitic purposes, when should you use “”” vs # when describing what a function does</p></i>
+               <p><b>A1:&nbsp;</b> For this class, you can use either.  But usually programmers use &quot;&quot;&quot; comments for multi-line comments at the start of each function and # comments for single line comments in the middle of code.</p>
+        
+               <p><b>A2:&nbsp;</b> A # is a single line comment and “”” is for multiline comments!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When we write comments in our assignments, should they be tabbed inside of the defs? Or should they be placed in between defs? Thank you!</p></i>
+               <p><b>A1:&nbsp;</b> (Hopefully the indentation works here):  def function():     “””     this comment explains a function     “””
+    move()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Would the command “morning” be the body of the main function?</p></i>
+               <p><b>A1:&nbsp;</b> There are a ton of ways to decompose this! If the program covers the entire day, morning() is a reasonable function to go in main()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we use a variable that counts ?</p></i>
+               <p><b>A1:&nbsp;</b> We can’t use variables in Karel :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why do you have to go through a neighbor pile and not go straight to the end step?</p></i>
+               <p><b>A1:&nbsp;</b> You need to have a separate pile the represents the doubled pile.  Karel can&#039;t directly determine the number of beepers in a pile.</p>
+        
+               <p><b>A2:&nbsp;</b> We’ll get there in a sec but think about how the program would end if we didn’t have a temporary pile!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So Karal does not know which number of beepers right?</p></i>
+               <p><b>A1:&nbsp;</b> Correct.  Karel can only tell if there is a beeper on a corner or not (not how many beepers there are).</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we assume that Karel already has enough beepers to have double?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  We assume Karel has infinite beepers in the beeper bag to begin with.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does Karel have an infinite storage of beepers? (i.e. Where does Karel’s 2 beepers come from if she only picked up 1)</p></i>
+               <p><b>A1:&nbsp;</b> Karel has infinite beepers in this problem</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Should Karel be concerned about removing the existing beepers before putting in the new ones?</p></i>
+               <p><b>A1:&nbsp;</b> That&#039;s why the new beepers are put in a separate pile than the original pile we want to double.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how can I follow along on the website? because the link doesnt work</p></i>
+               <p><b>A1:&nbsp;</b> Which link?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;The one chris sent in the chat to get to this website hes on right now</p></i>
+               <p><b>A1:&nbsp;</b> It’s on the lecture page for today</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does Karel have to make double pile next door? Or can Karel pick up and put 2 back down on the same corner?</p></i>
+               <p><b>A1:&nbsp;</b> Think about how the program would end if you did it like that!</p>
+        
+               <p><b>A2:&nbsp;</b> If Karel put down 2 on the same pile, Karel would never stop adding beepers to the pile since the pile would just keep getting bigger.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do we assume karel starts with infinite beepers?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+               <p><b>A2:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Under def main(), after double_pile, should we have a return_to_square_one?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;should you always have # notes and where</p></i>
+               <p><b>A1:&nbsp;</b> You should have a commnet for each function to describe what it does.  Additionally, having comments in the middle of a function can be useful to describe complicated things you are trying to do.</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does style when grading the homework also account for how concise the code is? Is it good to optimize it to as few lines as possible? Or does it matter?</p></i>
+               <p><b>A1:&nbsp;</b> For CS106A we care more about code readability than optimization.  You shouldn&#039;t try to optimize code if it sacrifices readbility.</p>
+        
+               <p><b>A2:&nbsp;</b> For now, please optimize for code that’s readable rather than just minimizing the number of lines of code you’re using (often, those goals will align)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we use a modified version of make_double_pile_nextdoor by moving backwards instead of moving forward and putting one beeper instead of two?</p></i>
+               <p><b>A1:&nbsp;</b> Can you elaborate on what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason why we can’t pick up all of the beepers at once?</p></i>
+               <p><b>A1:&nbsp;</b> You don’t know how many beepers you have if you picked them all up!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;should the pre be “pile in the back of Karel”?</p></i>
+               <p><b>A1:&nbsp;</b> For which function?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why can’t you pick up all the beepers at once?</p></i>
+               <p><b>A1:&nbsp;</b> You don’t know how many beepers you have if you picked them all up!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;You don’t need to deliver each beeper individually, though, right? You can pick up a beeper for as long as beepers are present, and then move back and put_beeper for as long as beepers_in_bag, which is a basic karel condition.</p></i>
+               <p><b>A1:&nbsp;</b> Karel has infinite beepers, so you’d be putting beepers down for a long time :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we have to make the shortest programs possible, or is it okay as long as it works well ?</p></i>
+               <p><b>A1:&nbsp;</b> For CS106A we care more about code readability than optimization.  You shouldn&#039;t try to optimize code if it sacrifices readbility.  Longer code is just fine if it&#039;s more readable.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;^ Ah, were we ever told that Karel has infinite beepers in this problem?</p></i>
+               <p><b>A1:&nbsp;</b> In general, Karel has infinite beepers unless we say otherwise!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why can’t you pick up all the beepers at once?</p></i>
+               <p><b>A1:&nbsp;</b> You don’t know how many beepers you have if you picked them all up!</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;move nextdoor pile back</p></i>
+               <p><b>A1:&nbsp;</b> Nope, because Karel starts off behind the pile, so it’s in front of Karel</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you explain the pre and post conditions again for this problem</p></i>
+               <p><b>A1:&nbsp;</b> Karel starts and stops at (1, 1) and facing East. (2, 1) has some number of beepers to start off, and has double that number of beepers at the end!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is the difference between adding an additional move_backwards() under the def main as opposed to adding two move backwards commands under the def make double pile next door?</p></i>
+               <p><b>A1:&nbsp;</b> Both are reasonable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I don&#039;t know if it just my screen, but there is a black rectangular object blocking the slides.</p></i>
+               <p><b>A1:&nbsp;</b> That seems to be showing up on other screens too.   Seems to be a Zoom issue.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Chris, is it alright to write out def_main() first w/ high-level steps and comment out the stuff you&#039;re not ready for yet (before you confirm milestones)?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! That’s what we do basically all the time when we’re programming :) It makes testing much easier</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Am i able to screenshare with you during OH after this….. something is wrong with my pycharm</p></i>
+               <p><b>A1:&nbsp;</b> Sure</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if I accidentally run an infinite loop, will my computer crash? my computer is really old haha</p></i>
+               <p><b>A1:&nbsp;</b> It might get a little slower if it runs for a while, but you can still quit the Karel program!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is left of karel its west or our left?</p></i>
+               <p><b>A1:&nbsp;</b> 90 degrees counterclockwise of the direction Karel is facing in</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why move beepers from doubled pile back to original position one at a time? 
+
+Could this work?
+
+#After the pile is doubled
+while beeper_present():
+    pick_beeper()
+move_backwards()
+while beepers_in_bag():
+    put_beeper()</p></i>
+               <p><b>A1:&nbsp;</b> Karel has infinite beepers, so you’d be putting them down for a while</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is anyone else struggling to see the right hand side of the screen?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, this seems to be a problem with how Zoom is refreshing (or not) the screen in the broadcast.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does 3 only work for even columns?</p></i>
+               <p><b>A1:&nbsp;</b> It could be adjusted in some ways for odd worlds, but I still wouldn’t recommend it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If I am in ACE do I attend normal section too?</p></i>
+               <p><b>A1:&nbsp;</b> Yes.  ACE is in addition to the regular section.</p>
+        
+               <p><b>A2:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how do you comment multiple lines at once</p></i>
+               <p><b>A1:&nbsp;</b> Highlight them and type command/ctrl + / !</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you hash multiple lines of code at once?</p></i>
+               <p><b>A1:&nbsp;</b> Highlight them and type command/ctrl + / !</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why did you choose to write the definitions of place_cardinal, place_chris, etc. after the definition of solve_puzzle and not under the original def c
+reate_puzzle?</p></i>
+               <p><b>A1:&nbsp;</b> Great question! I like to order my functions from biggest picture to more specific</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For some reason, the karel program won’t run my code… It’s having a hard time loading? Does anyone know a solution to this?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it acceptable to do pattern 4 if you want to get practice with doing the least number of moves?</p></i>
+               <p><b>A1:&nbsp;</b> Sure, feel free to try that for practice.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so if we want an if statement with 2 conditions, would we make it with “and” or an if statement within another if statement</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What do you exactly  mean by matching the pre and post statements?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+
+			</div>
+		</div>
+
+
+		
+
+
+	
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

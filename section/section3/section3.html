@@ -1,0 +1,781 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/section/section3/section3.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:22:00 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- add after bootstrap.min.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <div class="col-sm-12">
+      <div style="height: 20px;"></div>
+      <h1>
+        Section #3: Parameters, Return Values & Images
+      </h1>
+      <p class="subtleHeading">
+        April 26th, 2020
+      </p>
+      <hr />
+      <p>
+        <i>
+          Written by Brahm Capoor, Juliette Woodrow, Parth Sarin, Kara Eng, Tori
+          Qiu and Peter Maldonado
+        </i>
+      </p>
+
+      <p>
+        This week in section, your goal is to practice and gain familiarity with
+        the principles of parameters and return values, as well as to work on
+        some interesting image problems using the
+        <code>SimpleImage</code> library. We'll also explore some interesting
+        applications of doctests in the debugging process.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <a href="Section3.zip">
+            <i
+              class="fas fa-download"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            PyCharm Project
+          </a>
+        </div>
+        <div class="col-sm-6 text-center">
+          <a href="section3-soln.html">
+            <i
+              class="fas fa-file-pdf"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Solutions
+          </a>
+        </div>
+      </div>
+
+      <h2>Parameters Review</h2>
+      <h3>Checking Ranges</h3>
+
+      <p>
+        Implement the following function which takes in 3 integers as
+        parameters:
+      </p>
+
+      <pre class="lang-python">
+        <code>
+def in_range(n, low, high)
+  """
+  Returns True if n is between low and high, inclusive. 
+  high is guaranteed to be greater than low.
+  """
+        </code>
+      </pre>
+
+      <p>
+        Next, complete the program by writing a <code>main</code> function which
+        reads in three integers from the user and calls
+        <code>in_range</code>
+        to determine whether or not the second number is in between the first
+        and third. Here are a few sample runs of the program (user input is
+        <i>italicized</i>):
+      </p>
+
+      <pre class="plaintext">
+        <code>
+Enter first number: <i>42</i>
+Enter second number: <i>8</i>
+Enter third number: <i>50</i>
+8 is not in between 42 and 50
+
+Enter first number: <i>8</i>
+Enter second number: <i>42</i>
+Enter third number: <i>50</i>
+42 is in between 8 and 50
+
+Enter first number: <i>50</i>
+Enter second number: <i>42</i>
+Enter third number: <i>8</i>
+42 is in between 50 and 8
+        </code>
+      </pre>
+
+      <h3>FizzBuzz</h3>
+      <p>
+        In the game Fizz Buzz, players take turns counting up from one. If a
+        player’s turn lands on a number that’s divisible by 3, she should say
+        “fizz” instead of the number, and if it lands on a number that’s
+        divisible by 5, she should say “buzz” instead of the number. If the
+        number is both a multiple of 3 and of 5, she should say "fizzbuzz"
+        instead of the number. A spectator sport, it is not.
+      </p>
+      <p>
+        What it is, however, is an interesting problem in control flow and
+        parameter usage. Write a function called <code>fizzbuzz</code> which
+        accepts as a parameter an integer called <code>n</code>. The function
+        should count up until and including <code>n</code>, fizzing and buzzing
+        the correct numbers along the way. Once it's done, the function should
+        return how many numbers were fizzed or buzzed along the way.
+      </p>
+
+      <p>
+        Next, complete your program by writing a <code>main</code> function that
+        reads in an integer from the user and plays fizzbuzz until it counts to
+        the number. Here's a sample run of the program (user input is
+        <i>italicized</i>):
+      </p>
+
+      <pre class="plaintext">
+          <code>
+Number to count to: <i>17</i>
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+Fizzbuzz
+16
+17
+        </code>
+      </pre>
+
+      <h3>Medical Test Simulator</h3>
+
+      <p>
+        A team of doctors and scientists has developed a new medical test for a
+        rare disease that they say is 99% accurate. However, they warn, that
+        number is deceiving. Your job is to write a program that confirms this.
+      </p>
+      <p>
+        To be precise about our wording, a test being 99% accurate means that
+        for every 100 people it tests, 99 people will be correctly diagnosed as
+        sick or healthy.
+      </p>
+      <p>
+        To explore the implications of this, suppose we have a population of
+        10000 people, of whom 1%, or 100 people, have the disease. Your job is
+        to write a function called <code>simulate_tests</code>, which predicts
+        each of 4 quantities:
+      </p>
+      <ul>
+        <li>
+          <b>The number of true positives:</b> the number of sick people who are
+          correctly diagnosed as sick.
+        </li>
+        <li>
+          <b>The number of false positives:</b> the number of healthy people who
+          are incorrectly diagnosed as sick.
+        </li>
+        <li>
+          <b>The number of false negatives:</b> the number of sick people who
+          are incorrectly diagnosed as healthy.
+        </li>
+        <li>
+          <b>The number of true negatives:</b> the number of healthy people who
+          are correctly diagnosed as healthy.
+        </li>
+      </ul>
+      <p>
+        In order to be able to generalize this prediction to other diseases and
+        contexts, your function should accept the following parameters:
+      </p>
+      <pre class="lang-python">
+        <code>
+def simulate_tests(num_people, test_accuracy, infection_rate)
+  """
+  num_people: the number of people getting the test 
+  test_accuracy: how accurate the test is 
+  infection_rate: the proportion of the population with the disease
+  """
+        </code>
+      </pre>
+      <p>
+        In the specific example discussed above, the function would be called
+        with these parameters:
+      </p>
+      <pre class="lang-python">
+        <code>
+simulate_tests(10000, 0.99, 0.01)
+        </code>
+      </pre>
+      <p>
+        Your function should print all 4 quantities mentioned above and return
+        the fraction of incorrect positive results: that is, the number of
+        incorrect positive results divided by the total number of positive
+        results.
+      </p>
+      <p>
+        This is a tricky process, so we'll break it down into steps. To simulate
+        a single person's test, take these steps:
+      </p>
+      <ol>
+        <li>
+          Randomly choose whether the person is sick with a probability of 0.01.
+        </li>
+        <li>
+          Randomly choose whether the test is correct for them with a
+          probability of 0.99.
+        </li>
+        <li>
+          Update your counts accordingly.
+        </li>
+      </ol>
+      <p>
+        You might wish to make use of the following piece of code, which
+        evaluates to <code>True</code> with probability <code>prob</code>
+      </p>
+      <pre class="lang-python">
+        <code>
+is_true = random.random() < prob
+        </code>         
+      </pre>
+      <br />
+      <p>
+        <code>random.random()</code> returns a random number between 0 and 1,
+        whose probability of being less than <code>prob</code> is
+        <code>prob</code>, provided that <code>prob</code> is between 0 and 1.
+        For example, a random number between 0 and 1 has a 50% chance of being
+        less than 0.5, and so to get a variable that is <code>True</code> with
+        50% probability, you'd use the following line:
+      </p>
+      <pre class="lang-python">
+              <code>
+      is_true = random.random() < 0.5
+              </code>         
+            </pre>
+      <br />
+      <p>
+        Once you've written this function, complete the program by writing a
+        <code>main</code> function that reads in a number of people, a test
+        accuracy rate and an infection rate from the user, calls
+        <code>simulate_test</code>
+        and then prints the proportion of incorrect positive results (which
+        <code>simulate_test</code> should return). You may assume the user types
+        in valid inputs for each of these values, although you should decide
+        what type they should be.
+      </p>
+      <p>
+        Here's some sample output of the program (user input is
+        <i>italicized</i>):
+      </p>
+      <pre class="plaintext">
+        <code>
+Number of people: <i>10000</i>
+Test accuracy: <i>0.99</i>
+Infection rate: <i>0.01</i>
+True positives: 93
+False positives: 113
+False negatives: 1
+True negatives: 9793
+54.85436893203883% of positive tests were incorrect
+        </code>
+      </pre>
+      <p>
+        As you can see, the results are pretty surprising: nearly 55% of people
+        told they had the disease didn't actually have it. Intuitively, why
+        might this be? Is our result just anomalous?
+      </p>
+
+      <br />
+      <h2>Images</h2>
+      <p>
+        Implement the following functions to familiarize yourself with the
+        various ways you can work with images. Each function takes in a string
+        <code>filename</code>, which can then be converted into a
+        <code>SimpleImage</code>. Each function should end by displaying the
+        image, which can be done by calling the <code>.show()</code> function on
+        an image.
+      </p>
+
+      <h3>Double Left</h3>
+      <div class="row">
+        <div class="col-12 col-md-8" style="height: 100%;">
+          <pre class="lang-python" style="height: 100%;">
+            <code>
+def double_left(filename):
+  """
+  Takes the left half of image, and copies it on top of the right half.
+  """
+            </code>
+        </pre>
+        </div>
+        <div class="col-6 col-md-4">
+          <img
+            src="../../img/section/section3/double_left.png"
+            alt="An image of Karel, with the left half of the image copied onto the right half."
+            style="width: 250px; margin: 0 auto;"
+            class="img-fluid mx-auto d-block"
+          />
+        </div>
+      </div>
+
+      <h3>Squeeze Width</h3>
+      <div class="row">
+        <div class="col-12 col-md-8" style="height: 100%;">
+          <pre class="lang-python" style="height: 100%;">
+                  <code>
+def squeeze_width(filename, n):
+  """
+  A funhouse mirror effect governed by the int parameter n. 
+  Create a new image with the same height as the original, but
+  with a width that is n times smaller than the original's. 
+  Copy the original image such that it is squeezed horizontally.
+
+  For example, if n = 4, the pixels in the output image with an 
+  x coordinate of 0 would be copies of the input pixels with
+  an x coordinate of 0 * 4 = 0, while pixels in the output 
+  image with an x coordinate of 1 would be copies of the input
+  pixels with an x coordinate of 1 * 4 = 4, and so on.
+  """
+                  </code>
+              </pre>
+        </div>
+        <div
+          class="col-6 col-md-4 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="../../img/section/section3/squeeze_width.png"
+            alt="Two images of Marc Tessier-Levigne, one at normal width and then one that is squeezed to a third the width."
+            style="width: 250px; margin: 0 auto;"
+            class="img-fluid mx-auto d-block"
+          />
+        </div>
+      </div>
+
+      <h3>Crop Image</h3>
+      <div class="row">
+        <div class="col-12 col-md-8" style="height: 100%;">
+          <pre class="lang-python" style="height: 100%;">
+            <code>
+def crop_image(filename, n):
+    """
+    crops the image to fit inside of a frame by shaving 
+    n pixels from each side of the image. 
+
+    You may assume that n is less than half the width of 
+    the image. 
+    """
+            </code>
+          </pre>
+        </div>
+        <div
+          class="col-6 col-md-4 d-flex align-items-center justify-content-center"
+        >
+          <img
+            src="../../img/section/section3/crop_image.png"
+            alt="A picture of Karel with 30 pixels cropped off each side"
+            style="width: 250px; margin: 0 auto;"
+            class="img-fluid mx-auto d-block"
+          />
+        </div>
+      </div>
+      <br /><br />
+      <h2>Debugging with Doctests</h2>
+      <p>
+        In this problem, we'll work through using doctests to help us debug a
+        program. Suppose we're trying to write a function which given two
+        integers, calculates the Greatest Common Divisor of both numbers. The
+        Greatest Common Divisor of two numbers is the largest number that is a
+        factor in both of them. In <code>greatest_common_divisor.py</code>,
+        we've provided the following buggy implementation of a function called
+        <code>greatest_common_divisor</code>:
+      </p>
+      <pre class="lang-python">
+        <code>
+def greatest_common_divisor(a, b):
+    """
+    Return the greatest common divisor of a and b.
+
+    >>> greatest_common_divisor(4, 16)
+    4
+    >>> greatest_common_divisor(16, 4)
+    4
+    >>> greatest_common_divisor(9, 24)
+    3
+    """
+
+    lower = a
+
+    gcd = 1
+    for i in range(1, lower):
+      if a % i == 0 or b % i == 0:
+        gcd = i
+        </code>
+      </pre>
+      <br />
+
+      <p>
+        At first glance, this looks like a reasonable way of solving the
+        problem, but it turns out there are several issues. By running the
+        doctests for the function, try identifying what the bugs are and
+        correcting them. You might wish to add more doctests to more
+        exhaustively test your function.
+      </p>
+    </div>
+
+    <div class="myTocContainer" style="position: absolute;">
+      <div
+        class="position-fixed justify-content-center d-flex flex-column"
+        style="
+          height: 100vh;
+          width: 185px;
+          right: 0px;
+          top: 0px;
+          margin-top: -20px;
+        "
+      >
+        <nav id="toc" data-toggle="toc" class="myToc"></nav>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release%409.18.1/build/highlight.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    // Trim whitespace around code blocks.
+    $("pre>code").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+    $("pre").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+  });
+
+  hljs.initHighlightingOnLoad();
+</script>
+    <br />
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

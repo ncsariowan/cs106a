@@ -1,0 +1,644 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/12-Lists/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:50:10 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 12: Lists
+					</h1>
+					<p class="subtleHeading">
+						May 4th, 2020 
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="12-Lists.pdf">
+						<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture12.zip"><i class="fas fa-code"
+							aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;when do we receive our diagnostic grades?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Sorry some of us might have missed it, when do we recieve our diagnostic grades?</p></i>
+               <p><b>A1:&nbsp;</b> By Wednesday’s class</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you run the program through the console?</p></i>
+               <p><b>A1:&nbsp;</b> Not easily! You should use the terminal for that.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you have lists within lists?</p></i>
+               <p><b>A1:&nbsp;</b> Yep! We’ll get there in the next lecture</p>
+        
+               <p><b>A2:&nbsp;</b> Can you have lists within lists?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Had some confusion with &#039;Ghost&#039; in Assgn 3 - if we use load_images() and that returns a list of picture elements, can we pass element numbers into function parameters?</p></i>
+               <p><b>A1:&nbsp;</b> You shouldn’t need to do anything with lists for ghost</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Did we get grades for the assessment? If so, where are they posted?</p></i>
+               <p><b>A1:&nbsp;</b> They’ll be released by Wednesday’s class.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is empty_list == None?</p></i>
+               <p><b>A1:&nbsp;</b> No</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the assignment of a replacement element need to be the same type as the element it was replacing (string to string, vs. string to float)</p></i>
+               <p><b>A1:&nbsp;</b> Nope! Good question. In general, though, you usually won’t have lists with multiple different types.</p>
+        
+               <p><b>A2:&nbsp;</b> Does the assignment of a replacement element need to be the same type as the element it was replacing (string to string, vs. string to float)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how can length be -1 ?</p></i>
+               <p><b>A1:&nbsp;</b> length - 1 means 1 less than the length of the list, not length=-1</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will a for loop with a range of 0, simply just not execute the for loop?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+               <p><b>A2:&nbsp;</b> Will a for loop with a range of 0, simply just not execute the for loop?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why isn’t len (emptylist) not equal to none but rather zero?</p></i>
+               <p><b>A1:&nbsp;</b> len returns how many elements there are in the list - there are 0 elements in the list!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why don’t the negatives start from 0 ?</p></i>
+               <p><b>A1:&nbsp;</b> You can kind of imagine the negative index as how far back from the end of the list you’re going. The last element is at length - 1, so you start off at -1 with negative indices.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can lists be edited outside the loop like a google doc? or a pixel</p></i>
+               <p><b>A1:&nbsp;</b> Yes! Great question, they’re also stored like URLs</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are we allowed to use an underscore in a list name?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can the append work for str and floaps?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, it’s just for lists</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if i appended a 25? does it still go at the end would i get error</p></i>
+               <p><b>A1:&nbsp;</b> You can append whatever you want</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do lists of integers need to go in increasing numerical order?</p></i>
+               <p><b>A1:&nbsp;</b> Nope!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I mean, lists of str and floaps</p></i>
+               <p><b>A1:&nbsp;</b> Oh, yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can .append add elements between existing elements instead of at the end?</p></i>
+               <p><b>A1:&nbsp;</b> There’s another function for that called .insert</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can we add something to a llist but not to the end, maybe to the middle?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, there’s a function called .insert</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how is the order, then? because the a came first now</p></i>
+               <p><b>A1:&nbsp;</b> It’s just the order that you append to it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what are the names of the things that come after the . (For example alist.append, what is append called? A function?)</p></i>
+               <p><b>A1:&nbsp;</b> Methods! Saying ‘functions’ is also fine</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we append multiple elements at once_</p></i>
+               <p><b>A1:&nbsp;</b> Not in one fell swoop, you’ll have to call it multiple times. There are other functions to do this but we’ll get there!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you append multiple elements to a list? Like alist.append(10, 20)</p></i>
+               <p><b>A1:&nbsp;</b> Not in one fell swoop, you’ll have to call it multiple times. There are other functions to do this but we’ll get there!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are empty lists often used like a variable that counts or keeps track of something (tally)</p></i>
+               <p><b>A1:&nbsp;</b> Yes! You’ll see some examples of this soon.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what’s the difference between variable.fun() and fun(variable)? Is there any rules on how to remember which one to use?</p></i>
+               <p><b>A1:&nbsp;</b> fun is when you’ve defined your own function, and .fun() is for a method that comes inbuilt to a particular variable type (like append)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;the removing is just for the last value, right? What about removing more things?</p></i>
+               <p><b>A1:&nbsp;</b> You can’t remove multiple things at tone time using .pop</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;when it gets returned to x, does it all store in x or does it replace the value of x?</p></i>
+               <p><b>A1:&nbsp;</b> .pop() returns the element that got removed</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you find where exactly the element is in the list? Like the index or indices?</p></i>
+               <p><b>A1:&nbsp;</b> We’ll get there soon enough!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is range(n) a list ?</p></i>
+               <p><b>A1:&nbsp;</b> ish! It doesn’t store all the numbers at once (that would take up a lot of space) so it gives each number to you one by one. You can convert it to a list, though. Good question!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;are we going to have a reference sheet for lists?</p></i>
+               <p><b>A1:&nbsp;</b> http://web.stanford.edu/class/cs106a/pythonreader/lists/</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you do 
+if list[4]:
+    # do something
+in order to see if there is an element in position [4]?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, list[4] would crash if there isn’t an index 4. You’ll need to check the length of the list.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;diff between .remove and .pop?</p></i>
+               <p><b>A1:&nbsp;</b> .remove removes a particular value, .pop removes whatever is at the end of the list.</p>
+        
+               <p><b>A2:&nbsp;</b> pop takes an index, remove takes an element</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we remove elements using certain parameters such as elements being greater or less than others?</p></i>
+               <p><b>A1:&nbsp;</b> short answer: not using the standard list library</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How can one make it append in numerical order? Rather than just putting one list after the other?</p></i>
+               <p><b>A1:&nbsp;</b> You have to sort the list first (we’ll talk about this later)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Once the second_list is extended into the first_list, will second_list retain its original elements or will it be an empty list since all it’s elements are transferred into first_list?</p></i>
+               <p><b>A1:&nbsp;</b> It’ll still have its original elements in it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will fantasy = actual_jedi not work?</p></i>
+               <p><b>A1:&nbsp;</b> it works but then those two tags refer to the same list (so changing one will change the other)</p>
+        
+               <p><b>A2:&nbsp;</b> Will fantasy = actual_jedi not work?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we do list_1 = list_2 instead of list_1 = list2.copy()?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but then changing one list woudl change the other too</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would happen if you tried to get the max of a list that only includes strings?</p></i>
+               <p><b>A1:&nbsp;</b> It compares strings alphabetically</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can extend be used to simply add 1 element</p></i>
+               <p><b>A1:&nbsp;</b> yes</p>
+        
+               <p><b>A2:&nbsp;</b> Yes, if you put it in a list, but that’s a little roundabout</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would newlist = oldlist produce the same functionality as newlist = oldlist.copy()?</p></i>
+               <p><b>A1:&nbsp;</b> No, changing one list would change the other.</p>
+        
+               <p><b>A2:&nbsp;</b> no. In the first, both lists refer to the same list.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What happens when you sum a list of letters/non-numbers?</p></i>
+               <p><b>A1:&nbsp;</b> It would concatenate all the strings, I believe</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the for-each loop, do you have to first assign the variable to a value (like elem in this example or pixel) before using the for-each loop?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, the for loop defines it for you</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is mutable the same thing as “pass by reference” in other languages?</p></i>
+               <p><b>A1:&nbsp;</b> It’s pretty similar, yeah</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How does this affect the idea of ‘local’ lists? (like local variables)</p></i>
+               <p><b>A1:&nbsp;</b> The URLs are local, but the lists (the webpages) aren’t!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you get the new list by a return function?</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if you want to show new num_list can you return num_list?</p></i>
+               <p><b>A1:&nbsp;</b> What do you mean by ‘show’?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you wanted to change the list in place using a for each loop, could you assign list[elem] = elem +=1?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what does primitive mean again?</p></i>
+               <p><b>A1:&nbsp;</b> It’s a simple variable like an int or float, which doesn’t get passed by reference!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is a primitive type?</p></i>
+               <p><b>A1:&nbsp;</b> A simple variable like an int or float, which isn’t passed by reference</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What would be the difference between saying for value in list vs for elem in list?</p></i>
+               <p><b>A1:&nbsp;</b> No difference, except the name of the variable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you have to pass in a constant EXTRA CREDIT. can’t every function already see it?</p></i>
+               <p><b>A1:&nbsp;</b> Great question! It’s mostly a question of making this function more generalizable</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the animation class last week - how can we export our animations in a video format?</p></i>
+               <p><b>A1:&nbsp;</b> Unfortunately, there isn’t an easy way - you might want to try taking a screen recording.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would it work if you didn’t pass in EXTRA CREDIT? would it be able to see the global constant and still work?</p></i>
+               <p><b>A1:&nbsp;</b> You’d have to refer to it as EXTRA_CREDIT and not extra_credit, but yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How come a return list was not necessary at the end of the get_extra_credit function?</p></i>
+               <p><b>A1:&nbsp;</b> Because the list was passed in by reference, so the changes are made in place.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why in give extra credit do we not have to have a line to return the scores? Are lists automatically returned from functions when we modify individual elements?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What can we type into terminal to stop a program that is running?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is there a way to paramatrise pixel.blue? say a function that takes function(color) and returns pixel.color</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is a primitive?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we use lists in assignment 3? I think my code could be better if i did.</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

@@ -1,0 +1,594 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/handouts/diagnostic.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:29:24 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../plugins/prism/prism.js"></script>
+<link href="../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../plugins/probability/gaussian.js"></script>
+<script src="../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+	<!-- add after bootstrap.min.js -->
+	<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div kclass="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div style="height:20px;"></div>
+				<h1>
+					CS 106A Diagnostic
+				</h1>
+				<hr />
+			</div>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-sm-12">
+
+				<p>
+					The CS 106A Diagnostic is intended as a way for us to identify early how comfortable
+					you feel with course material thus far. Since the course material builds on itself,
+					checking that you have a solid grasp of the early material is critical for making sure that
+					you have the right scaffolding to assimilate other concepts that are learned later in the
+					class.
+				</p>
+
+				<p>
+					The primary goal of the diagnostic is to provide feedback to you, but we want you to prepare for it and take it
+					seriously, which is why it's worth 15% of your grade. As we said in the general information handout,
+					to pass the class you are required to make a real effort on and submit all the assignments, take the 
+					diagnostic assessment, and attend/participate in section. We hope you'll take the diagnostic 
+					as an opportunity to see how much you've learned in the past few weeks, as well as what work you 
+					have left to do. 
+				</p>
+
+				<h2>Logistics</h2>
+
+				<p>
+					The diagnostic is scheduled to take place on <b>Monday, April 27th at 
+					1:30pm PDT</b>, and will cover material up to and including the lecture on April 22. 
+					The diagnostic will be 50 minutes long and you can consult 
+					any materials (although we'll discuss this more in th strategy section 
+					of this handout), and will be administered digitally on a tool called <i>BlueBook</i>. 
+				</p>
+
+				<p>
+					If you have conflicts with the diagnostic timing or OAE accommodations, please contact Brahm 
+					as soon as possible. 
+				</p>
+
+				<h2>BlueBook</h2>
+				<p>
+					Please make sure to download and install BlueBook on your laptop <b>before the diagnostic</b>. 
+					Download links--as well as a guide to using BlueBook--can be found 
+					<a href="https://web.stanford.edu/dept/cs_edu/bluebook/bluebook.shtml" target="_blank">here</a>. 
+					BlueBook was designed for closed-note exams, and so the splash screen asks you to not access the internet 
+					or other applications. <b>We are not enforcing this this quarter but you should check the box anyway</b>.
+				</p>
+
+				<p>
+					Additionally, the honor code requires that the solutions you produce are your own. You're welcome 
+					to use any external resources you want, but you should not be copying preexisting solutions on 
+					the internet. BlueBook does not allow you to copy and paste into or out of the application 
+					to ensure your solutions are your own.
+				</p>
+
+				<p> 
+					A practice diagnostic that can be run on BlueBook can be downloaded below. 
+					This practice will be run under timed conditions, and give you an idea of what 
+					to expect for the actual diagnostic. 
+				</p>
+
+				<p> 
+					Should you run into any technical issues, shoot Brahm an email at  
+					<a href="mailto:brahm@stanford.edu"> brahm@stanford.edu </a>.
+				</p>
+
+				<div class="alert alert-warning">
+					<p>
+						<b>Note:</b> BlueBook runs on Windows, macOS and Linux computers. If you do not have
+						one of these computers (e.g. a Chromebook) instead, please let Brahm know
+						as soon as possible.
+					</p>
+				</div>
+
+				<hr/>
+
+				<h2>Practice Materials</h2>
+				
+				<div class="row">
+					<div class="col-sm-2"><a href="PracticeDiagnostic.pdf">
+							<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+							<br /><br />
+							<span style="margin-left:3px">Practice Diagnostic</span>
+						</a>
+					</div>
+					<div class="col-sm-2">
+						<a href="practicediagnostic.json" download="practicediagnostic.json"><i class="fas fa-code" aria-hidden="true"
+								style="font-size: 5em;margin-left:0px"></i>
+							<br /><br />
+							<span style="margin-left:6px">Practice Exam on BlueBook</span> <br />
+							<span style="margin-left: 6px;">Password: <code>mjolnir</code></span>
+						</a>
+					</div>
+					<div class="col-sm-2"><a href="PracticeDiagnosticSolutions.html">
+							<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+							<br /><br />
+							<span style="margin-left:3px">Practice Diagnostic Solutions</span>
+						</a>
+					</div>
+				</div>
+
+				<br/>
+				<br/>
+				<div class="alert">
+					<p>
+						<b> Note: </b>We unfortunately currently don't have a way for students to access their own submissions
+						from the BlueBook practice. If you'd like to compare your answers to the posted solutions, please
+						make sure to copy, save, or otherwise keep your answers before submitting. Apologies for some of the growing
+						pains as we develop all of the functionality of our new electronic system!
+					</p>
+				</div>
+
+				<h2> Strategies </h2>
+
+				<p>
+					Assessments in the CS106 courses can be challenging. Hopefully you have been keeping up in lecture and doing well on the
+					assignments but may be unsure of how to make sure your skills will translate well to the timed diagnostic setting. The practice
+					diagnostic gives an idea of what to expect and this handout gives some sage advice gathered from our current and past staff
+					members. We hope you will find our tips useful! Remember: We are assessing your ability to think logically and use
+					appropriate problem-solving techniques. We expect you to express yourself in reasonably correct Python, but we will be
+					quite lenient with errors that are syntactic rather than conceptual.
+				</p>
+
+				<h3>
+					Digital Diagnostics
+				</h3>
+
+				<p>
+					Electronic assessments hold several advantages. For students, writing code on a computer (with syntax highlighting, undo, cut,
+					etc) is a much easier experience than writing solutions out by hand. The way in which you are assessed is much
+					closer to the way in which you program. On our end, it makes it a lot easier to make, distribute and grade
+					assessments. Instead of using the 16,000 pages of paper that CS106A typically consumes each year, we use 0. Finally, grading
+					hand written answers is hard and inaccurate. Hand written answers allow for bias in teachers grading and are inaccurate
+					because we can’t run your programs. Your diagnostic will still be assessed by a human, but they will be better equipped to
+					understand what you were trying to do.
+				</p>
+
+				<b><i>Great, it's on a computer! Can I run my program?</i></b>
+				<p>
+					Yes, but in a time-restricted situation, immediate feedback can sometimes be more of an impediment than an 
+					advantage. Imagine this, you read the first problem, have a good idea how to solve it, write your solution, and trace 
+					its operation and feel good. You compile and test it. Suppose it exhibits a bug—even though it may only be a minor issue, 
+					you can see your answer is wrong—so you hunker down and rework and retest until perfect... even if it takes the whole time. 
+					Bad deal – since you never got to the other problems! We want you to write your best answer and move on.
+				</p>
+
+				<h3>
+					How to study for the diagnostic
+				</h3>
+
+				<b><i>"Open Book" doesn't mean "No Review Required"</i></b>
+				<p>
+					 The diagnostic is open-book/open-notes and you can refer to
+					slides, the Karel reader, your notes from lecture, course handouts, and your assignments. We don’t 
+					expect you to memorize minute details and the diagnostic will not focus on them. However, this doesn’t mean you shouldn’t 
+					prepare. There certainly isn’t enough time during the diagnostic to learn the material. To do well, you must be experienced 
+					at working problems efficiently and accurately without needing to repeatedly refer to your resources.
+				</p>
+
+				<b><i>Practice, practice, practice</i></b>
+				<p>
+					 A good way to study for the programming problems is to take a problem 
+					(lecture or section problem, sample diagnostic problem) and write out your solution under test-like conditions. 
+					This is much more valuable than a passive review of the problem and its solution where it is too easy to conclude 
+					“ah yes, I would have done that”, only to find yourself adrift during the real diagnostic when there is no provided solution 
+					to guide you!
+				</p>
+
+				<b><i>Get your questions answered</i></b>
+				<p>
+					If there is a concept you’re a bit fuzzy on, or you’d like to check your 
+					answer to a chapter exercise, or you wonder why a solution is written a particular way, get those questions answered 
+					before the diagnostic. Swing by the LaIR, come to office hours, or post on Ed and we’re happy to help.
+				</p>
+
+				<h3> How to take the diagnostic </h3>
+
+				<b><i>Scan all the problems first </i></b>
+				<p>
+					Quickly peruse all questions before starting on any one. This allows you to “multitask”—as you are writing the more
+					mundane parts of one answer, your mind can be brainstorming strategies or ideas for another problem in the background.
+					You can also sketch out how to allocate your time between questions in the first pass.
+				</p>
+
+				<b><i>Spend your time wisely.</i></b>
+				<p>
+					There are only a handful of questions, and each is worth a significant amount. Don’t get stuck on any particular
+					problem. There is much opportunity for partial credit, so it’s better to make good efforts on all problems than to
+					perfect an answer to one leaving others untouched.
+				</p>
+
+				<b><i>Style and decomposition are secondary to correctness.</i></b>
+				<p>
+					Unlike the assignments where we hold you to high standards in all areas, for a diagnostic, the correctness of the answers
+					dominates the grading. Decomposition and style are thus somewhat de-emphasized. However, good design may make it
+					easier for you to get the functionality correct and require less code, which takes less time and has fewer opportunities
+					for error. Comments are never required unless specifically indicated by a problem. When a solution is incorrect,
+					commenting may help us determine what you were trying to do and award partial credit.
+				</p>
+
+				<b><i>Pay attention to specific instructions</i></b>
+				<p>
+					A problem statement may include detailed constraints and hints such as “Karel must end up facing East.” 
+					These constraints are not intended to make things difficult; typically we are trying to guide you in the 
+					direction of a straightforward and simple solution. If you disregard these instructions, you are likely to 
+					lose points, either for not meeting the problem specification and/or for errors introduced when attempting a 
+					convoluted alternative.
+				</p>
+
+				<b><i>Syntax is not that important if it is clear what you mean.</i></b>
+				<p>
+					We won’t trouble you about most small syntax errors (forgetting colons or spaces, for example) as long as your
+					intentions are clear. Having said that, beware that if your syntax errors cause ambiguity, we might not get the correct
+					meaning. For example, if we see a <code>for</code> statement followed by two lines, where both lines are vaguely indented 
+					or a third line has been added in after the fact, we may be confused. 
+				</p>
+
+				<b><i>Save a little time for checking your work.</i></b>
+				<p>
+					Before handing in your exam, reserve a few minutes to go back over your work. Check for missing correct parameters passed
+					to functions, etc. We try not to deduct points for minor things if it is obvious what you meant, but sometimes it is difficult 
+					to decipher your true intention. You might save yourself a few lost points by tidying up the details at the end.
+				</p>
+
+				<h3> Final Thoughts </h3>
+
+				<p>
+					Always remember why you are at school. Learning and education tend to be a more fulfilling goal than high grades. If you
+					work hard, study lots and feel good about your understanding of computer science that is an achievement to be proud
+					of—regardless of how many points you get relative to the other students in the class.
+				</p>
+
+
+			</div>
+			<div class="myTocContainer" style="position:absolute">
+				<div class="position-fixed  justify-content-center d-flex flex-column" style="height:100vh; width:185px;right:0px;top:0px;margin-top:-20px;
+							">
+			
+					<nav id="toc" data-toggle="toc" class="myToc"></nav>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

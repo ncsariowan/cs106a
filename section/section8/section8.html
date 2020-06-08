@@ -1,0 +1,934 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/section/section8/section8.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:24:34 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- add after bootstrap.min.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <div class="col-sm-12">
+      <div style="height: 20px;"></div>
+      <h1>
+        Section #8
+      </h1>
+      <p class="subtleHeading">
+        May 31st, 2020
+      </p>
+      <hr />
+      <p>
+        <i>
+          Written by Brahm Capoor, Parth Sarin, Juliette Woodrow and Peter
+          Maldonado
+        </i>
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6 text-center">
+          <a href="Section8.zip">
+            <i
+              class="fas fa-download"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            PyCharm Projects
+            <br />
+            (import each subfolder separately)
+          </a>
+        </div>
+        <div class="col-sm-6 text-center">
+          <a>
+            <i
+              class="fas fa-file-pdf"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Solutions
+          </a>
+        </div>
+      </div>
+      <br />
+    </div>
+
+    <h2>Finding Grandparents</h2>
+
+    <p>
+      Implement a function find_grandchildren, which given a dictionary
+      <code>parents</code> whose keys are strings representing parent names and
+      whose values are lists of those parent's children's names, produces and
+      return s a dictionary mapping from people's names to those lists of those
+      people's grandchildren's names.
+    </p>
+
+    <p>For example, given this dictionary:</p>
+
+    <pre class="lang-python">
+      <code>
+parents_to_children = {
+  'Alice': ['Bob', 'Catherine'],
+  'Daniel': ['Alice', 'Eve'],
+  'Catherine': ['Frank'],
+  'Eve': ['Grace']
+}
+      </code>
+    </pre>
+
+    <p>
+      Daniel's grandchildren are Bob, Catherine and Grace, since those are the
+      children of his children. Additionally, Alice is Frank's grandparent,
+      since Frank's parent is Alice's child. Therefore, calling
+      <code>find_grandchildren (parents_to_children)</code> returns this
+      dictionary:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+{
+  'Alice': ['Frank'],
+  'Daniel': ['Bob', 'Catherine', 'Grace']
+}
+      </code>
+    </pre>
+
+    <p>
+      Note that the people who aren't grandparents don't show up as keys in the
+      new dictionary
+    </p>
+
+    <br />
+    <br />
+    <h2>Contact Tracing</h2>
+
+    <p>
+      Stanford has enlisted your help to do contact tracing on campus. Thanks to
+      cell phone data, they have a list of everyone who was on campus and their
+      locations throughout the day. This data is stored in a file called
+      <code>locations.txt</code>, which is provided as the constant
+      <code>LOCATION_FILE</code>. Here are the first few lines:
+    </p>
+
+    <code class="text">
+      <pre>
+Leonida, 11:30, CoHo
+Natalya, 10:00, CoHo
+Vashti, 8:00, Mausoleum
+Nathanial, 11:00, Roble Arts Gym
+Alexis, 7:00, Ricker
+Noelle, 9:30, Lathrop
+Salvador, 10:00, Law School Terrace
+      </pre>
+    </code>
+    <br />
+
+    <p>
+      Notice that each line is of the form
+      <code>{name}, {time}, {location}</code>. Each line represents a single
+      person-location timestamp indicating that <code>{name}</code> was at
+      <code>{location}</code> at <code>{time}</code>. So, the line
+      <code>Leonida, 11:30, CoHo</code> means that Leonida was at CoHo at
+      11:30am. Additionally, this file contains all the location data for every
+      person on campus, in 30-minute increments between 7am and 12:30pm.
+    </p>
+
+    <p>
+      At 12:30pm, Rosalind found out that they were sick, so Stanford wants to
+      find everyone that Rosalind came in contact with throughout the day.
+    </p>
+
+    <p>
+      Write a function <code>find_contacts(target, location_file)</code> which
+      returns a a list of people that <code>target</code> came in contact with
+      based on the data in <code>location_file</code>. <code>target</code> will
+      be a name from the location file. More precisely, we say that two people
+      "came in contact" if, at any point during the day, they were in the same
+      location. For example, if this was the location data:
+    </p>
+
+    <code class="plaintext">
+      <pre>
+Brahm, 8:00, CoHo
+Brahm, 8:30, CoHo
+Parth, 8:30, CoHo
+Tori, 9:00, CoHo
+      </pre>
+    </code>
+    <br />
+
+    <p>
+      then Brahm and Parth came in contact (they were both at CoHo at 8:30), but
+      neither came in contact with Tori.
+    </p>
+
+    <p>
+      While we don't have any requirements for how you do this, we recommend you
+      solve this problem in two parts:
+    </p>
+
+    <ol>
+      <li>
+        Open the <code>LOCATION_FILE</code> and parse the data. We suggest that
+        you store this data in a dictionary where every key is a name. The value
+        associated to a name should be another dictionary. The inner dictionary
+        should map a time to a location if the person was in that location at
+        that time. For the CoHo example above, this would look like:
+        <pre class="lang-python">
+          <code>
+{
+  'Brahm': {'8:00': 'CoHo', '8:30': 'CoHo'},
+  'Parth': {'8:30': 'CoHo'},
+  'Tori': {'9:00': 'CoHo'}
+}
+          </code>
+        </pre>
+      </li>
+      <li>
+        After you've loaded the data, extract the <code>target</code>'s path
+        through the day. Compare everyone's path to the target's path and add
+        their names to a list if they came in contact.
+      </li>
+    </ol>
+
+    <br />
+    <h2>ASCII Art</h2>
+
+    <p>
+      ASCII art is a form of art that uses text characters to create images. For
+      example, here's some ASCII art of a unicorn:
+    </p>
+
+    <code class="text" role="img" aria-labelledby="unicorncaption">
+      <pre>
+         &nbsp;
+                                             |
+                                            \ /
+                      ~~%%%%%%%%_,_,    --_,* ---
+                    ~~%%%%%%%%%*"/./   _,=" / \
+                  ~~%%%%%%%*'   /  *.="      |
+              ~~%%%%%%%%*  .    ,__*.
+            ~~%%%%%%%%*   *      \O\*
+          ~~%%%%%%%%*    *           *
+        ~~%%%%%%%%*       *. _*        *
+    ~~%%%%%%%%*          *'`*._        `*
+  ~~%%%%%%%%%*           *      `*.     (,*
+~~%%%%%%%%*             *         *._\_.*
+~~%%%%%%%*              *	
+      </pre>
+    </code>
+    <p id="unicorncaption" class="text-muted">An ASCII image of a unicorn</p>
+    <br />
+    <p>
+      In this problem, we'll write a function
+      <code>convert_img_to_ascii(img_file)</code>
+      that takes in an image and converts it into ASCII art. We're going to do
+      this by replacing each pixel in the image with an ASCII character. Here
+      are the characters we'll use: <code>▓▒░ </code> (these are stored in a
+      constant called <code>IMG_CHARS</code>`). The leftmost character will
+      replace dark pixels and the rightmost character (which is just a space)
+      will replace light pixels. More precisely, for every pixel in your image,
+      you should compute the average RGB value (just like we did to convert an
+      image into grayscale). Then, based on that value, replace the pixel with
+      one of the characters:
+    </p>
+
+    <code class="text">
+      <pre>
+avg  &lt; 64:          '▓'
+64  &lt;= avg &lt; 128:   '▒'
+128 &lt;= avg &lt; 192:   '░'
+192 &lt;= avg:         ' ' 
+      </pre>
+    </code>
+
+    <p>
+      In other words, if the average value is less than 64, use the darkest
+      character. If it's between 64 and 128, use the next character, etc. We've
+      provided the numerical breakpoints as a constant
+      <code>BREAKPOINTS = (64, 128, 192)</code>.
+    </p>
+
+    <p>
+      Then, print out each ASCII character in order, keeping in mind that each
+      row of pixels in the image should be represented by a separate line of
+      text in your terminal. We've provided an image of a panda that you can
+      test your code on:
+    </p>
+
+    <img
+      src="../../img/section/section8/img_ascii/panda_large.jpg"
+      alt="A panda with its left paw raised upwards."
+      style="width: 30%; margin: 0 auto;"
+      class="img-fluid mx-auto d-block"
+    />
+
+    <p>
+      If you want to test this code on your own image, you should make use of
+      our <code>resize_img_for_ascii(img)</code> function, which takes a
+      SimpleImage and stretches it out so it's twice as wide. This is necessary
+      because although pixels are square, our characters (like <code>▓</code>)
+      are rectangular: they're about twice as tall as they are wide. If you make
+      the image twice as wide, then the ASCII will look correct.
+    </p>
+
+    <p>
+      To debug your code, you can also try this out on the image of our hapless
+      Head TA:
+    </p>
+
+    <img
+      src="../../img/section/section8/img_ascii/brahm.jpg"
+      alt="An image of Brahm Capoor, the head TA for 106A, against a white background."
+      style="width: 30%; margin: 0 auto;"
+      class="img-fluid mx-auto d-block"
+    />
+
+    <p>
+      which gives this (mildly terrifying) result:
+    </p>
+
+    <pre class="text" role="img" aria-labelledby="brahmcaption">
+      <code>
+        &nbsp;
+                            ░░▒▒▓▓▓▓▓▓▓▓▓▒░
+                          ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒
+                        ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒
+                       ▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒
+                      ░▒▓▓▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▒
+                      ▒▓▓▓▒░░░░░░░░▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓░
+                      ▒▓▓▒   ░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓░
+                      ▓▓▒░ ░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▒▓▓▓▓▓
+                      ▒▒░░▒▓▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▒▒▓▓░
+                       ▒░░▒▒▒▓▓▓▓▓▒░▒▓▓▓▓▓▓▓▓▓▓▒▓▓▓▒
+                      ░░░ ░░░▒▒▒▒░░░▒▒▓▓▓▓▒▒▒▒▒▒▓▓▒▒
+                      ░▒░  ░░▒▒░░░░░▒▒▒▒▓▒▒▒▒▒▒▒▒▓▓▒
+                       ░░ ░░▒▒▒░░▒▒▒▒▓▓▓▒▒▒▓▒▓▒▒▓▒▒
+                          ░▒▒▓▒▒░░░▒▒▒▒▒▓▓▓▓▒▓▒░
+                          ░▒▒▒▒▒░░░▒▒▒▒▓▓▒▒▓▓▒▒
+                           ░░░░░░░▒▒▒▒▒▒▒▒▒▓▒▒▒
+                           ░░░░░░░░▒▒▒▒▒▒▒▓▓▓▓░
+                           ░░░▒▒▒▒▒▓▓▓▓▓▓▓▓▓▒▒
+                           ░░░░░░▒▒▒▓▓▓▓▓▓▓▒▒▒
+                           ░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒
+                       ▒░  ░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒
+                  ░▒   ░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░
+               ░▒▓▓▓░   ░▒▒░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒░ ░▒░
+          ░▒▒▓▓▓▓▓▓▓▓░    ░▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░   ▒▓▓▓░
+     ▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▒     ░▒░░░▒▒▒░░░░▒▒▒░   ░▒▓▓▓▓▓▓▓▒░
+  ░▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░     ░░░░░▒░░░░░░░░░░░▒▓▓▓▓▓▓▓▓▓▓▓▓░
+      </code>
+    </pre>
+    <p id="brahmcaption" class="text-muted">ASCII art of Brahm</p>
+
+    <br />
+    <h2>Polling</h2>
+
+    <p>
+      As the quarter comes to an end, Brahm has been getting disorganized
+      juggling his head TA duties, graduation, and rewatching all of the
+      Avengers movies. He needs your help with something pressing: he wants to
+      poll all of the SLs about which of the Avengers they think would win in a
+      battle. Help Brahm do this by writing a <code>Poll</code>Poll class with
+      four functions: <code>__init__</code>, <code>add_option</code>,
+      <code>vote_for</code>, and <code>get_winner</code>.
+    </p>
+
+    <p>
+      Once implemented, <code>add_option(self, option)</code> should add an
+      option that can be voted for into the poll. If the option has already been
+      added, calling <code>add_option</code> shouldn't do anything.
+      <code>vote_for(self, option) </code> should record a vote for that option.
+      <code>get_winner(self)</code> should return the name of the option which
+      received the most votes. If there's a tie, <code>get_winner</code> can
+      break it arbitrarily.
+    </p>
+
+    <p>
+      We're leaving the implementation up to you, but we strongly recommend that
+      you start by thinking about the data structure that you'll use to record
+      the votes.
+    </p>
+
+    <p>
+      Altogether, you should be able to use the class like this:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def main():
+  poll = Poll()
+
+  poll.add_option('Iron Man')
+  poll.add_option('Captain America')
+  poll.add_option('Black Widow')
+
+  poll.vote_for('Iron Man')
+  poll.vote_for('Iron Man')
+  poll.vote_for('Iron Man')
+  poll.vote_for('Iron Man')
+
+  poll.vote_for('Captain America')
+
+  poll.vote_for('Black Widow')
+  poll.vote_for('Black Widow')
+  poll.vote_for('Black Widow')
+
+
+  poll.get_winner() # => 'Iron Man'
+
+if __name__ == "__main__":
+  main()
+      </code>
+    </pre>
+
+    <br />
+    <br />
+    <h2>Sentiment Analysis</h2>
+
+    <p>
+      In this problem, you will get practice with text classification which
+      organizes text into groups. Brahm has a list of some puns that he recently
+      came up with and wants your help classifying them into categories (If you
+      want to try something other than Brahm's puns, you can also analyze
+      <code>random_sentences.txt</code>). Your main goal is to find the pun that
+      most expresses a given emotion. We have broken this down into milestones
+      for you.
+    </p>
+
+    <h3>
+      Milestone 1: Making an Emotion Dictionary
+    </h3>
+    <p>
+      You are given an "emotion-lexicon" which categorizes each word based on
+      whether it expersses one of these ten emotions:
+    </p>
+    <ul>
+      <li>anger</li>
+      <li>anticipation</li>
+      <li>disgust</li>
+      <li>fear</li>
+      <li>joy</li>
+      <li>negative</li>
+      <li>positive</li>
+      <li>sadness</li>
+      <li>surprise</li>
+      <li>trust</li>
+    </ul>
+    <p>
+      Each line in the file starts with a word. The following word on the line
+      is one of these ten emtions which is followed by a number, 0 or 1, which
+      explains if the word expresses that emotion. If a word has a 1 that means
+      it does express that emotion and if it has a 0 it does not express that
+      emotion.
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def make_emotion_dict(filename):
+	"""
+	This function takes in an emotion lexicon and returns a dictionary where 
+	the key is the word and the value is the score for that word for the given EMOTION.
+	Each line on the file has 3 values. The first is the word, the second is an emotion, and the third is 
+	a value (either 0 or 1) which explains if the word expresses that emotion. 
+	In this function, you should create a dictionary for every word in the file and store its score 
+	for the emotion that the emotion constant is equal to. 
+	For example, the line 'memorable joy 1' would correspond to {'joy': 1} 
+	whereas the line 'memorandum fear 0' would not correspond to any value in the dictionary because it is the wrong emotion.
+	"""
+	pass
+      </code>
+    </pre>
+
+    <h3>Milestone 2: Scoring a sentence</h3>
+
+    <p>
+      You are given a single sentence represented as a list of words and the
+      complete emotion dictionary that you built in the previous milestone. Your
+      job is to go over each word in the sentence and sum up their corresponding
+      values in the dictionary. If a word is not in the dictionary, it can be
+      ignored in the sum. Your dictionary stores lower case versions of words,
+      so make sure to covert every word to lower case before checking if it is
+      in the dictionary.
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def sum_sentence(sentence, emotion_dict):
+	"""
+	This function goes over each word in the sentence and sums up their corresponding values in the dictionary. 
+	If a word is not in the dictionary, it is ignored. Make sure that words can be any case. 
+	It returns this sum. 
+
+	>>> emotion_dict = {'happy':1, 'birthday':1}
+    >>> sum_sentence(['Happy', 'Birthday', 'Brahm!'], emotion_dict)
+    2
+    """
+	pass
+      </code>
+    </pre>
+
+    <h3>Milestone 3: Reading a File</h3>
+
+    <p>
+      You are given a filename, the emotion dictionary you built up in a
+      previous milestone, and list of all stop words, which are words like 'it'
+      and 'the', which don't carry any inherent sentiment. This function should
+      return the sentence with the highest score for the given EMOTION constant.
+      Each line in the file is a sentence. Before summing up the values for that
+      sentence, you should call the <code>remove_stop_words</code> function
+      which removes any small words that will not be helpful in classifying the
+      sentence.
+    </p>
+
+    <pre class="lang-python">
+      <code>
+def read_file(filename, emotion_dict, stoplist):
+	"""
+	This function reads in a file where each line is a sentence. It should remove all stopwords 
+	from a tweet and then calculate its sum. Stopwords are short words that won't correctly impact
+	the sentiment analysis of a sentence, so it is best practice to remove these before doing any classification. 
+	Use the helpful remove_stopwords() function that we wrote for you. Don't forget to pass in stoplist. 
+	This function should return the sentence with the highest score.  
+	"""
+	pass
+      </code>
+    </pre>
+
+    <br />
+    <br />
+    <h2>Meme Generator</h2>
+
+    <p>
+      Brahm wants to stay in touch with his SLs during the summer break. He
+      wants to send them memes, and thinks that Python can help create them
+      automatically!
+    </p>
+
+    <p>
+      Our goal is to implement the <code>MemeGenerator</code> class in
+      <code>memegenerator.py</code> for use in the following program:
+    </p>
+
+    <pre class="lang-python">
+      <code>
+# import the MemeGenerator class from memegenerator.py
+from memegenerator import MemeGenerator
+
+def main():
+    # initalize the meme generator with an image
+    meme_gen = MemeGenerator('one-does-not.png')
+
+    # add text to the top and bottom of the meme
+    meme_gen.add_text('ONE DOES NOT SIMPLY', 60, 5)
+    meme_gen.add_text('MAKE A MEME GENERATOR IN PYTHON', 10, 220)
+
+    # generate the meme!
+    meme_gen.render()
+
+if __name__ == '__main__':
+    main()
+      </code>
+    </pre>
+
+    <p>
+      (Feel free to change this program to generate different memes!) When we
+      run <code>memegen_test.py</code>, we generate this variation of a classic
+      meme:
+    </p>
+
+    <img
+      src="../../img/section/section8/memes/python_meme.png"
+      alt="Boromir raising his hand. Top text says 'One does not simply' and bottom text says 'Make a meme generator in Python'"
+      style="width: 50%; margin: 0 auto;"
+      class="img-fluid mx-auto d-block"
+    />
+    <br />
+    <p>
+      Implement the following methods in the <code>MemeGenerator</code> class:
+    </p>
+    <ul>
+      <li>
+        <code>__init__(self, filename)</code>: the constructor which initializes
+        the meme's image, and accepts as a parameter the filename of the image.
+      </li>
+      <li><code>set_image(self, filename)</code>: updates the meme's image.</li>
+      <li>
+        <code>add_text(self, text, x, y)</code>: records the string
+        <code>text</code>
+        to be placed at position (<code>x</code>, <code>y</code>) on the meme.
+      </li>
+    </ul>
+
+    <div class="alert alert-info">
+      <b>Note: </b> <code>SimpleImage</code> supports a
+      <code>create_text</code> method that you can use by calling
+      <code>img.create_text(text, x, y, font_filename)</code>. The
+      <code>text</code> is the text that you want to draw onto the image,
+      <code>x</code> and <code>y</code> are the coordinates of the top-left
+      corner of the text, and <code>font_filename</code> is the filename that
+      contains the font you want to draw the text in (usually this ends with
+      <code>.ttf</code>). Optionally, you can also add a size parameter and a
+      color parameter if you want to change the size of the text or the color of
+      the text. You might do that by calling
+      <code
+        >img.create_text(text, x, y, font_filename, size=10,
+        color='white')</code
+      >
+      to create 10pt white text.
+    </div>
+
+    <div class="myTocContainer" style="position: absolute;">
+      <div
+        class="position-fixed justify-content-center d-flex flex-column"
+        style="
+          height: 100vh;
+          width: 185px;
+          right: 0px;
+          top: 0px;
+          margin-top: -20px;
+        "
+      >
+        <nav id="toc" data-toggle="toc" class="myToc"></nav>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release%409.18.1/build/highlight.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    // Trim whitespace around code blocks.
+    $("pre>code").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+    $("pre").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+  });
+
+  hljs.initHighlightingOnLoad();
+</script>
+    <br />
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

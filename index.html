@@ -1,0 +1,1102 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:40:35 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="plugins/prism/prism.js"></script>
+<link href="plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="plugins/probability/gaussian.js"></script>
+<script src="plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+</head>
+
+<body>
+
+
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+
+	<div id="header" class="container" style="padding-top: 15px;">
+		<div class="row">
+			<div class="col">
+				<div id="logo">
+					<img id="logoImg" src="img/logo.gif" />
+				</div>
+				<div id="headerText" style="padding-bottom:15px;">
+					<div id="title">
+						CS106A: Programming Methodologies
+					</div>
+					<div>
+						Stanford University | Spring 2020
+					</div>
+					<div>
+						Monday, Wednesday, Friday | <i>Live Lectures 1:30pm - 2:20pm PST</i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div style="height:20px"></div>
+		<div class="d-flex justify-content-between homeContainer">
+
+			<!-- make this sticky-top when announcements get long -->
+			<div class="info-col" style="top:400px">
+
+				<p class="subtleHeading">Resources</p>
+
+				<ul class="readingList">
+					<li>
+						<i class="fas fa-th-large sidebaricon"></i>
+						<a href="schedule.html">Class Schedule</a>
+					</li>
+
+					<li>
+						<i class="fas fa-question sidebaricon"></i>
+						<a href="handouts/coursecommunication.html">Getting Help</a>
+					</li>
+
+					<li>
+						<i class="fas fa-calendar sidebaricon"></i>
+						<a href="oh.html">Office Hours</a>
+					</li>
+
+					<li>
+						<i class="fas fa-hands-helping sidebaricon"></i>
+						<a href="https://cs198.stanford.edu/lair/student">LaIR Signup</a>
+					</li>
+
+					<li>
+						<i class="fas fa-video sidebaricon"></i>
+						<a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==">Zoom Details</a>
+					</li>
+
+					<li>
+						<img src="img/icons/Canvas-Logo.png" class="sidebaricon" alt="Canvas Icon" />
+						<a href="https://canvas.stanford.edu/courses/115366" target="_blank">Videos on Canvas</a>
+					</li>
+
+					<li>
+						<img src="img/icons/edstem.png" class="sidebaricon" alt="ed icon" />
+						<a href="https://us.edstem.org/join/9H2UXg">Discussion Forum</a>
+					</li>
+
+					<li>
+						<i class="fas fa-file-upload sidebaricon"></i>
+						<a href="https://paperless.stanford.edu/">Paperless</a>
+					</li>
+
+					<li>
+						<i class="sidebaricon">🌱</i>
+						<a href="starterCode/BlankPyCharmProject.zip">Blank PyCharm Project</a>
+					</li>
+
+					<li>
+						<img src="img/icons/spotify.ico" class="sidebaricon" alt="ed icon" />
+						<a href='https://open.spotify.com/playlist/19BUrKn676okGlpNGDD4ix?si=bsSYBhuuTmekB0HRgRvjyQ'>Spotify Playlist</a>
+					</li>
+
+				</ul>
+
+
+				<hr />
+				<p class="subtleHeading">Assignments</p>
+				<ul class="readingList mb-0">
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a target="_blank"
+							href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link">Assn
+							0</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a  href="assn/karel.html">Assn
+							1</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/khansole_and_interest.html">Assn
+							2</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/ghost_and_quilt.html">Assn
+							3</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/sand.html">Assn
+							4</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/strings_and_wordguessing.html">Assn
+							5</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/babynames.html">Assn
+							6</a>
+					</li>
+					<li>
+						<i class="fas fa-file sidebaricon"></i>
+						<a href="assn/bajillion.html">Assn
+							7</a>
+					</li>
+				</ul>
+				<hr />
+
+				<p class="subtleHeading">Professors</p>
+				<div class="staffBox d-flex justify-content-between" style="flex-wrap:wrap">
+
+					<div class="mb-2">
+						<a href="http://robotics.stanford.edu/~sahami/bio.html">Mehran Sahami</a>
+						<br />
+						<img class="round-img" src="img/people/mehran-sq.jpg" alt="Mehran"><br />
+						<i class="fas fa-envelope sidebaricon"></i> sahami@cs<br />
+						<i class="fas fa-clock sidebaricon"></i> Weds 2:30-3:30, Thurs 1:30-2:30 PDT
+					</div>
+
+					<div class="mb-3">
+						<a href="http://stanford.edu/~cpiech">Chris Piech</a>
+						<br />
+						<img class="round-img" src="img/people/piech-small.jpg" alt="Chris"><br />
+						<i class="fas fa-envelope sidebaricon"></i> piech@cs<br />
+						<i class="fas fa-clock sidebaricon"></i> Mon 2:30-3:30, Thurs 10-11 PDT 
+					</div>
+				</div>
+
+				<p class="subtleHeading">Head TA <span class="mobile-only-inline">+ SLs</span></p>
+				<div class="staffBox d-flex justify-content-between" style="flex-wrap:wrap">
+
+
+					<div class="mb-2">
+						<a href="http://brahmcapoor.com/">Brahm Capoor</a>
+						<br />
+						<img class="round-img" src="img/people/Brahm.jpg" alt="Brahm"><br />
+						<i class="fas fa-envelope sidebaricon"></i> brahm@<br />
+						<i class="fas fa-clock sidebaricon"></i> Tues 10am-12pm, Fri 2:30-4:30 PDT <br />
+					</div>
+
+					<div class="mobile-only">
+						Section Leaders
+						<br />
+						<img class="round-img" src="img/home/mainquad-sq.jpg"><br />
+						<i class="fas fa-user-friends sidebaricon"></i> We help each-other<br />
+						<i class="fas fa-clock sidebaricon"></i> TBD
+					</div>
+
+					<br />
+
+				</div>
+				<div style="height:0px"></div>
+
+
+
+			</div>
+
+
+			<div class="announcement-col">
+
+
+				<p class="subtleHeading">Announcements</p>
+
+				<!-- Newsfeed -->
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Assignment 6 Deadline Update</div>
+      <div class="moment">2020053023</div>
+    </div>
+    <p>
+      We've extended the deadline for Assignment 6; it is now due 
+      at 1:30pm on <b>Wednesday, June 3rd</b>. For more details, check
+      out <a href="https://us.edstem.org/courses/325/discussion/74530">this Ed Post</a>. 
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Retractions</div>
+      <div class="moment">2020052213</div>
+    </div>
+    <p>
+      Today in class, we discussed the retraction policy for CS 106A, 
+      which allows you to retract any work you've submitted if you feel 
+      it crossed the line of academic integrity. Please take the time 
+      to read through our <a href="handouts/retractions.html">handout</a>
+      detailing the policy.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">CS 106A Contest</div>
+      <div class="moment">2020051813</div>
+    </div>
+    <p>
+      One of the joys of programming is the ability to make something totally of your own creation. In CS106A this quarter we
+      are hosting a Contest where you can program anything you like using the concepts and tools we learn in class.
+      See the <a href="handouts/13-contest.pdf">contest handout</a> for more details.
+    </p>
+    <p>
+      <b>Note:</b> We incorrectly said in lecture that contest submissions are due on June 10th. They are actually due on June 
+      5th.
+    </p>
+    <img src="img/contest.png" alt="" style="width: 100%;">
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Additional Help Sessions</div>
+      <div class="moment">2020050800</div>
+    </div>
+    <p>
+      We are going to be holding some additional help sessions next week
+      reviewing the material from earlier this quarter. You can find the
+      times, zoom links and descriptions of these sessions on the
+      <a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==#diagnostic-review-sessions">Zoom Information page</a>.
+    </p>
+    <p>
+      In addition, we received positive feedback from students on the group 
+      office hours we held last week, so will be holding them on a weekly basis. 
+      We've updated the office hours schedule to reflect this, and you can find 
+      the Zoom links <a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==#group-office-hours">here</a>.
+    </p>
+    <p>
+      If you have other feedback or thoughts on help sessions for CS 106A, feel free 
+      to let Brahm know!
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Diagnostic Grades Released</div>
+      <div class="moment">2020050500</div>
+    </div>
+    <p>
+      Diagnostic grades have been released on <a href="https://www.gradescope.com/courses/126989">Gradescope</a>. 
+      Statistics for the exam, as well as additional resources on interepreting your grade, can be found in 
+      <a href="handouts/diagnosticgrades-2.html">this handout</a>.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Upcoming Events</div>
+      <div class="moment">2020043019</div>
+    </div>
+    <p>
+      We have a bunch of really exciting optional events coming up over the next few weeks:
+    </p>
+    <ul>
+      <li>
+        <b>Pixar Night</b>: Next Thursday, CS 106A and CS 106B are going to be hosting 
+        a panel of some of the creative leads of Pixar's new film, 'Onward'. Check out 
+        our <a href="https://weblogin.stanford.edu/login/?RT=Xt2lspJupOWjOq0sRoD9bZwjqRBelY7oQXuDy3j1KgFloOw6xKSZfFD1jL3Dkg7R+Q8+J1YxN1clMLywW8k0D5NEDfzcuDsh1EwstXkIc/T+rTgIj0j5JFrzIGdwyzcCk5O3EbcVpibmtX3IgD10hQHVB3OCdLc6Owkl7yJss5fHp/SHk29QkOp1unPIZkkWwceU6fbzrIo+mXyeuVesjVXTjnmsdmPenjJD2VM7UPcJJjTes840NI3nRYWs3iT8hsO3QfGKw2xv3qwNpP9Pu4yrnMRK8xO/LM1FTa0OpVCTvdum;ST=XtyM93g5DiIIPlrdKPOvGy240TIAbyf+jiEfwVNnkEV6qvLHZTRlIhSrDdt1u+YgsL3efVgbgxjzNwFxR4z0PeMPB8tE9J9+xGi/F+hJ6xnWLTMVSUklOVbicQy+btss3ogJhODT6HFFb+RySAe+g0h8F+GMZariKRE7ADGMMW/0AgNxhqemEszJxr4fT51cxgNjOA==">event page</a> for more details!
+      </li>
+      <li>
+        <b>AMAs</b>: Mehran and Chris are going to be hosting two AMAs (Ask Me Anythings) on our 
+        <a href="https://us.edstem.org/join/9H2UXg">class Ed forum</a>, in which they'll 
+        answer your questions about anything in Computer Science that interests you or 
+        about life in general. Chris will be hosting his AMA on the 9th of May from 
+        9am-10am PDT. Mehran will be hosting his AMA on the 14th of May from 4pm-5pm PDT.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Additional Help Sessions</div>
+      <div class="moment">2020043010</div>
+    </div>
+
+    <p>
+      We are going to be holding some additional assignment help sessions
+      over the week, which we'll update this post with details about:
+    </p>
+    <ul>
+      <li>
+        <b>Assignment 3 YEAH Hours:</b> Will and Kara, two of our wonderful section leaders, have produced 
+        a review video for assignment 3 that explains the assignment, some of 
+        the common pitfalls as well as strategies for working through it. We've 
+        posted the slides on the <a href="assn/ghost_and_quilt-2.html">
+        Assignment 3</a> page and the video on the course canvas page. 
+      </li>
+      <li>
+        Some of our section leaders are going to be holding group-style office hours early next week 
+        to provide additional help on the assignment. We've posted the times for these office hours, and 
+        the Zoom links, on the <a href="https://weblogin.stanford.edu/login/?RT=Xt2ls2t97CCG9m8ou0lvwtHTkQuajKDOn4Nc25n/SFxaJPfot9VzPzjDhrrUmDbKi8hSUAfkM4uqzUgEp9lbvVxgyXseg2e7RMw6Swl8KVgNy6uwszondsXd3Sp0TLVM22Y5cMFtvQ9/Sx7a4aoJJDl75DS0jVY3fKXSrdNk5WGIXCOZVrOl3twAG0UmQEoTSEYrN9Dqdyx7bRMT5GBOwuQgdFFSPlUKC6uzgcEpxc1MPFyycfqP8VrMnvgHgL01YTx3MDmn1CICnVL9HWkMIYSFYmyQUMkiPbrCJmFtdSegz9D5;ST=XtyM93g5DiIIPlrdKPOvGy240TIAbyf+jiEfwVNnkEV6qvLHZTRlIhSrDdt1u+YgsL3efVgbgxjzNwFxR4z0PeMPB8tE9J9+xGi/F+hJ6xnWLTMVSUklOVbicQy+btss3ogJhODT6HFFb+RySAe+g0h8F+GMZariKRE7ADGMMW/0AgNxhqemEszJxr4fT51cxgNjOA==#week5oh">Zoom Information Handout</a>.
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="card announcement" style="background-color: pink;">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Diagnostic Logistics</div>
+      <div class="moment">2020042615</div>
+    </div>
+
+    <b>You can now begin the diagnostic - good luck!</b>
+
+    <p>
+      The diagnostic is scheduled to take place tomorrow (April 27th)
+      at <b>1:30 p.m.</b> It will be administered digitally; instructions
+      to set up BlueBook, our digital assessment platform, are posted  
+      <a href="handouts/diagnostic-2.html">here</a>.
+    </p>
+    <p>
+      Click the button below to access your diagnostic. <b>All students</b>
+      can use this button, even if you have arranged for an alternate 
+      duration, time or platform for the diagnostic. <b>You must be enrolled in 
+      the class to access the diagnostic.</b>
+    </p>
+    <p>
+      Unless you have arranged with Brahm for an alternate sitting, you must 
+      begin the exam after 1:30pm and must submit at 2:20pm, with a short grace 
+      period during which you can submit. 
+    </p>
+    <div class="text-center"">
+      <button 
+        type="button" 
+        class="btn btn-primary" 
+        onclick="location.href='https://weblogin.stanford.edu/login/?RT=Xt2ltOI/gMk3v3jTOpk611pkrzCXdnrziTJ0NxCEfflx/m54q12ycJLYV7UWfuABklAgDwaKwL0j3gmdaT9CnizTUq3WYW0a53TOFaYtFC2oCGrmJMKseOOMshS4//3HmyTnAKQv0SxfQjpr/H+l35G0AnNviiQeJaa8amL87b54f3cTV2WM6rJqkVykcWEzQxbNqSW1humyZUIO0iGPldt3YSAqriW0WvOXapxDZQjbkl+O+vGnVF04N/kq71/LXfwLeBMYr9fmSYei2dAszaRW/J02tNFfC7Vyz4ddb9DvaMXaTCr73SmDvjw2knVvLGzBlVUSnJV+DlyDUCu8KNNLkto=;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A=='"
+        >
+          Access Diagnostic
+      </button>
+    </div>
+    <br />
+    <p>
+      If you run into any issues with BlueBook during the exam, check out 
+      <a href="https://docs.google.com/document/d/1GOta8ze9wvEX0kQL8tR9LdW0ECySxeBN52muSnXI8sA/preview">this handout</a>.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">LaIR Schedule updates</div>
+      <div class="moment">2020042614</div>
+    </div>
+
+    <p>
+      Starting this week, the morning LaIR schedule is being adjusted 
+      to consolidate more helpers into the time slots we offer. The morning 
+      LaIR will now be held on Mondays & Tuesdays between the hours of 9am and
+      11am. Note that morning LaIR hours are primarily for students  who can’t 
+      attend the evening LaIR hours due to time constraints or other obligations.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Diagnostic Resources</div>
+      <div class="moment">2020042214</div>
+    </div>
+
+    <p>
+      We've posted material about the diagnostic on 
+      <a href="handouts/diagnostic.html">this handout</a>.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Section Assignments</div>
+      <div class="moment">2020041417</div>
+    </div>
+
+    <p>
+      Section assignments have been made. Students who filled out the section signup 
+      on time should have received an email with details of their section.
+    </p>
+    <p>
+      If your section time no longer works for you or you were unable to sign up for
+      a section in time, visit <a href="http://cs198.stanford.edu/cs198/auth/default.aspx" target="_blank">this website</a> 
+      or click 'Section Management' in the 
+      Section dropdown to join a section. This page will also have a link to a list of 
+      all the section times for students wishing to make up a section and auditors.
+    </p>
+    <p>
+      Note that section participation is <b>required</b> for all enrolled students in 
+      CS 106A.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">LaIR</div>
+      <div class="moment">2020041216</div>
+    </div>
+
+    <p>
+      The LaIR opens tonight! Check out the <a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A==#the-lair">Zoom details 
+      page</a> for more details.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Free Online CTL Tutoring</div>
+      <div class="moment">2020041017</div>
+    </div>
+
+    <p>
+      We've been asked to share this message on behalf of the Center 
+      for Teaching and Learning:
+    </p>
+
+    <p style="padding-left: 10px; border-left: 1px solid lightgray;">
+      Want to meet with an experienced peer to discuss course concepts, 
+      think through a problem set, or prepare for an upcoming exam? CTL 
+      offers appointment tutoring for CS 106A, in addition to tutoring 
+      for a number of other courses. For more information and to schedule 
+      an appointment, visit our 
+      <a target="_blank" href="https://learningconnection.stanford.edu/appointments-and-drop-schedule">
+        tutoring appointments and drop-in schedule page</a>. We also have a variety of 
+        <a target="_blank" href="https://learningconnection.stanford.edu/remotelearning">remote learning opportunities</a> 
+        and 
+        <a target="_blank" href="https://learningconnection.stanford.edu/academic-skills-coaching">academic coaching</a>
+        available to assist with all of your learning needs!
+    </i> </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Section Signups</div>
+      <div class="moment">2020040916</div>
+    </div>
+
+    <p>
+      Section Signups are open! You can sign up for section by 
+      going to <a href="http://cs198.stanford.edu/">this page</a>, 
+      logging in, and clicking the form. Section signups are due 
+      on Sunday at 5pm PDT and are not first come first serve. 
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Questions in Lecture</div>
+      <div class="moment">2020040915</div>
+    </div>
+
+    <p>
+      Several students have enquired into the possibility of 
+      viewing questions asked in lecture after the live sessions ended. 
+      We've exported the Q&A log from the Zoom webinars and have posted 
+      the Questions & Answers from <a href="lectures/1-Welcome/index-2.html">Lecture 1</a> and 
+      <a href="lectures/2-ControlFlow/index-2.html">Lecture 2</a> and posted them on their respective lecture pages.
+      We'll continue to do so for future lectures. 
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Assignment 1 released</div>
+      <div class="moment">2020040815</div>
+    </div>
+
+    <p>
+      We just released <a href="assn/karel-2.html">Assignment 1</a>. It's due
+      on <b>April 17th at 1:30pm PDT</b>.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Installing PyCharm</div>
+      <div class="moment">2020040622</div>
+    </div>
+
+    <p>
+      We just posted the <a href="handouts/installingpycharm.html">PyCharm installation handout</a>.
+      We will be using PyCharm for our assignments, so you will need to follow these steps before you are able 
+      to work on Assignment 1. 
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Watch the first lecture live!</div>
+      <div class="moment">2020040613</div>
+    </div>
+
+    <p>
+      Go <a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A=="><i class="fas fa-video sidebaricon"></i> here</a> to connect to the first class and watch it live. 1:30pm PST! It will be availible later on canvas in case you miss it.
+      Office hours also begin today immediately after lecture.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Who are you?</div>
+      <div class="moment">2020040111</div>
+    </div>
+
+    <p>
+      To learn a little bit more about you, we have a very quick assignment #0
+      for you to fill out. Find the form <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link"
+        target="_blank"> here </a>.
+      This assignment is not a part of your grade, but helps us tailor the class
+      according to your needs and preferences. Please fill out the form by
+      <b>Friday, April 10th</b> at 3:30pm.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <p class="card-title newsfeedTitle">What is CS106A?</p>
+      <div class="moment">2020040514</div>
+    </div>
+
+    <p>
+      We put together some handouts to help you understand where we are going to go in CS 106A and how we plan to get
+      there.
+    </p>
+    <p>
+      The <a href="handouts/01-general-information.pdf"><i class="fas fa-file "></i> General Information</a> handout has details on
+      course logistics. Read this to get a sense for what CS 106A is going to entail.
+
+      The  <a href="handouts/02-course-placement.pdf"><i class="fas fa-file "></i> Course Placement</a> handout has details on deciding between CS 106A and CS 106B.
+
+      The <a href=handouts/03-honor-code.pdf><i class="fas fa-file "></i> Honor Code</a> handout has details on how the Honor Code
+      applies in the context of the work you'll be doing in CS 106A.
+    </p>
+<!-- 
+    <p>
+      
+    </p> -->
+
+    <p>
+      The  <a href="schedule.html"><i class="fas fa-th-large "></i> Course Schedule</a> page shows you the topics that we are going to cover
+      in CS106A. We will also post materials from lecture on the schedule page.
+
+      The   <a href="oh.html"><i class="fas fa-calendar "></i> Office Hours</a> page has contact information for teaching team and the office
+      hour calendar. Office hours will start in week one. <br />
+    </p>
+
+    <p>
+      Finally, the   <a href=handouts/coursecommunication.html><i class="fas fa-file "></i> Course Communication</a> handout has details
+      on where to go when you need help in the class.
+    </p>
+  </div>
+</div>
+
+<div class="card announcement">
+  <div class="card-body">
+    <div class="newsfeedHeader">
+      <div class="newsfeedTitle">Welcome!</div>
+      <div class="moment">2020032500</div>
+    </div>
+
+    <p>
+      Welcome to CS106A! We're gearing up for a fun quarter beginning on Monday, April 6th. Enrolled students should
+      read the <a href="https://weblogin.stanford.edu/login/?RT=Xt2lkSz1h3iNVMh2VoXMMGemMVc+nRjmdf4OzfS+DmzmsDAe+3aTLHq10ngFzXdyqmLzZvRdPKg7dcIGYow5uITJd5/RdeK2k6eeFDj9nLRCHcuG+OsryJRUsXeYBbl2DwhTdfbTsEOVY+icqP5d/V30I+jHYj5qtaztHDfHMH7YZHXRwCptKZvRdzxUI0f3+YfGWRuM6iOwH8I82MGDgCb0cLLWIMRZyv9lYPf3qVbf/24vLOmTMuh6VvFWGrmt/zKNX2eexdVTpxOKcRXTlH4NenH2/AKX9Z6m2RcexTZioDHI;ST=XtyNEaKCkcXnDHDhocOdVopdRDdeYAb1JTY/Ba4vP2vYM8aHJ50OBCYemkNHX8wPFxMsj99NJd5vGq9pYvsL9jSejpYv1UezDLNGHEARE7STnNdNzv90P2IIWSXb6Iwy62TDubzxn9tU2ql5Q0gadF5AjT5ti64RDVBz/BPjU8Mu53d0LXo0wW46YaGh6Y/tlHRl0A=="><i class="fas fa-video sidebaricon"></i> Zoom info</a>
+      handout for details about how to get on the 1:30pm webinar on the first day of class.
+    </p>
+    <p>
+      Until then, reach out to <a href="mailto:brahm@stanford.edu">Brahm</a>, the Head TA,
+      with any questions you have.
+    </p>
+  </div>
+</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+			</div>
+			<div class="extra-col non-mobile-only hidden-sm hidden-xs">
+
+
+
+				<p class="subtleHeading">Readings</p>
+
+<div class="card">
+  <div class="reading-body">
+    <ul class="readingList mb-0">
+      <li>
+        <i class="fas fa-book sidebaricon"></i>
+        <a
+          target="_blank"
+          href="https://compedu.stanford.edu/karel-reader/docs/python/en/intro.html"
+          >Karel Reader</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-book sidebaricon"></i>
+        <a target="_blank" href="pythonreader/index.html">Python Reader</a>
+      </li>
+      <li>
+        <i class="fas fa-book sidebaricon"></i>
+        <a href="handouts/08-image-reference.pdf"
+          >Image Reference</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-book sidebaricon"></i>
+        <a href="handouts/graphics-reference.html"
+          >Graphics Reference</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-book sidebaricon"></i>
+        <a href="handouts/objectsandclasses.html"
+          >Objects & Classes Reference</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-tv sidebaricon"></i>
+        <a href="handouts/SuccessStrategies.pdf"
+          >Success Strategies Review</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-tv sidebaricon"></i>
+        <a href="handouts/ControlFlowReview.pdf"
+          >Control Flow Review</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-tv sidebaricon"></i>
+        <a href="handouts/VariablesReview.pdf"
+          >Variables Review</a
+        >
+      </li>
+      <li>
+        <i class="fas fa-file-pdf sidebaricon"></i>
+        <a href="handouts/FunctionsReview.pdf"
+          >Functions Review</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
+		
+
+	  			<p class="subtleHeading mt-4">Covid-19 edition 🦠 </p>
+					<div class="card mb-0">
+	  					<div class="card-body extra-body">
+
+	  						<span>Class is 100% online. Diagnostics not exams. Same great projects.<br/> Same great sections.<br/> Just as much feedback. Mastery & learning + S/NC.</span>
+	  						<a href="handouts/01-general-information.pdf"><i class="fas fa-file "></i> Learn more</a>.
+
+	  					</div>
+	  				</div>
+
+	  			<p class="subtleHeading mt-4">Course Values</p>
+					<div class="card mb-0">
+	  					<div class="card-body extra-body">
+
+	  						Everyone is welcome.<br/>
+		  					
+		  					Intellectual joy.<br/>
+		  					Be kind. Be humane.<br/>
+		  					Social connection.<br/>
+		  					Learn by doing.<br/>
+		  					Thrill of building.<br/>
+		  					Adapt to new contexts.<br/>
+		  					<a href="#" onclick="Swal.fire({
+		  						title:'Guiding Principles for Teaching and Learning in a Time of Pandemic',
+		  						confirmButtonText: `Be well`,
+		  						html:`
+<p style='text-align:center'>(by Prof. Brandon Bayne, UNC – Chapel Hill; via cs103; adapted for cs106a)</p>
+<p ><ol style='text-align:justify'><li>Nobody signed up for this. Not for the sickness, not for the social distancing, not for the sudden end of our collective lives together
+on campus. Not for an online class, not for teaching remotely, not for learning from home, not for mastering new
+technologies, not for varied access to learning materials.</li>
+<li> We will foster intellectual nourishment, social connection, and personal accommodation. 
+Accessible asynchronous content for diverse access, time zones, and contexts. 
+Optional chances to learn together and combat isolation. Mastery learning approach that is designed around growth as a first principle.</li>
+
+<li>We will remain flexible and adjust to the situation.
+Nobody knows where this is going and what we’ll need to adapt.
+Everybody needs support and understanding in this unprecedented moment.</li>
+
+<li>The humane option is the best option.
+We are going to prioritize communicating clearly.
+We are going to prioritize supporting each other as humans.
+</li>
+
+</ol></p>`
+		  					})"> Especially in a hard time</a>.<br/>
+	  					</div>
+	  				</div>
+
+	  				
+
+			</div>
+
+			<!-- %include templates/parts/quickref.html -->
+
+		</div>
+	</div>
+	</div>
+
+
+
+	<script>
+		function scrollToNav(navId) {
+			$('html, body').animate({
+				scrollTop: $('#' + navId).offset().top
+			}, 500);
+		}
+
+
+	</script>
+
+	<script type="text/javascript">
+		$(".moment").each(function (i) {
+			var date = $(this).html()
+
+			var fromStr = moment(date, "YYYYMMDDHH").fromNow()
+
+			$(this).html(fromStr)
+		});
+		//alert(moment("20160101", "YYYYMMDD").fromNow())
+	</script>
+
+
+</body>

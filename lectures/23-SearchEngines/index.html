@@ -1,0 +1,493 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/23-SearchEngines/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:05:45 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+
+
+
+    <!-- Header -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="pageHeader">
+          <br />
+          <h1>
+            Lecture 23: Search Engines
+          </h1>
+          <p class="subtleHeading">
+            June 1st, 2020
+          </p>
+
+        </div>
+
+        <hr>
+      </div>
+    </div>
+
+    <h3>Lecture Materials </h3>
+    <p>
+    <div class="row">
+      <div class="col-sm-2"><a href="23-SearchEngines.pdf">
+          <i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:3px">Slides</span>
+        </a>
+      </div>
+      <!-- <div class="col-sm-2">
+        <a href="//web.stanford.edu/class/cs106a/lectures/22-Internet/Lecture22.zip"><i class="fas fa-code" aria-hidden="true"
+            style="font-size: 5em;margin-left:0px"></i>
+          <br /><br />
+          <span style="margin-left:6px">Lecture Code</span>
+        </a>
+      </div> -->
+    </div>
+    </p>
+
+    <div class="row">
+      <div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;I just want to make sure -- assignment 7 is the last mandatory assignment right?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If I wanted to learn more about how the crawling is done, could you refer me to where I could learn that?</p></i>
+               <p><b>A1:&nbsp;</b> Stop by office hours or post on Ed and we can explain how it works!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would mapping also tell you where within those documents the term comes up?</p></i>
+               <p><b>A1:&nbsp;</b> In more advanced indices, absolutely!</p>
+        
+               <p><b>A2:&nbsp;</b> would mapping also tell you where within those documents the term comes up?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do we convert the string ‘100,000’ to an integer?</p></i>
+               <p><b>A1:&nbsp;</b> Nope</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What about commas between words?</p></i>
+               <p><b>A1:&nbsp;</b> Those would be at the end of a particular term, so .strip would get rid of them</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So string.punctuation only strips the punctuations at the end?</p></i>
+               <p><b>A1:&nbsp;</b> .strip only removes characters from the start and end of a string, and string.punctuation is just a list of punctuation characters</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the program automatically ignore it or would we need to write that?</p></i>
+               <p><b>A1:&nbsp;</b> You need to ignore puncutation by stripping it from each term</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;but if it is a separate element like $$ does it get ignored by the program</p></i>
+               <p><b>A1:&nbsp;</b> No, you’ll need to reason through how to do that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if you apply lowercase to all of the terms and a particular term is a number, would that cause an error?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, numbers just aren’t modified</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we would need to create a condition to check and see if the stripped string is empty before adding it to the dict?</p></i>
+               <p><b>A1:&nbsp;</b> That sounds like a good idea</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does --Yoda-- need to be stripped twice to become yoda? or does .strip do it on one iteration?</p></i>
+               <p><b>A1:&nbsp;</b> .strip will remove all the punctuation in one fell swoop</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a reason why it’s “Gandhi’s wisdom” and NOT ‘Gandhi’s Wisdom’?</p></i>
+               <p><b>A1:&nbsp;</b> That’s just what it says in the file in the first line</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if we had Ghandi&#039;s Wisdom! Do we get rid of the &#039;!&#039; at the end when we store the title in the dictionary for titles?</p></i>
+               <p><b>A1:&nbsp;</b> Stripping punctuation just like you do for other terms</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you differentiate between the plural form of a word and a plural possesive when indexing, since the apostraphe at the end of the word will be removed?
+
+Ex: Computers vs computers’</p></i>
+               <p><b>A1:&nbsp;</b> Good question! You can’t do that in this kind of index</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do large search engines just have massive indexes that they search over? Or are the indexes generated upon query?</p></i>
+               <p><b>A1:&nbsp;</b> Fantastic question! They have enormous indices they’re updating very frequently. Those indices are stored across hundreds or thousands of computers using something that’s kind of like a dictionary :)</p>
+        
+               <p><b>A2:&nbsp;</b> Do large search engines just have massive indexes that they search over? Or are the indexes generated upon query?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What was the reason that dictionaries are quicker to search over than, for example, lists?</p></i>
+               <p><b>A1:&nbsp;</b> Dictionaries rely on something called a hash function, which allows you to go directly from a key to where in your memory they would be. Stop by office hours to learn more about how this works! (or take 106b)</p>
+        
+               <p><b>A2:&nbsp;</b> hashing! Which you learn about in cs106b. But basically they have a really cool system to look up where in a dictionary an entry lives</p>
+        
+               <p><b>A3:&nbsp;</b> What was the reason that dictionaries are quicker to search over than, for example, lists?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do we currently have the skills to be able to create some kind of an interface and actually link to these articles?</p></i>
+               <p><b>A1:&nbsp;</b> You could make an interface using a canvas! The dataset we’re giving you is text files, not URLs, so linking will be a little tricly.</p>
+        
+               <p><b>A2:&nbsp;</b> But you could display the contents of the file on a canvas by reading it!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the “-s” part of the comamnd line prompt call the search function of our code or the search function built-in to the command terminal?</p></i>
+               <p><b>A1:&nbsp;</b> The search function in the starter code</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When is the last day of CS106A classes?</p></i>
+               <p><b>A1:&nbsp;</b> Friday is our last concrete lecture and then on Monday, we’ll have a quick class to show the contest winners!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What are the state of the art search algorithms doing now?</p></i>
+               <p><b>A1:&nbsp;</b> The end of these slides actually have a few overviews of some of the techniques that most modern techniques are based on</p>
+        
+               <p><b>A2:&nbsp;</b> What are the state of the art search algorithms doing now?</p>
+        
+               <p><b>A3:&nbsp;</b> Using a lot of very cool machine learning and AI to rank articles!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are the number of shards per term determined by popularity of query of that term?</p></i>
+               <p><b>A1:&nbsp;</b> Are the number of shards per term determined by popularity of query of that term?</p>
+        
+               <p><b>A2:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Very briefly, how was python created? Was python created using python o__o</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Just like how Google grew to be such a giant today, how do you imagine search engines in 20-30 years?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Mehran, what applications of google have you created or helped creating?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+      </div>
+    </div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+  </div>
+
+</body>

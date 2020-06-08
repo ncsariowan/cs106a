@@ -1,0 +1,751 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/section/section5/section5.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 03:22:47 GMT -->
+<head>
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  <!-- add after bootstrap.min.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+  />
+  <!-- add after bootstrap.min.js -->
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target="#toc">
+  <!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../../lectures/2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../../lectures/3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../../lectures/4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../../lectures/5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../../lectures/6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../../lectures/8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../../lectures/10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../../lectures/11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../../lectures/12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../../lectures/14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../../lectures/15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../../lectures/16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../../lectures/18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../../lectures/19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../../lectures/20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../../lectures/21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../../lectures/22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../../lectures/23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../../lectures/24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../../lectures/25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+  <div class="container">
+    <div class="col-sm-12">
+      <div style="height: 20px;"></div>
+      <h1>
+        Section #5: Grids & Strings
+      </h1>
+      <p class="subtleHeading">
+        May 10th, 2020
+      </p>
+      <hr />
+      <p>
+        <i>
+          Written by Brahm Capoor, Juliette Woodrow, Peter Maldonado, Kara Eng,
+          Tori Qiu and Parth Sarin
+        </i>
+      </p>
+
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <a href="section5.zip">
+            <i
+              class="fas fa-download"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            PyCharm Project
+          </a>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="https://us.edstem.org/courses/325/lessons/1274/">
+            <i
+              class="fas fa-laptop-code"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Online IDE
+          </a>
+        </div>
+        <div class="col-sm-4 text-center">
+          <a href="section5-soln.html">
+            <i
+              class="fas fa-file-pdf"
+              aria-hidden="true"
+              style="font-size: 5em;"
+            ></i>
+            <br /><br />
+            Solutions
+          </a>
+        </div>
+      </div>
+      <br />
+      <h2>Lists Review: Compatibility Calculations</h2>
+      <p>
+        You've just begun working for a company whose goal is to help users make
+        new friends based on what they like to watch and read. Users input
+        information about themselves, such as their Netflix history and favorite
+        books. Your program will use this information to calculate a
+        'compatibility score' between two people, which serves as an estimate of
+        how likely those people are to get along with one another. The
+        compatibility score of two people is calculated as follows:
+      </p>
+      <div class="text-center">
+        <code>
+          compatibility = % (books liked in common) + % (shows on Netflix liked
+          in common)
+        </code>
+      </div>
+      <br />
+      <p>
+        In this problem, we'll represent the books and movies liked by a
+        particular user as separate lists. Given the lists representing, for
+        example, the books liked by two different users, we find the number of
+        elements present in both lists and divide it by the sum of the lengths
+        of the two lists. To that end, your first job is to implement the
+        following function:
+      </p>
+      <div class="text-center">
+        <code>
+          def in_common(l1, l2)
+        </code>
+      </div>
+      <br />
+      <p>
+        which takes in two lists of strings and returns the number of elements
+        the two lists have in common divided (using float division) by the total
+        number of elements in both lists. For example,
+        <code
+          >percent_in_common(['a', 'b', 'c', 'd'], ['c', 'd', 'm', 'n', 'x',
+          'z'])</code
+        >
+        would return <code>0.2</code>, because both lists contain
+        <code>'c'</code> and <code>'d'</code> and there are 4 elements in the
+        first list and 6 in the second.
+      </p>
+      <p>
+        Next, implement the following function:
+      </p>
+      <div class="text-center">
+        <code>
+          def calc_score(netflix_history1, netflix_history2, fav_books1,
+          fav_books2)
+        </code>
+      </div>
+      <br />
+      <p>
+        which takes the names and preferences of two users and returns their
+        compatibility score. The compatibility score between two users is the
+        fraction of shows on Netflix in common + the fraction of books in
+        common, using the calculation you implemented in the
+        <code>calc_score</code>
+        function. You may assume that there are no repeated elements in any of
+        the lists.
+      </p>
+      <br />
+      <p>
+        Finally, implement the following function to predict for a particular
+        user which user they will be the most compatible with:
+      </p>
+      <div class="text-center">
+        <code>
+          def new_friend(name_list, compatibility_scores)
+        </code>
+      </div>
+      <br />
+      <p>
+        which takes in a list of names of all other users and a list of
+        compatibility scores between the chosen user and all other users, and
+        returns a list where the first element is the name of the user who is
+        most compatible and the second element is their compatibility score.
+        <code>name_list</code> stores the name for each user at the same index
+        as the <code>compatibility_scores</code> list stores the corresponding
+        compatabiity score. For example, for user <code>Barack</code> if we have
+        <code>name_list = ['Michelle', 'Joe']</code> and
+        <code>compability_scores = [1, 0.8]</code>, this means the the
+        compatibility score between Barack and Michelle is 1 and the
+        compatibility score between Barack and Joe is only 0.8. In this example,
+        <code>new_friend(name_list, compatability_scores)</code> would return
+        <code>['Michelle', 1]</code>. You may break ties between
+        equally-compatible users arbitrarily.
+      </p>
+      <br />
+
+      <h2>Nested Lists & Grids</h2>
+
+      <h3>Enumerating a list</h3>
+      <p>
+        Implement the following function:
+      </p>
+      <pre class="lang-python">
+        <code>
+def enumerate(lst):
+    """
+    returns a nested list where each element is a list containing 
+    the index of an element in the original list and the element itself. 
+    These lists should appear in increasing order of indices.
+
+    >>> enumerate(['cs106a', 'is', 'super', 'fun'])
+    [[0, 'cs106a'], [1, 'is'], [2, 'super'], [3, 'fun']]
+    >>> enumerate(['hello'])
+    [[0, 'hello']]
+    >>> enumerate([])
+    []
+    """
+        </code>
+      </pre>
+      <br />
+      <h3>Matrix Math</h3>
+      <p>
+        Nested lists are often used to represent matrices, which are grids of
+        numbers commonly used in linear algebra, computer graphics, and
+        artificial intelligence. For example, the nested list
+        <code>[[1, 2], [3, 4], [5, 6]]</code> represents this matrix:
+      </p>
+      <div class="text-center">
+        $\begin{bmatrix}1 & 2\\3 & 4\\5 & 6\end{bmatrix}$
+      </div>
+      <br />
+      <p>
+        Two common operations you might perform on matrices are to multiply a
+        matrix's elements by a constant, or to add two matrices of equal
+        dimensions together. For example, we'd multiply a matrix by a constant
+        like so:
+      </p>
+      <div class="text-center">
+        $3 \times \begin{bmatrix}1 & 2\\3 & 4\\5 & 6\end{bmatrix} =
+        \begin{bmatrix}3 & 6\\9 & 12\\15 & 18\end{bmatrix}$
+      </div>
+      <br />
+      <p>
+        Note that each element of the matrix is multiplied by $3$. We add two
+        matrices of equal dimension by adding their pairs of corresponding
+        elements:
+      </p>
+      <div class="text-center">
+        $\begin{bmatrix}1 & 2\\3 & 4\\5 & 6\end{bmatrix} + \begin{bmatrix}2 &
+        3\\4 & 5\\6 & 7\end{bmatrix} = \begin{bmatrix}3 & 5\\7 & 9\\11 &
+        13\end{bmatrix}$
+      </div>
+      <br />
+      <p>
+        Your job is to implement the following functions, which each represent
+        one of the above operations:
+      </p>
+      <pre class="lang-python">
+        <code>
+def matrix_constant_multiply(c, m):
+    """
+    Multiplies the 2-dimensional matrix m (represented as a list of lists) 
+    by a constant factor c and returns the result. m should not be modified.
+
+    >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    >>> matrix_constant_multiply(2, m)
+    [[2, 4, 6], [8, 10, 12], [14, 16, 18]]
+    """
+
+def matrix_add(m1, m2):
+    """
+    Adds matrices m1 and m2 together and returns the result. m1 and m2 are 
+    guaranteed to be the same size. Neither m1 nor m2 should be modified.
+
+    >>> m1 = [[1, 2], [3, 4], [5, 6]]
+    >>> m2 = [[2, 3], [4, 5], [6, 7]]
+    >>> matrix_add(m1, m2)
+    [[3, 5], [7, 9], [11, 13]]
+    """
+        </code>
+      </pre>
+      <br />
+      <h3>Times Table</h3>
+      <p>
+        Implement the following function:
+      </p>
+      <pre class="lang-python">
+        <code>
+def make_times_table(m, n):
+    """
+    Makes and returns a list of m rows, each with n columns. 
+    Each element is found by multiplying its row number by 
+    its column number, where we start counting rows and columns 
+    from 1. 
+
+    >>> make_times_table(3, 4)
+    [[1, 2, 3, 4], [2, 4, 6, 8], [3, 6, 9, 12]]
+    """
+        </code>
+      </pre>
+      <br />
+      <h2>Strings</h2>
+      <h3>String Slicing</h3>
+      <div class="text-center">
+        <code>s = 'PythonTime'</code>
+      </div>
+      <br />
+      <p>
+        How would you slice into this string to obtain the following results?
+      </p>
+      <ul>
+        <li><code>'ython'</code></li>
+        <li><code>'Py'</code></li>
+        <li><code>'Tim'</code></li>
+        <li><code>'Time'</code></li>
+        <li><code>'T'</code></li>
+        <li><code>'PythonTime'</code></li>
+      </ul>
+      <p>
+        Remember, strings in Python are 0-indexed. In addition, the slice
+        <code>s[1:8]</code> is inclusive of the first index, and exculsive of
+        the second (that is, it will get the string beginning at index 1 and up
+        to, but not including, index 8, i.e. <code>'ythonTi'</code>).
+      </p>
+      <br />
+      <h3>String Construction</h3>
+      <p>
+        Implement the following functions:
+      </p>
+      <ol>
+        <li>
+          <code>only_one_first_char(s)</code>: removes all occurrences of the
+          first character of <code>s</code> except the first character itself.
+          For example, <code>only_one_first_char('recurrence')</code> returns
+          <code>'recuence'</code>. You may assume <code>s</code> has at least
+          one character.
+        </li>
+        <li>
+          <code>make_gerund(s)</code>: which adds <code>'ing'</code> to the end
+          of the given string <code>s</code> and returns this new word. If
+          <code>s</code> already ends with <code>'ing'</code>, add an
+          <code>'ly'</code> to the end of <code>s</code> instead. You may assume
+          that <code>s</code> is at least 3 characters long.
+        </li>
+        <li>
+          <code>put_in_middle(outer, inner)</code>: which returns a string where
+          <code>inner</code> has been inserted into the middle of the string
+          <code>outer</code>. To find the middle of a string, take the length of
+          the string and divide it by 2 using integer division. The first half
+          of the string should be all characters leading up to, but not
+          including, the character at this index. The second half should start
+          with the character at this index and include the rest of the
+          characters in the string.
+        </li>
+      </ol>
+      <br />
+      <h3>Word Puzzles</h3>
+      <p>
+        In these problems, we'll investigate properties of words in the English
+        language. In each problem, we'll define a special rule and write a
+        function to determine whether a word obeys that rule or violates that
+        rule. For this problem, you can assume that word will be a string
+        containing uppercase alphabetic characters only.
+      </p>
+      <h4>Tridromes</h4>
+      <p>
+        We say that a word is a <i>tridrome</i> if the first three letters of
+        the word are the same as the last three letters of the word (and appear
+        in the same order). All tridromes must be at least 6 letters long. For
+        example, ENTERTAINMENT, MURMUR, and UNDERGROUND are tridromes. Write a
+        function <code>is_tridrome(word)</code> that returns
+        <code>True</code> if a word is a tridrome and
+        <code>False</code> otherwise.
+      </p>
+      <h4>Peaceful Words</h4>
+      <p>
+        We say that a word is peaceful if its letters are in alphabetical order.
+        For example, ABORT, ALMOST, CHIPS, DIRTY, FIRST, and HOST are all
+        peaceful words. Write a function
+        <code>is_peaceful(word)</code> that returns <code>True</code> if a word
+        is peaceful and <code>False</code> otherwise. You may assume you have
+        access to a constant <code>ALPHABET</code> which is a string of the
+        uppercase letters in the alphabet, in sequential order, i.e.,
+        <code>ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'</code>.
+      </p>
+      <h4>Stacatto Words</h4>
+      <p>
+        We say that a word is a stacatto word if all of the letters in even
+        positions are vowels (i.e., the second, fourth, sixth, etc. letters are
+        vowels). For this problem, the vowels are A, E, I, O, U, and Y. For
+        example, AUTOMATIC, CAFETERIA, HESITATE, LEGITIMATE, and POPULATE are
+        stacatto words. Write a function <code>is_stacatto(word) </code> that
+        returns <code>True</code> if a word is a stacatto word and
+        <code>False</code> otherwise.
+      </p>
+      <h4>No More Counting Dollars, We'll Be Counting Words</h4>
+      <p>
+        Suppose you're given a file that contains all the words in the English
+        language, where each one is on a different line. Write the following
+        functions, using the functions you wrote in the previous problem:
+      </p>
+      <ol>
+        <li>
+          <code>count_tridromes(filename)</code> which returns the number of
+          English words that are tridromes.
+        </li>
+        <li>
+          <code>count_peaceful(filename)</code> which returns the number of
+          English words that are peaceful.
+        </li>
+        <li>
+          <code>count_stacatto(filename)</code> which returns the number of
+          English words that are stacatto words.
+        </li>
+      </ol>
+      <p>
+        A few things to note:
+      </p>
+      <ul>
+        <li>
+          You're given the <i>name</i> of a file that contains English words, so
+          you have to open the file and process the words.
+        </li>
+        <li>
+          The words are not all uppercase. Convert them to uppercase before you
+          call the function that you wrote in the last problem.
+        </li>
+        <li>
+          Lines will end with a newline character, <code>\n</code>. You can
+          remove this character from a string using the
+          <code>strip</code> function, i.e. <code>s.strip()</code>.
+        </li>
+      </ul>
+      <p>
+        You can actually run this program! We've provided a file of all the
+        words in the English language called <code>words.txt</code> in the
+        section project.
+      </p>
+    </div>
+
+    <div class="myTocContainer" style="position: absolute;">
+      <div
+        class="position-fixed justify-content-center d-flex flex-column"
+        style="
+          height: 100vh;
+          width: 185px;
+          right: 0px;
+          top: 0px;
+          margin-top: -20px;
+        "
+      >
+        <nav id="toc" data-toggle="toc" class="myToc"></nav>
+      </div>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release%409.18.1/build/highlight.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+    // Trim whitespace around code blocks.
+    $("pre>code").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+    $("pre").each(function (index, element) {
+      var $elem = $(element);
+      $elem.html($.trim($elem.html()));
+    });
+  });
+
+  hljs.initHighlightingOnLoad();
+</script>
+    <br />
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+  </div>
+</body>

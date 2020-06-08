@@ -1,0 +1,490 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/19-Tuples/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:56:54 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="../4-Variables/index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+
+
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 19: Tuples
+					</h1>
+					<p class="subtleHeading">
+						May 20th, 2020
+					</p>
+
+				</div>
+
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+		<div class="row">
+			<div class="col-sm-2"><a href="19-Tuples.pdf">
+					<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:3px">Slides</span>
+				</a>
+			</div>
+			<div class="col-sm-2">
+				<a href="Lecture19.zip"><i class="fas fa-code"
+						aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+					<br /><br />
+					<span style="margin-left:6px">Lecture Code</span>
+				</a>
+			</div>
+		</div>
+		</p>
+
+		<div class="row">
+			<div class="col-sm-12">
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hello. The link on the previous class&#039;s slide isn&#039;t working. Could you confirm?</p></i>
+               <p><b>A1:&nbsp;</b> It’s working for me: http://web.stanford.edu/class/cs106a/lectures/18-NestedStructures2/18-NestedStructures2.pdf</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how are we today!</p></i>
+               <p><b>A1:&nbsp;</b> Thinking about colors more than I thought I would be!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;could we get help from lair for our project?</p></i>
+               <p><b>A1:&nbsp;</b> We might not be able to provide specific advice, but we can provide some general guidance. We’ll probably prioritize assignment help, though</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;The link of slide is &quot;http://web.stanford.edu/class/cs106a/lectures/18-NestedStructures2/18-NestedStuctures2.pdf&quot;, NestedStuctures2.pdf is wrong. St&quot;r&quot;uctures is correct.</p></i>
+               <p><b>A1:&nbsp;</b> Where are you finding this link from?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How are tuples different from dictionaries?</p></i>
+               <p><b>A1:&nbsp;</b> They don’t have keys and values, they’re ordered, and index</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I find here.
+http://web.stanford.edu/class/cs106a/schedule.html</p></i>
+               <p><b>A1:&nbsp;</b> Cool, thanks, I’ll fix that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Are print functions tuples?</p></i>
+               <p><b>A1:&nbsp;</b> No - what makes you think they would be?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how can you know it is a tuple and not a list when it shows up in someones code (by the name)?</p></i>
+               <p><b>A1:&nbsp;</b> ( instead of [ !</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;about indexes, can we mix negative index with positive ones ? As use the both of them in the same function ?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do max and min work on strings?</p></i>
+               <p><b>A1:&nbsp;</b> They return the alphabetically last and first character, respectively</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what do max(), min() and sum() do for non-numeric elements?</p></i>
+               <p><b>A1:&nbsp;</b> It depends on the type of the elements - strings, for example, will be compared alphabetically. We’ll talk more about that in a bit</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what happens if you sum stanford</p></i>
+               <p><b>A1:&nbsp;</b> Python will complain because it doesn’t know how to add 94305 to a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you create a very large tuple if you cannout use functions like list.append()? do you have to write out the tuple manually?</p></i>
+               <p><b>A1:&nbsp;</b> Yes - you can also convert a list to a tuple (we’ll talk about that in a bit)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you put tuples in json, if theyre imutable anyway, might as well put them with the othere data</p></i>
+               <p><b>A1:&nbsp;</b> Yep, you can put them in json files</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does it change the values of chartreuse if you return rgb_tuple?</p></i>
+               <p><b>A1:&nbsp;</b> You’d need to store it back in the original variable (like a string or int)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In the date example, the tuple does not have a name..how do yu assign a name to a tuple that has both the &quot;coordinates&quot; like dd/mm/yyyy and the values?</p></i>
+               <p><b>A1:&nbsp;</b> Just store it in a variable with the appropriate name</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is the additional usefulness of returning a tuple from a function when you could return a list and access the individual elements of the list?</p></i>
+               <p><b>A1:&nbsp;</b> Also, you can access individual elements in a tuple too</p>
+        
+               <p><b>A2:&nbsp;</b> its the default that if you return multiple values it becomes a tuple</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Why doesn’t day, month, year have to be in parentheses when it is returned?</p></i>
+               <p><b>A1:&nbsp;</b> Tuples can also be defined by the comma! The parentheses are just a stylistic convention that we don’t use when returning</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is that Mehran&#039;s birthday?</p></i>
+               <p><b>A1:&nbsp;</b> yep :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does the list function work on other things as well? (Say a string?)</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does it work the the other way as well, so  list = list(string) and string = string(list)</p></i>
+               <p><b>A1:&nbsp;</b> So str(lst) won’t stick everything together - you’d need to use “”.join(lst) for that</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;in the slide that mehran just covered, where we loop through key/value pairs as tuples</p></i>
+               <p><b>A1:&nbsp;</b> Answering in your next question</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do we have to define what key and value are? (sorry question got cut off)</p></i>
+               <p><b>A1:&nbsp;</b> No, the for loop defines them for you.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how you make tuples in the “value part”. In other words, how to make something in your dictionary be a tuple?</p></i>
+               <p><b>A1:&nbsp;</b> Just by writing it out in your code i.e dict[key] = (1, 2, 3)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a scenario where a tuple can do something a list cannot? (Where would we use a tuple rather than a list?)</p></i>
+               <p><b>A1:&nbsp;</b> We just talked about it - a tuple can be used as a key in a dictionary, or is used to represent a group of variables that represent one thing (i.e. a point with x, y values)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;and what about when we want to make it decreasing?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if a word is a mixture of upper and lower case?</p></i>
+               <p><b>A1:&nbsp;</b> the comparisons are done on a character by character basis</p>
+        
+			</div>
+		</div>
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>

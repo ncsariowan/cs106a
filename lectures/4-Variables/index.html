@@ -1,0 +1,819 @@
+
+<!-- Mirrored from web.stanford.edu/class/cs106a/lectures/4-Variables/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jun 2020 02:44:44 GMT -->
+<head>
+
+<title>CS106A</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta http-equiv="content-type" content="text/html; charset=UTF8">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+<!-- Java Script -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../plugins/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<!-- Python highlighting -->
+<script src="../../plugins/prism/prism.js"></script>
+<link href="../../plugins/prism/prism.css" rel="stylesheet" />
+
+<!-- Probability Packages -->
+<script src="../../plugins/probability/gaussian.js"></script>
+<script src="../../plugins/color.js"></script>
+
+<!-- font awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+<!-- SWAL -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+
+<!-- Stanford -->
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<!-- Math Jax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+
+<script src="../../plugins/math.min.js"></script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+</head>
+<body>
+
+	<!-- Navigation Bar -->
+
+<nav id="mainNav" class="navbar sticky-top navbar-expand-md navbar-dark bg-dark" style="padding-bottom: 0px;">
+		<div class="container">
+			<a class="navbar-brand" style="padding-top:0px;color:rgba(255,255,255,.7)" href="../../index-2.html#mainNav">CS106A</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#courseNavbar" aria-controls="courseNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+
+			<div class="collapse navbar-collapse" id="courseNavbar">
+				<ul class="navbar-nav mr-auto">
+					<!-- LECTURES -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Lectures
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<div class="row" style="width:800px;">
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../1-Welcome/index.html">
+										1. Welcome
+									</a>
+									<a class="dropdown-item" href="../2-ControlFlow/index.html">
+										2. Control Flow
+									</a>
+									<a class="dropdown-item" href="../3-Decomposition/index.html">
+										3. Decomposition
+									</a>
+									<a class="dropdown-item" href="index.html">
+										4. Variables
+									</a>
+									<a class="dropdown-item" href="../5-ArithmeticExpressions/index.html">
+										5. Arithmetic Expressions
+									</a>
+									<a class="dropdown-item" href="../6-ControlFlowRevisited/index.html">
+										6. Control Flow Revisited
+									</a>
+									<a class="dropdown-item" href="../7-FunctionsAndParameters/index.html">
+										7. Functions Revisited
+									</a>
+									<a class="dropdown-item" href="../8-MoreParameters/index.html">
+										8. More Parameters
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../9-Images/index.html">
+										9. Images
+									</a>
+									<a class="dropdown-item" href="../10-Graphics/index.html">
+										10. Graphics
+									</a>
+									<a class="dropdown-item" href="../11-Animation/index.html">
+										11. Animation
+									</a>
+									<a class="dropdown-item" href="../12-Lists/index.html">
+										12. Lists
+									</a>
+									<a class="dropdown-item" href="../13-MoreLists/index.html">
+										13. More Lists
+									</a>
+									<a class="dropdown-item" href="../14-TextProcessing/index.html">
+										14. Text Processing
+									</a>
+									<a class="dropdown-item" href="../15-Files/index.html">
+										15. Files
+									</a>
+									<a class="dropdown-item" href="../16-Dictionaries/index.html">
+										16. Dictionaries
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../17-NestedStructures/index.html">
+										17. Nested Structures
+									</a>
+									<a class="dropdown-item" href="../18-NestedStructures2/index.html">
+										18. Nested Structures II
+									</a>
+									<a class="dropdown-item" href="../19-Tuples/index.html">
+										19. Tuples
+									</a>
+									<a class="dropdown-item" href="../20-ClassesObjects/index.html">
+										20. Classes & Objects
+									</a>
+									<a class="dropdown-item" href="../21-Memory/index.html">
+										21. Memory
+									</a>
+									<a class="dropdown-item" href="../22-Internet/index.html">
+										22. Internet 
+									</a>
+									<a class="dropdown-item" href="../23-SearchEngines/index.html">
+										23. Search Engines
+									</a>
+									<a class="dropdown-item" href="../24-FunctionExecution/index.html">
+										24. Function Execution
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a class="dropdown-item" href="../25-LifeAfterCS106A/index.html">
+										25. Life After CS 106A
+									</a>
+								</div>
+							</div>
+						</div>
+					</li>
+
+
+					<!-- PSETS -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Assignments
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a 
+								class="dropdown-item"
+								href="https://docs.google.com/forms/d/e/1FAIpQLSfeKsiN9eJ-zWBqKUNuTLsm3sGJ6zfsG6v9DNvZPPUnAfnRAg/viewform?usp=sf_link" 
+								target="_blank"
+							>
+								0 - Who are you?
+							</a>
+							<a class="dropdown-item"
+								href="../../assn/karel.html"
+								>
+								1 - Karel
+							</a>
+							<a class="dropdown-item" href="../../assn/khansole_and_interest.html">
+								2 - Khan-sole Academy & Computing Interest
+							</a>
+							<a class="dropdown-item" href="../../assn/ghost_and_quilt.html">
+								3 - Ghost & Quilt
+							</a>
+							<a class="dropdown-item" href="../../assn/sand.html">
+								4 - Sand
+							</a>
+							<a class="dropdown-item" href="../../assn/strings_and_wordguessing.html">
+								5 - Strings & Word Guessing
+							</a>
+							<a class="dropdown-item" href="../../assn/babynames.html">
+								6 - BabyNames
+							</a>
+							<a class="dropdown-item" href="../../assn/bajillion.html">
+								7 - Bajillion
+							</a>
+							<hr />
+							<a class="dropdown-item" href="../../starterCode/ContestProject.zip">
+								Contest Starter Code
+							</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false">
+							Section
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item"
+								href="http://cs198.stanford.edu/cs198/auth/default.aspx"
+								target="_blank">
+								Section Management
+							</a>
+							<hr />
+							<a class="dropdown-item" 
+							   href="../../section/section1/section1.html" 
+							   target="_blank">
+								Section 1
+							</a>
+							<a class="dropdown-item" href="../../section/section2/section2.html" target="_blank">
+								Section 2
+							</a>
+							<a class="dropdown-item" href="../../section/section3/section3.html" target="_blank">
+								Section 3
+							</a>
+							<a class="dropdown-item" href="../../section/section4/section4.html" target="_blank">
+								Section 4
+							</a>
+							<a class="dropdown-item" href="../../section/section5/section5.html" target="_blank">
+								Section 5
+							</a>
+							<a class="dropdown-item" href="../../section/section6/section6.html" target="_blank">
+								Section 6
+							</a>
+							<a class="dropdown-item" href="../../section/section7/section7.html" target="_blank">
+								Section 7
+							</a>
+							<a class="dropdown-item" href="../../section/section8/section8.html" target="_blank">
+								Section 8
+							</a>
+						</div>
+					</li>
+
+		      <!-- Handouts -->
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Handouts
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../handouts/01-general-information.pdf">General Information</a>
+
+							<a class="dropdown-item" href="../../handouts/02-course-placement.pdf"> Course Placement</a>
+
+							<a class="dropdown-item" href=../../handouts/03-honor-code.pdf>Honor Code</a>
+
+							<a class="dropdown-item" href=../../handouts/installingpycharm.html>Installing PyCharm</a>
+
+							<a class="dropdown-item" href=../../assn/04-using-karel-with-pycharm.pdf>Using Karel in PyCharm</a>
+
+							<a class="dropdown-item" href=../../handouts/06-submitting-assignments.pdf>Submitting Assignments</a>
+
+							<a class="dropdown-item" href=../../handouts/diagnostic.html>Diagnostic</a>
+
+							<a class="dropdown-item" href="../../handouts/08-image-reference.pdf">Image Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/graphics-reference.html">Graphics Reference</a>
+
+							<a class="dropdown-item" href="../../handouts/diagnosticgrades.html">Diagnostic Grades</a>
+
+							<a class="dropdown-item" href="../../handouts/13-contest.pdf">Contest</a>
+
+							<a class="dropdown-item" href="../../handouts/retractions.html">Retractions</a>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					 Examples
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="../../examples/awesome/index.html">Programming is Awesome</a>
+							<a class="dropdown-item" href="../../examples/moveToCenter/index.html">Move to Center</a>
+							<a class="dropdown-item" href="../../examples/bouncingBall/index.html">Bouncing Ball</a>
+							<hr/>
+							<a class="dropdown-item" href="../../examples/tictactoe/index.html">Tic Tac Toe</a>
+							<a class="dropdown-item" href="../../examples/justanumber/index.html">Just a Number</a>
+							<a class="dropdown-item" href="../../examples/palindrome/index.html">Palindrome</a>
+						</div>
+					</li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+						<a class="nav-link" href="../../schedule.html">
+							<i class="fas fa-th-large"></i> Schedule </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+
+		
+			
+		<!-- Header -->
+		<div class="row">
+			<div class="col-sm-12">
+				<!--<div class="alert alert-success"><b>New materials!</b> On Wed (Nov 9th) we posted the midterm, the midterm solution and the grade distribution.
+				</div>-->
+				<div id="pageHeader">
+					<br />
+					<h1>
+						Lecture 4: Introduction to Python &  Variables
+					</h1>
+					<p class="subtleHeading">
+						April 13th, 2020
+					</p>
+
+				</div>
+				
+				<hr>
+			</div>
+		</div>
+
+		<h3>Lecture Materials </h3>
+		<p>
+			<div class="row">
+				<div class="col-sm-2"><a href="4-Variables.pdf">
+						<i class="far fa-file-pdf" aria-hidden="true" style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:3px">Slides</span>
+					</a>
+				</div>
+				<div class="col-sm-2">
+					<a href="Lecture4.zip"><i class="fas fa-code" aria-hidden="true"
+							style="font-size: 5em;margin-left:0px"></i>
+						<br /><br />
+						<span style="margin-left:6px">Lecture Code</span>
+					</a>
+				</div>
+			</div>
+		</p>
+
+	
+
+		<div class="row">
+			<div class="col-sm-12">
+				<h3>Class Announcements</h3>
+				<p>
+					<div class="well">
+						<ol style="padding-left:10px">
+							<li>
+								<b>Section sign ups</b>: Sections start this week. Section assignments will be emailed out to you by Tuesday. If you didn't sign up for a section, or need to change your assignment, a late signup form will open on Tuesday evening. 
+							</li>
+							<li>
+								<b>Early assignment start</b>: We have covered everything you need for assignment #1. It is due on Friday. Don't leave submission to the last second.
+							</li>
+							<li>
+								<b>LaIR is open</b>: See the Office Hours link on the main page for hours.
+							</li>
+					</div>
+				</p>
+				<br/>
+				<h3>Learning Goals </h3>
+				<p>
+					<div class="well">
+					The goal of today's class is for you to be able to create, use and modify basic variables. You will also be able to think through how expressions evaluate.
+				</div>
+				</p>
+<h3>
+    Questions & Answers
+</h3>
+
+
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hi! Should we sign up for the LaIR or do we just join the Zoom call?</p></i>
+               <p><b>A1:&nbsp;</b> Check out the details on the ‘Zoom details’ handout on the course page!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Hello! Is it acceptable to define our functions outside of the main in assignment 1?</p></i>
+               <p><b>A1:&nbsp;</b> Thats the best place to put them</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;When will we be assigned our sections?</p></i>
+               <p><b>A1:&nbsp;</b> By tomorrow evening - I’ll post on the course page when they’re out.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;I went to the Tea Room last week 1 time - may help to set informal time/periods for people to meet 🌸</p></i>
+               <p><b>A1:&nbsp;</b> Good idea!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does it matter if we define a function in a line before or after we use it?</p></i>
+               <p><b>A1:&nbsp;</b> Python doesn’t care, but you should be consistent about it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How are we judged with the descriptive names as long as we describe why we defined the function that way?</p></i>
+               <p><b>A1:&nbsp;</b> Make names succinct, but descriptive! You’ll get a better sense for this as we go through the quarter.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Should we include pre and post conditions for our functions in our pset?</p></i>
+               <p><b>A1:&nbsp;</b> Yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;In the Karel IDE for the website, we used # for comments. Can we use # instead of “”” in our psets?</p></i>
+               <p><b>A1:&nbsp;</b> “””””” is for multline comments and # is for single line comments</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;re: Our First Python Program slide, are there any conventions for when to use # vs &quot;&quot;&quot;</p></i>
+               <p><b>A1:&nbsp;</b> “””””” is for multline comments and # is for single line comments</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What&#039;s the point of the &quot;py&quot; at the beginning of the terminal line when calling a program?</p></i>
+               <p><b>A1:&nbsp;</b> ‘py’ is a program on your computer that reads through the file with the Python code you’re writing (helloworld.py) and actually executes the code!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;do we have to type python3 &lt;name of program&gt;.py every single time we want to run our code after we’ve made an adjustmenmt to the code or is there something else we can do?</p></i>
+               <p><b>A1:&nbsp;</b> you can type that, or, try hitting the up arrow while you have your cursor in the terminal</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is Karel artificially intelligent?</p></i>
+               <p><b>A1:&nbsp;</b> But he’s not an AI :) Stop by office hours if you’re itnerested in how that something works!</p>
+        
+               <p><b>A2:&nbsp;</b> he is truly intelligent</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the homework, does Karel need to be facing the same direction as the diagrams for the end state in the assignment sheet?</p></i>
+               <p><b>A1:&nbsp;</b> We try and write in details what we expect! Its problem specific</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we have to always run our code in a specific program &lt;name of program&gt;? so do we need to download always a certain program to run our code eg. karel?</p></i>
+               <p><b>A1:&nbsp;</b> I’m not sure I fully understand the question so feel free to clarify but your code always needs to be written in a file with a filename you then give to Python.</p>
+        
+               <p><b>A2:&nbsp;</b> if you just type “python” into your terminal it opens up a place where you can just type python!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is &quot;int&quot; short for ?</p></i>
+               <p><b>A1:&nbsp;</b> integer</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if the user inputs a letter instead of a number?</p></i>
+               <p><b>A1:&nbsp;</b> the line where it tries to convert to an int breaks!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;would int stand for integer or would it allow any number?</p></i>
+               <p><b>A1:&nbsp;</b> int is a function that converts text to a number!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does “int” stand for integer?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will python understand the difference between an input of “9” and an input of “nine?”</p></i>
+               <p><b>A1:&nbsp;</b> Python doesn’t know that “nine” means ‘9’, so you can’t convert ‘nine’ to a number</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we can only print Strings and not integers in the print statement?</p></i>
+               <p><b>A1:&nbsp;</b> (A string is the formal name for text)</p>
+        
+               <p><b>A2:&nbsp;</b> if you only print an int, it is fine. Its just that you cant add a string and an intenger, gotta convert first</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a difference between running the program in the terminal vs simply using ^R?</p></i>
+               <p><b>A1:&nbsp;</b> Yes - we’ll get there later in the quarter!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So using int(17.5) would return 18?</p></i>
+               <p><b>A1:&nbsp;</b> Python would throw a tantrum and complain that it’s not a whole number!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Dumb question but is there a french version of python for example ? or like just other languages ?</p></i>
+               <p><b>A1:&nbsp;</b> good question! No its international! People around the world all write things like “def” and “int” but they would make the output in their own language</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can’t we print variables too? Hence no need for str(total), simply print(total)?</p></i>
+               <p><b>A1:&nbsp;</b> thats right</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how does the program know to print the “enter first number” “enter second number”? we never wrote print by them</p></i>
+               <p><b>A1:&nbsp;</b> Input prints whatever you put in there before getting input from the user!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is str?</p></i>
+               <p><b>A1:&nbsp;</b> It stands for string, which is the Python name for text - don’t worry about it too much right now!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So if you want double and single quotes in the text…</p></i>
+               <p><b>A1:&nbsp;</b> Answered live :)</p>
+        
+               <p><b>A2:&nbsp;</b> 😱</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if I wanna use both in the text?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if you want to use both double quotes and  an apostrophe?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a line breaker in python?</p></i>
+               <p><b>A1:&nbsp;</b> \n</p>
+        
+               <p><b>A2:&nbsp;</b> Yes! It’s “\n” but you don’t need to worry about this right now.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we add the single and double quote statements in the print statement? Like print(&quot;hello&quot; + &#039;world&#039;)</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What is a deliminator? Not sure if I spelled that correctly…</p></i>
+               <p><b>A1:&nbsp;</b> ‘Delimiter’! It marks the start or end of something.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can you use int(input(“Give number”))?</p></i>
+               <p><b>A1:&nbsp;</b> Yep! We’ll get to how that works later</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Who is “the user” in this? Is it us or another person?</p></i>
+               <p><b>A1:&nbsp;</b> Whoever is running the program</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does it matter if the input is a number versus a letter?</p></i>
+               <p><b>A1:&nbsp;</b> the conversion to integer will break! that is the int() part</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How can we print text to the next line?</p></i>
+               <p><b>A1:&nbsp;</b> Everytime you call print, it goes to a new line.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can the user type out a number? Say “nine”?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but we couldn’t convert it to a number</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If the user types in “a” will there be an error because it isn’t a number? Or is the int() function ok with receiving an “a”?</p></i>
+               <p><b>A1:&nbsp;</b> Nope, int will crash</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if you use x == 10?</p></i>
+               <p><b>A1:&nbsp;</b> That’s checking if x has the value 5 - we’ll get there later!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you store multiple values inside a single variable?</p></i>
+               <p><b>A1:&nbsp;</b> Nope!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Which quotes do we use if we want to print a sentence with both “ “ and ‘ ‘? E.g. The teacher told me, “You spelled Karel ‘Karol’.”</p></i>
+               <p><b>A1:&nbsp;</b> in that case there is a special token backslash which be used to mean.. i want this next token to be an actual quote, not an end of string. eg “ this’ \” “</p>
+        
+               <p><b>A2:&nbsp;</b> There are ways to indicate that your quotes don’t delimit a string, but they’re a little beyond what we’re working with right now. Essentially, you need to type \ before the quotes.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Wondering why we can use mathematical expressions to add NUMBERS in Variables (eg x= 5 + 7), when we also said 5 is &quot;text&quot; and needed to convert it to a NUMBER with int?</p></i>
+               <p><b>A1:&nbsp;</b> Could you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there any way to initialize a variable without assigning a value to the variable?</p></i>
+               <p><b>A1:&nbsp;</b> Not in Python!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can we define a variable before we use it? Like int x = 9</p></i>
+               <p><b>A1:&nbsp;</b> yes!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is = the same as -&gt; ?</p></i>
+               <p><b>A1:&nbsp;</b> No, -&gt; is not valid Python</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can a variable first appear on the right handside? For ex. Total = Total +1, where this is the very first time total appears? If so, is total evaluated as 0?</p></i>
+               <p><b>A1:&nbsp;</b> Great question! Python would complain and give you an error if you did that.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you reuse/ reassign  the varible, which value will python use?  
+
+for example if you were to use this code :
+x=10
+(code part 1 )
+x=5 
+(code part 2) 
+will code part 1 use x=10 and part2 will use x=5?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is total the previous total assigned?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, in this case 5</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;both those lines of code together in a program are valid? ie. you can have both “5” and “total + 1” assigned?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, one comes after the other. The first would set total to 5 and the next would add 1 to it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;How do you know if you picked an existing word accidentally?</p></i>
+               <p><b>A1:&nbsp;</b> PyCharm will color it a special color and you’ll get a scary red line under it! You’ll also get more familiar with these words as the quarter goes on.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what is snake case?</p></i>
+               <p><b>A1:&nbsp;</b> variable_names_like_this</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you define a variable within a function within main, does it get fed into the next function within main? E.g. if
+def main(): 
+     function1() # variable assigned here 
+   function2() # will function2() know the variable from function1()?</p></i>
+               <p><b>A1:&nbsp;</b> Nope - functions only know about their own variables (for now!)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is the object the variable (the box) or whatever value is inside?</p></i>
+               <p><b>A1:&nbsp;</b> The object is the suitcase itself, which has a 700 inside it</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;does their sequence matter?</p></i>
+               <p><b>A1:&nbsp;</b> Whose sequence?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;of the num____ programs in integrating the values of the others to the 3rd</p></i>
+               <p><b>A1:&nbsp;</b> You can define the variable in whatever order you want</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you type a negative sign before the number to denote a negative number?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Difference between real value and integer?</p></i>
+               <p><b>A1:&nbsp;</b> Integers can’t have decimal places</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;int is a type and int() is a function right?</p></i>
+               <p><b>A1:&nbsp;</b> Yep! Good catch</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What about irrational numbers?</p></i>
+               <p><b>A1:&nbsp;</b> Good question! There are some clever ways to represent them but by in large we just use floats that are close to them i.e. pi = 3.1415</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why would you save a whole number like 5.0 as a real number rather than an integer?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;how many digits can you put after the decimal point?</p></i>
+               <p><b>A1:&nbsp;</b> An arbitrary number</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If you assign a variable using another variable (e.g. num_initial= 500, then later num_total = num_initial), using the luggage tag analogy would you say that a second tag is added to the suitcase or that a second identical suitcase is created? I assume it would be the second case since you are assigning rather than claiming the two variables will always be equivalent, but just wanted to check</p></i>
+               <p><b>A1:&nbsp;</b> you are right!</p>
+        
+               <p><b>A2:&nbsp;</b> Fantastic question! You are actually usually making a new tag but there are some nuances to this, which we’ll explore later in the quarter.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why is string 5 not equivalent to int 5?</p></i>
+               <p><b>A1:&nbsp;</b> lots of good reasons a number could be represented as a string. For example you might have a confirmation code “04384” but a number can’t start with a zero. So at times you do want a number in string form, and they do have a few differences. Good question</p>
+        
+               <p><b>A2:&nbsp;</b> You can’t do math on “5”  but you can on 5 :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So input always gives a string back?</p></i>
+               <p><b>A1:&nbsp;</b> always!</p>
+        
+               <p><b>A2:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a function that returms the type of a variable?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! It’s called type() :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does 9 go in the place of “Enter first…” or after the colon?</p></i>
+               <p><b>A1:&nbsp;</b> After the colon</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do you have to end the prompt for an input command with a colon, or does it not matter?</p></i>
+               <p><b>A1:&nbsp;</b> Doesn’t matter</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;is it possible to take in an integer rather than a string?</p></i>
+               <p><b>A1:&nbsp;</b> From input? No</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so why not name the integer version differently?</p></i>
+               <p><b>A1:&nbsp;</b> You could, but we don’t need the string anymore, so we might as well overwrite it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Will python happily convert between int and float? Vice versa? (e.g. if I have 5 as an int, will python be ok if it’s reassigned as a float? Or vice versa for 5.0 float trying to convert to int)</p></i>
+               <p><b>A1:&nbsp;</b> You can go from ints to floats, but floats to ints gets a little weird if there’s a decimal place</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;eg. Brahm re: question before on strings, can we just have Input from the User be an Int or Float? Instead of a string? Or do we need a different command other than Input to make it work?</p></i>
+               <p><b>A1:&nbsp;</b> You always get a string back from input, so you’ll need to manually convert it.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is there a command to convert text into floats instead of integers?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! It’s called float()</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do we have to input string first and then convert to a int?</p></i>
+               <p><b>A1:&nbsp;</b> Input always gives you back a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So num1=int(num1) is now replacing the suitcase that was a string and we cannot ask the string num1 anymore without converting it back?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if the user gave you 9.1?</p></i>
+               <p><b>A1:&nbsp;</b> The program would throw a tantrum and break because you can’t convert that to an int!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So you lose the num1 string value when you replace it with the int version? Or do you have both as num1?</p></i>
+               <p><b>A1:&nbsp;</b> You lose the string value</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Is it possible to go directly to an integer value instead of having to go from string to integer?</p></i>
+               <p><b>A1:&nbsp;</b> No, input always gives you back a string.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;If we were just printing the number 26, can we keep it in integer form?</p></i>
+               <p><b>A1:&nbsp;</b> Yep!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So we always have to start with input/ string?</p></i>
+               <p><b>A1:&nbsp;</b> It depends on what your program is doing but if you need user input, you need to call input and you’ll get back a string</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;why do you have to convert an int to a str version of it in order to print?</p></i>
+               <p><b>A1:&nbsp;</b> live answered</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;So unlike Karel, order does matter. if you are reassigning a varible it needs to be after that varible has already been created.
+Ex:
+num1 = 9
+num1 = int (num1) 
+
+is not the same as 
+
+num1 = int(num1)
+num1 = 9 ?</p></i>
+               <p><b>A1:&nbsp;</b> your example is correct. In karel order matters too (move turn isn’t always the same as turn, move)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;will str4 still have double quotes?</p></i>
+               <p><b>A1:&nbsp;</b> Not when you print it, but internally, yes</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;can num1 be used multiple times in the same function asking for different inputs?</p></i>
+               <p><b>A1:&nbsp;</b> Yes, but you’d lose the previousinputs</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;if your already are definying &quot;str= &quot; for a value, do you need to still use &quot; &quot;</p></i>
+               <p><b>A1:&nbsp;</b> Can you clarify what you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Stylistically, where should we put comments in our code? Today’s lecture slides and the section on “Good Style” in the Assignment 1 handout put a multiline comment in different places. Or do we just have to be consistent with where we put comments?</p></i>
+               <p><b>A1:&nbsp;</b> A multiline comment at the top, but I don’t think anything else really *needs* a comment here.</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Can you print a number by itself without converting it into its string form?</p></i>
+               <p><b>A1:&nbsp;</b> Yep</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Does the + operator have multiple functions—regular addition with integers as well as concatenation with strings? Does it have any other functions with other types?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! We’ll get there in due time :)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do variables need to be the same type when doing mathematical operations (i.e. can we subtract a float value from an int)?</p></i>
+               <p><b>A1:&nbsp;</b> Yes! If you do an operation on a float and an int you always get back a float</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;so does input both display what you put inside () and take a string to put into the variable? aka does input do two things at the same time? and what if you leave () empty?</p></i>
+               <p><b>A1:&nbsp;</b> correct. If you leave it empty, it doesn’t show the user any text before asking for the input</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;What if the user entered a decimal?</p></i>
+               <p><b>A1:&nbsp;</b> int would crash</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;Do you need to define a function for spaces between words or does it do it automatically?</p></i>
+               <p><b>A1:&nbsp;</b> What do you mean?</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;For the example that was give &quot;str = &quot;hello&quot; &quot;, is it necessary to write hello in &quot; &quot; vs hello w/o &quot;&quot; since you are already identifying by &quot;str=&quot; that is a string?</p></i>
+               <p><b>A1:&nbsp;</b> Oh, I see - you need the double quotes. Python won’t look at variable names (it always looks at RHS first)</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;what if you type 10.5?</p></i>
+               <p><b>A1:&nbsp;</b> Same kind of crash!</p>
+        
+        <br />
+        <i><p><b>Q:</b>&nbsp;after int(num1), where does the contents before the colon go?</p></i>
+               <p><b>A1:&nbsp;</b> That’s not stored in num1 :)</p>
+        
+			</div>
+		</div>
+
+
+	
+
+
+	<div class="row">
+		<div class="col-md-12">
+			<hr>
+
+			<div class="footer">
+				<p class="pull-left">
+					&#169; Stanford 2020 &#124; CS106A has been developed over decades by many talented teachers. Website designed by 
+					<a href="http://stanford.edu/~cpiech">Chris Piech</a>.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-74362126-1', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+
+
+	</div>
+
+</body>
